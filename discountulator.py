@@ -8,7 +8,9 @@ except :
     print('enter numbers only')
 
 if user_discount_min == 0 :
-    print((user_discount_rate/user_cart) * user_discount_rate)
+    print(user_discount_rate * user_cart)
+    print((user_discount_rate * user_cart) / user_cart)
+    print( 20 * 200 / 100)
 
 #else :
     #ot = (hrs - 40) * (rate * 1.5)
