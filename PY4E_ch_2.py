@@ -5,9 +5,9 @@
 ======
 
 try :
-    hrs = int(input('Hours: '))
-    rate = float(input('Rate/Hour: '))
+    hrs = int(input('hours: '))
+    rate = float(input('hourly rate: '))
 except :
     print('numbers only')
 
-print('Pay: ', hrs * rate)
+print('pay: ', hrs * rate)
