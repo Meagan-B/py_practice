@@ -11,7 +11,7 @@ if inp_discount_min == 0 :
     user_discount_total = ((inp_discount_rate / 100) * inp_cart)
     print('you saved: ', user_discount_total)
     print('new total: ', inp_cart - user_discount_total)
-elif inp_discount_min >= 0 and inp_discount_min <= inp_cart:
+elif inp_discount_min > 0 and inp_discount_min <= inp_cart:
     user_discount_total = ((inp_discount_rate / 100) * inp_cart)
     print('you saved: ', user_discount_total)
     print('new total: ', inp_cart - user_discount_total)
