@@ -1,16 +1,16 @@
 # calculate the discount, excluding taxes
 # with user input for cart total, discount rate and discount minimum requirements
 try :
-    user_cart = float(input('enter cart total: '))
-    user_discount_rate = float(input('enter discount "_% off": '))
-    user_discount_min = float(input('enter discount minimum, use 0 for no discount minimum: ' ))
+    inp_cart = float(input('enter cart total: '))
+    inp_discount_rate = float(input('enter discount "_% off": '))
+    inp_discount_min = float(input('enter discount minimum, use 0 for no discount minimum: ' ))
 except :
     print('enter numbers only')
 
-if user_discount_min == 0 :
-    print(user_discount_rate * user_cart)
-    print((user_discount_rate * user_cart) / user_cart)
-    print( 20 * 200 / 100)
+if inp_discount_min == 0 :
+    user_discount_total = (inp_discount_rate / 100) * inp_cart)
+    print('you saved: ', user_discount_total)
+    print('new total: ', inp_cart - user_discount_total)
 
 #else :
     #ot = (hrs - 40) * (rate * 1.5)
