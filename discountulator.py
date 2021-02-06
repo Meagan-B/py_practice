@@ -8,7 +8,7 @@ except :
     print('enter numbers only')
 
 if inp_discount_min == 0 :
-    user_discount_total = (inp_discount_rate / 100) * inp_cart)
+    user_discount_total = ((inp_discount_rate / 100) * inp_cart)
     print('you saved: ', user_discount_total)
     print('new total: ', inp_cart - user_discount_total)
 
