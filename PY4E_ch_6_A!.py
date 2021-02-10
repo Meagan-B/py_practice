@@ -7,11 +7,11 @@ fruit = 'pineapple'
 
 index = -1
 for letter in fruit :
-    while index < len(fruit) :
+    if index < len(fruit) :
         letter = fruit[index]
         print(letter)
         index = index - 1
-    while index > len(fruit) :
+    elif index > len(fruit) :
         break
 #while index :
 print('end')
