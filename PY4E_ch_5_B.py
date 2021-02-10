@@ -3,7 +3,6 @@
 #average of the numbers. If the user enters anything other than a number,
 #detect their mistake using try and except and print an error message and
 #skip to the next number.
-
 #Enter a number: 4
 #Enter a number: 5
 #Enter a number: bad data
@@ -12,12 +11,23 @@
 #Enter a number: done
 #16 3 5.333333333333333
 
-while num in usr_inp != 'DONE' or 'done' :
-    try:
-        usr_inp = int(input('enter a number, when you are done enter DONE: ''))
+count = 0
+total = 0.0
+print('WELCOME, please enter numbers only & when you are done enter "done"')
+while True :
+    usr_val = input('enter a number >')
+    if usr_val == 'done' or usr_val == 'DONE':
+        break
+    #if usr_val == exit :
+        #break
+    try :
+        float_usr_val = float(usr_val)
     except:
         print('invalid input, enter a NUMBER')
-
-count = 0
-while num in usr_inp :
+        continue
+    print(float_usr_val)
     count = count + 1
+    total = total + float_usr_val
+
+print('COUNT:',count , '• TOTAL:',total , '• AVG:',total/count)
+print('END')
