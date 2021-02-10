@@ -1,31 +1,28 @@
-#Exercise 1: Write a program which repeatedly reads numbers until the user
-#enters “done”. Once “done” is entered, print out the total, count, and
-#average of the numbers. If the user enters anything other than a number,
-#detect their mistake using try and except and print an error message and
-#skip to the next number.
+#Exercise 2: Write another program that prompts for a list of numbers as
+#above and at the end prints out both the maximum and minimum of the numbers
+#instead of the average.
 
-#Enter a number: 4
-#Enter a number: 5
-#Enter a number: bad data
-#Invalid input
-#Enter a number: 7
-#Enter a number: done
-#16 3 5.333333333333333
-
-while num in usr_inp != 'DONE' or 'done' :
-    try:
-        usr_inp = int(input('enter a number, when you are done enter DONE:'))
+max = None
+min = None
+while True :
+    usr_val = input('enter a number >')
+    if usr_val == 'done' or usr_val == 'DONE':
+        break
+    try :
+        f_usr_val = float(usr_val)
     except:
-        print('invalid input, enter a NUMBER')
+        print('invalid input')
+        continue
+    for num in [f_usr_val] :
+        if min is None :
+            min = num
+        elif num < min :
+            min = num
+    for num in [f_usr_val] :
+        if max is None :
+            max = num
+        elif num > max :
+            max = num
 
-    if num in usr_inp == 'DONE' or "done" :
-        count = 0
-        for num in [usr_inp]:
-            count = count + 1
-        print('COUNT: ', count)
-        total = 0
-        for num in [usr_inp]:
-            total = total + num
-        print('TOTAL: ', total)
-        print('AVG: ', total/count)
-print('END')
+print('Maximum is', max)
+print('Minimum is', min)
