@@ -18,18 +18,18 @@ while True:
     if i_usrage < 100 :
         yrscalc = 100 - i_usrage
         mscalc = yrscalc * 12
-        wkscalc = yrscalc
+        wkscalc = yrscalc * 52
         dyscalc = 365 *  yrscalc
         yrsto100 = 'years to 100: '
         msto100 =  'months to 100: '
         wksto100 = 'weeks to 100: '
         dysto100 = 'days to 100: '
-        print(yrsto100 + yrscalc)
-        print(msto100 + mscalc)
-        print(wksto100 + wkscalc)
-        print(dysto100 + dyscalc)
+        print(yrsto100, yrscalc)
+        print(msto100, mscalc)
+        print(wksto100, wkscalc)
+        print(dysto100, dyscalc)
         break
     else :
         print('you win life! you have already made it to 100')
 
-print('goodbye ' + usrname + ' thank you for playing!')
+print('thank you for playing!')
