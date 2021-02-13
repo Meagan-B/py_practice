@@ -24,12 +24,12 @@ while True:
         msto100 =  'months to 100: '
         wksto100 = 'weeks to 100: '
         dysto100 = 'days to 100: '
-        print(yrsto100.append())
-        print(msto100.append())
-        print(wksto100.append())
-        print(dysto100.append())
+        print(yrsto100 + yrscalc)
+        print(msto100 + mscalc)
+        print(wksto100 + wkscalc)
+        print(dysto100 + dyscalc)
         break
     else :
         print('you win life! you have already made it to 100')
 
-print('goodbye', usrname.append('thank you for playing!'))
+print('goodbye ' + usrname + ' thank you for playing!')
