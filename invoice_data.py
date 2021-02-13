@@ -34,7 +34,9 @@ paid_data = [ float(inv_2020_01[-1]) + float(inv_2020_02[-1]) + float(inv_2020_0
 paid_data = paid_data
 
 unpaid =  total_data - paid_data
+#find all unpaid invoices and print client info and DATE
 
-print('billed: ', total_data)
-print('paid: ', paid_data)
-print('unpaid: ', unpaid)
+
+#print('billed: ', total_data)
+#print('paid: ', paid_data)
+#print('unpaid: ', unpaid)
