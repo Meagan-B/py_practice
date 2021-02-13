@@ -30,7 +30,7 @@ while True:
         print(dysto100, dyscalc)
         break
     else :
-        print('you win life! you have already made it to 100' * 100 )
+        print('you WIN @ life!  ' * 100 )
         break
-        
+
 print('thank you for playing!')
