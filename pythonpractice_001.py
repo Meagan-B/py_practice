@@ -4,10 +4,9 @@
 #many copies of the previous message. (Hint: order of operations exists in Python)
 #Print out that many copies of the previous message on separate lines. (Hint: the string
 #"\n is the same as pressing the ENTER button)
-hello = 'hello,'
-inpname = input('enter your name >>')
-usrname = str(inpname)
-print(hello.append(usrname))
+
+usrname = input('enter your name >>')
+print('hello, ' + usrname)
 
 usrage = input('enter your age >>')
 while True:
