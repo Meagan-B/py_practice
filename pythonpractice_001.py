@@ -33,7 +33,7 @@ if i_usrage < 100 :
     print('year you turn 100 : %s' % num_dysto100.year)
     print(dir(num_dysto100))
     #print(dateto100)
-    #print(yrsto100, yrscalc)
+    print(yrsto100, yrscalc)
     #print(msto100, mscalc)
     #print(wksto100, wkscalc)
     #print(dysto100, dyscalc)
