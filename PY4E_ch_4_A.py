@@ -1,8 +1,0 @@
-# Testing random mod
-import random
-
-for i in range(10) :
-    x = random.random()
-    print(x)
-
-print('end')
