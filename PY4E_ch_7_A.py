@@ -8,21 +8,22 @@
 #      SAT, 05 JAN 2008 09:14:16 -0500
 
 #WIP
-# def name_fun() :
-#     if file_name.endswith('.txt' or '.pdf') :
-#         return file_name
-    #raise ValueError('extension must be .txt or .pdf')
+def name_fun(file_name) :
+    if file_name.endswith('.txt') :
+        return file_name
+    raise ValueError('extension must be .txt')
 
-file_name = input ('Enter a file name: ')
-#ver_file_name = name_fun(file_name)
+file_name = input('Enter a file name: ')
+#file_name = 'mboxshort.txt'
+ver_file_name = name_fun(file_name)
 
-opened = open(file_name, 'r')
-#opened = open(ver_file_name, 'r')
-lines_file = opened.readlines()
+# openedfile = open(file_name)
+openedfile = open(ver_file_name)
+readfile = openedfile.readlines()
 
 count = 0
-for line in lines_file :
+for line in readfile :
     count += 1
-    print('Line %s : %s /n' % (count, lines_file.uppercase))
+    print('Line %s : %s /n' % (count, readfile.toUpperCase()))
 
 print(end)
