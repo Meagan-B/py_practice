@@ -7,19 +7,22 @@
 #      BY FRANKENSTEIN.MAIL.UMICH.EDU (CYRUS V2.3.8) WITH LMTPA;
 #      SAT, 05 JAN 2008 09:14:16 -0500
 
-def name_fun() :
-    if file_name.endswith ('.txt') :
-        return file_name
-    raise ValueError('extension must be .txt')
+#WIP
+# def name_fun() :
+#     if file_name.endswith('.txt' or '.pdf') :
+#         return file_name
+    #raise ValueError('extension must be .txt or .pdf')
 
 file_name = input ('Enter a file name: ')
-ver_file_name = f_name_fun(file_name)
+#ver_file_name = name_fun(file_name)
 
-openread = open(file_name, 'r')
-lines_mbox = openread.readlines()
+opened = open(file_name, 'r')
+#opened = open(ver_file_name, 'r')
+lines_file = opened.readlines()
 
 count = 0
-for line in lines_mbox :
+for line in lines_file :
     count += 1
-    print('Line %s : %s /n' % (count, lines_mbox.uppercase))
-    print(end)
+    print('Line %s : %s /n' % (count, lines_file.uppercase))
+
+print(end)
