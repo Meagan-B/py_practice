@@ -24,6 +24,5 @@ readfile = openedfile.readlines()
 count = 0
 for line in readfile :
     count += 1
-    print('Line %s : %s /n' % (count, readfile.toUpperCase()))
-
-print(end)
+    print('Line %s : %s /n' % (count, readfile.upper())
+# file_name.close()
