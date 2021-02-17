@@ -15,15 +15,16 @@ def name_fun(file_name) :
     exit()
 
 file_name = input('Enter a file name: ')
-#file_name = 'mboxshort.txt'
 ver_file_name = name_fun(file_name)
-
-# openedfile = open(file_name)
 openedfile = open(ver_file_name)
-readfile = openedfile.readlines()
-READFILE = readfile.upper()
+# readfile = openedfile.readlines()
+#READFILE = readfile.upper()
 
-count = 0
-for line in readfile :
-    count += 1
-    print('Line %s : %s /n' % (count, READFILE)
+for line in openedfile :
+    line_clean = line.rstrip()
+    print(line_clean.upper())
+    
+# count = 0
+# for line in readfile[:6] :
+#     count += 1
+#     # print('Line %s : %s /n' % (count, readfile))
