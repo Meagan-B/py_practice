@@ -21,16 +21,29 @@ def name_fun(file_name) :
         raise ValueError('extension must be .txt')
         # exit()
 
+def value_extraction(ver_file_name) :
+    for line in ver_file_name :
+        line_clean = line.rstrip()
+    if 'X-DSPAM-Confidence:' in line :
+        spam_val = line.split(':', [-1])
+        return spam_val
+        float_val = float(spam_val)
+        print(float_val)
+
 file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
-readfile = fhandle.read()
+vals = value_extraction(ver_file_name)
 
-count = 0
-total = 0
-for line in readfile :
-    line_clean = line.rstrip()
-    count += 1
-    #total = total + slicestr
-    if not line.find('X-DSPAM-Confidence:') == -1 : continue
-    print(count, line)
+spam_count = 0
+spam_total = 0
+for values in vals :
+    print(vals)
+#     spam_count += 1
+#     spam_total = spam_total + values
+#     spam_avg = spam_total / spam_count
+# print('Average spam confidence: %s' % spam_avg)
+
+
+
+#
