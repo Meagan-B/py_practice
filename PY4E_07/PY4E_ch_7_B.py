@@ -22,7 +22,7 @@ def name_fun(file_name) :
 file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
-read_fhandle = fhandle.readlines()
+read_fhandle = fhandle.read()
 
 
 print(fhandle)
