@@ -21,29 +21,46 @@ def name_fun(file_name) :
         raise ValueError('extension must be .txt')
         # exit()
 
-def value_extraction(ver_file_name) :
-    for line in ver_file_name :
-        line_clean = line.rstrip()
-    if 'X-DSPAM-Confidence:' in line :
-        spam_val = line.split(':', [-1])
-        return spam_val
-        float_val = float(spam_val)
-        print(float_val)
-
 file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
-vals = value_extraction(ver_file_name)
+read_fhandle = fhandle.readlines()
+
+
+print(fhandle)
 
 spam_count = 0
-spam_total = 0
-for values in vals :
-    print(vals)
-#     spam_count += 1
-#     spam_total = spam_total + values
-#     spam_avg = spam_total / spam_count
+spam_total = 0.000000000000
+#      line_clean = line.rstrip()
+for line in read_fhandle :
+    if 'X-DSPAM-Confidence: ' in line :
+        spam_val = read_fhandle.split(':')
+        print(spam_val)
+        spam_count += 1
+        print(spam_count, ')', spam_val)
+    # try :
+    #     float_val = float(spam_val)
+    # except :
+    #     print('pos, could not convert float from line')
+#
+# spam_total = spam_total + float_val
+#     print('TOTAL: ', spam_total)
+
+
+
+# spam_avg = spam_total / spam_count
 # print('Average spam confidence: %s' % spam_avg)
 
 
-
-#
+# spam_count = 0
+# spam_total = 0
+# for line in fhandle :
+#     line_clean = line.rstrip()
+# if 'X-DSPAM-Confidence:' in line_clean :
+#     spam_count += 1
+#     spam_val = line_clean.split(':')
+#     print(spam_val, spam_count)
+    # spam_total = spam_total + spam_val
+    # float_val = float(spam_val)
+    # spam_avg = spam_total / spam_count
+# print('Average spam confidence: %s' % spam_avg)
