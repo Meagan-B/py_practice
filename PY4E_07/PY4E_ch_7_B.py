@@ -32,7 +32,7 @@ spam_count = 0
 spam_total = 0.000000000000
 #      line_clean = line.rstrip()
 for line in read_fhandle :
-    if 'X-DSPAM-Confidence: ' in line :
+    if 'X-DSPAM-Confidence:' in line :
         spam_val = read_fhandle.split(':')
         print(spam_val)
         spam_count += 1
