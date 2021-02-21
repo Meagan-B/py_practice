@@ -22,14 +22,14 @@ def name_fun(file_name) :
 file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
-print('verified file: ', fhandle)
+# print('verified file: ', fhandle)
 
 spam_count = 0
 spam_total = 0.0000
 for line in fhandle:
     line = line.rstrip()
     if line.find('X-DSPAM-Confidence:') == -1: continue
-    print(line)
+    # print(line)
     spam_count += 1
     # print(spam_count)
     extracts = line[-7:].strip()
