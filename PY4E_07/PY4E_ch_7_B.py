@@ -9,14 +9,6 @@
 # Average spam confidence: 0.750718518519
 # Test your file on the mbox.txt and mbox-short.txt files.
 
-#PY4E code:
-
-# count = 0
-# for line in fhand:
-#     count = count + 1
-# print('Line Count:', count)
-#
-
 
 #WIP
 
@@ -37,7 +29,7 @@ spam_total = 0.0000
 for line in fhandle:
     line = line.rstrip()
     if line.find('X-DSPAM-Confidence:') == -1: continue
-    # print(line)
+    print(line)
     spam_count += 1
     # print(spam_count)
     extracts = line[-7:].strip()
@@ -45,8 +37,8 @@ for line in fhandle:
     fl_extracts = float(extracts)
     # print(type(fl_extracts))
     spam_total = spam_total + fl_extracts
-    print(spam_total)
 
-
-# spam_avg = spam_total / spam_count
-# print('Average spam confidence: %s' % spam_avg)
+# print('TOTAL > ', spam_total)
+# print('COUNT > ', spam_count)
+spam_avg = spam_total / spam_count
+print('Average spam confidence: %s' % spam_avg)
