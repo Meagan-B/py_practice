@@ -11,28 +11,12 @@
 
 #PY4E code:
 
-count = 0
-for line in fhand:
-    count = count + 1
-print('Line Count:', count)
+# count = 0
+# for line in fhand:
+#     count = count + 1
+# print('Line Count:', count)
+#
 
-count = 0
-for line in fhand:
-    if line.startswith('From:'):
-        print(line)
-
-for line in fhand:
-    line = line.rstrip()
-    # Skip 'uninteresting lines'
-    if not line.startswith('From:'):
-        continue
-    # Process our 'interesting' line
-    print(line)
-
-for line in fhand:
-    line = line.rstrip()
-    if line.find('@uct.ac.za') == -1: continue
-    print(line)
 
 #WIP
 
@@ -47,20 +31,15 @@ file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
 print('verified file: ', fhandle)
-    
+
+spam_count = 0
+# spam_total = 0.000000000000
 for line in fhandle:
     line = line.rstrip()
     if line.find('X-DSPAM-Confidence:') == -1: continue
     print(line)
-
-# spam_count = 0
-# spam_total = 0.000000000000
-# for line in fhandle :
-#     if 'X-DSPAM-Confidence:' in line :
-#         spam_val = read_fhandle.split(':')
-#         print(spam_val)
-#         spam_count += 1
-#         print(spam_count, ')', spam_val)
+    spam_count += 1
+    print(spam_count)
 #     try :
 #         float_val = float(spam_val)
 #     except :
