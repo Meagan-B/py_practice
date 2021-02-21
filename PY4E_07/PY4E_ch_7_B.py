@@ -33,21 +33,19 @@ fhandle = open(ver_file_name)
 print('verified file: ', fhandle)
 
 spam_count = 0
-# spam_total = 0.000000000000
+spam_total = 0.0000
 for line in fhandle:
     line = line.rstrip()
     if line.find('X-DSPAM-Confidence:') == -1: continue
-    print(line)
+    # print(line)
     spam_count += 1
-    print(spam_count)
-#     try :
-#         float_val = float(spam_val)
-#     except :
-#         print('pos, could not convert float from line')
-#
-# spam_total = spam_total + float_val
-# print('TOTAL: ', spam_total)
-
+    # print(spam_count)
+    extracts = line[-7:].strip()
+    # print(extracts)
+    fl_extracts = float(extracts)
+    # print(type(fl_extracts))
+    spam_total = spam_total + fl_extracts
+    print(spam_total)
 
 
 # spam_avg = spam_total / spam_count
