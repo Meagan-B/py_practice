@@ -9,6 +9,30 @@
 # Average spam confidence: 0.750718518519
 # Test your file on the mbox.txt and mbox-short.txt files.
 
+#PY4E code:
+
+count = 0
+for line in fhand:
+    count = count + 1
+print('Line Count:', count)
+
+count = 0
+for line in fhand:
+    if line.startswith('From:'):
+        print(line)
+
+for line in fhand:
+    line = line.rstrip()
+    # Skip 'uninteresting lines'
+    if not line.startswith('From:'):
+        continue
+    # Process our 'interesting' line
+    print(line)
+
+for line in fhand:
+    line = line.rstrip()
+    if line.find('@uct.ac.za') == -1: continue
+    print(line)
 
 #WIP
 
@@ -22,28 +46,28 @@ def name_fun(file_name) :
 file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
-read_fhandle = fhandle.read()
+print('verified file: ', fhandle)
 
+for line in fhand:
+    line = line.rstrip()
+    if line.find('X-DSPAM-Confidence:') == -1: continue
+    print(line)
 
-print(fhandle)
-
-
-spam_count = 0
-spam_total = 0.000000000000
-#      line_clean = line.rstrip()
-for line in read_fhandle :
-    if 'X-DSPAM-Confidence:' in line :
-        spam_val = read_fhandle.split(':')
-        print(spam_val)
-        spam_count += 1
-        print(spam_count, ')', spam_val)
-    # try :
-    #     float_val = float(spam_val)
-    # except :
-    #     print('pos, could not convert float from line')
+# spam_count = 0
+# spam_total = 0.000000000000
+# for line in fhandle :
+#     if 'X-DSPAM-Confidence:' in line :
+#         spam_val = read_fhandle.split(':')
+#         print(spam_val)
+#         spam_count += 1
+#         print(spam_count, ')', spam_val)
+#     try :
+#         float_val = float(spam_val)
+#     except :
+#         print('pos, could not convert float from line')
 #
 # spam_total = spam_total + float_val
-#     print('TOTAL: ', spam_total)
+# print('TOTAL: ', spam_total)
 
 
 
