@@ -47,7 +47,7 @@ file_name = input('Enter a file name: ')
 ver_file_name = name_fun(file_name)
 fhandle = open(ver_file_name)
 print('verified file: ', fhandle)
-
+    
 for line in fhandle:
     line = line.rstrip()
     if line.find('X-DSPAM-Confidence:') == -1: continue
