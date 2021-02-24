@@ -6,11 +6,10 @@ def chop(l) :
     del(l[0])
     del(l[-1])
 
-test_val = '*burp* hello, my name is computer, what lovely weather we are having today! eh?'
-test_list = list(test_val)
+test_list = ['cats', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'f']
+
 
 chop(test_list)
-
 print(test_list)
 
 
