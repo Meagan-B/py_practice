@@ -20,4 +20,5 @@ for num in a :
     else :
         continue
 print(b)
-print(b.sort())
+b.sort()
+print(b)
