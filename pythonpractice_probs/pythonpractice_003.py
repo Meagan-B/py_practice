@@ -10,13 +10,13 @@
 # Ask the user for a number and return a list that contains only elements from the original list a that are smaller than that number given by the user.
 
 
-num_list = [1, 3, 2, 4, 19, 23, 278, 10, 736, 0.5]
-list_extract = []
+a = [1, 3, 2, 4, 19, 23, 278, 10, 736, 0.5]
+b = []
 
-for num in num_list :
+for num in a :
     if num < 5 :
-        num_extract = num
-        list_extract.append(num_extract)
+        b.append(num)
+        print(b)
     else :
         continue
-    print(list_extract.sort())
+    # print(list_extract.sort())
