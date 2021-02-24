@@ -2,7 +2,7 @@
 # For example, 13 is a divisor of 26 because 26 / 13 has no remainder.
 
 usr_num = int(input('enter a number for a list of its divisors, from 1-100. >> '))
-divisors = list(range(1, 101))
+divisors = list(range(1, 1000001))
 b = []
 
 for i in divisors :
