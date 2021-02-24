@@ -11,10 +11,12 @@
 
 
 num_list = [1, 3, 2, 4, 19, 23, 278, 10, 736, 0.5]
+list_extract = []
 
 for num in num_list :
     if num < 5 :
-        print(num)
+        num_extract = num
+        list_extract.append(num_extract)
     else :
         continue
-            
+    print(list_extract.sort())
