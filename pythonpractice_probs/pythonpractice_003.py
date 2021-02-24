@@ -16,7 +16,8 @@ b = []
 for num in a :
     if num < 5 :
         b.append(num)
-        print(b)
+        # print(b)
     else :
         continue
-    # print(list_extract.sort())
+print(b)
+print(b.sort())
