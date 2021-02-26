@@ -2,8 +2,8 @@
 # causes the program to fail and then modify the program so that the line is properly guarded and test it to make sure it handles your
 # new text file.
 
-
-fhand = open('mbox-short.txt')
+usr_dir = input('ENTER file name >>> ')
+fhand = open(usr_dir)
 count = 0
 for line in fhand:
     words = line.split()
