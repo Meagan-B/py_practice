@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1 1  1111 1 1 1 1 1 1 11111 1 1 111 1 111 11 \
+22 2 222 2 22 22 22 2\
+3 3 333 3 3 3  3    333   3 3 3 3  3 33 \
+4 4 4  444  4  \
+5 5  5 5 5555555 55 5 555 5 \
+6 6 6 6666 6 66 6 666 6\
+777777 777 7 7 77 7 7 7\
+888 88 888 8 8 8 88  8888       888 8\
+999 999 9 9 99 9999 99999  99    99999\
+0 \
+00000\
+\
+\
+ hello hello hello\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 hello\
+hello hello\
+\
+hello hello hello\
+hello hello\
+hello\
+\'91\'92\'92\'92\'94hello\'92hello hello\'92v\
+}

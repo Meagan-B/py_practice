@@ -7,10 +7,16 @@ fhand = open(usr_dir)
 count = 0
 for line in fhand:
     words = line.split()
-    # print('Debug:', words)
-    if len(words) == 0 : continue
-    if words[0] != 'From' : continue
-    print(words[2])
+    # print(words)
+    # if len(words) < 1 or words == '' or words[0] != 'From':
+    #     print('IGNORE', words)
+    if len(words) < 1 or words == '' or words[0] != 'From': continue
+    count += 1
+if count == 0 :
+    print('NOT DETECTED')
+else :
+    print(count, words)
+
 
 
 # Exercise 3: Rewrite the guardian code in the above example without two if statements. Instead, use a compound logical expression
