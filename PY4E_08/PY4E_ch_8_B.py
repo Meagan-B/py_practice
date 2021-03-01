@@ -31,4 +31,4 @@ for line in fhand :
 if count == 0 :
     print('NOT DETECTED')
 else :
-    print(count)
+     print('There were %s lines in the file with From as the first word' % count)
