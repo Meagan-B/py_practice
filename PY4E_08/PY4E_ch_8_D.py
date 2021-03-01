@@ -10,15 +10,24 @@
 # check to see if the word is already in the list of unique words. If the word is not in the list of unique words,
 # add it to the list. When the program completes, sort and print the list of unique words in alphabetical order.
 
-ss_uniq_wrds = list()
 
+
+ss_uniq_wrds = list()
+# creates empty list for loop below to fill
 usr_inp = input('enter file name >>> ')
 fhandle = open(usr_inp)
+# user inputs file to be processed, open() opens the file
 
 for lines in fhandle :
     words = lines.split()
-    ss_uniq_wrds += words
-
+    # splits the sting of words in fhandle into list items
+    for word in words :
+        if word in ss_uniq_wrds : continue
+        # passes words already collected in our list ss_uniq_wrds
+        else :
+            ss_uniq_wrds.append(word)
+            # adds new words to our list
 
 ss_uniq_wrds.sort()
+# sorts our newly created list, because captials sort differently it isnt strickly alphabetical
 print(ss_uniq_wrds)
