@@ -10,7 +10,7 @@
 # check to see if the word is already in the list of unique words. If the word is not in the list of unique words,
 # add it to the list. When the program completes, sort and print the list of unique words in alphabetical order.
 
-ss_uniq_wrds = []
+ss_uniq_wrds = list()
 
 usr_inp = input('enter file name >>> ')
 fhandle = open(usr_inp)
@@ -19,4 +19,6 @@ for lines in fhandle :
     words = lines.split()
     ss_uniq_wrds += words
 
+
+ss_uniq_wrds.sort()
 print(ss_uniq_wrds)
