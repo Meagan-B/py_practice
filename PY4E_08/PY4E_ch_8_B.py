@@ -22,16 +22,13 @@ fhand = open(usr_dir)
 count = 0
 for line in fhand :
     if line.startswith('From ') :
-        print(line)
+        # print(line)
         words = line.split()
-        print(words)
-    # if len(words) < 1 or words == '' or words[0] != 'From':
-    #     print('IGNORE', words)
-    # if len(words) < 1 or words == '' or words[0] != 'From ': continue
-    # count += 1
-    # print(count)
-    # print(words)
-# if count == 0 :
-#     print('NOT DETECTED')
-# else :
-#     print(count, words)
+        print(words[1])
+        # print(len(words))
+        count += 1
+
+if count == 0 :
+    print('NOT DETECTED')
+else :
+    print(count)
