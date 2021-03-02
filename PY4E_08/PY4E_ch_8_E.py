@@ -15,7 +15,7 @@ while True :
     count += 1
 
 usr_min = min(usr_nums)
-isr_max = max(usr_nums)
+usr_max = max(usr_nums)
 
 print('%s was your MINIMUM value ' % usr_min)
 print('%s was your MAXIMUM value ' % usr_max)
