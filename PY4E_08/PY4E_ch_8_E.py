@@ -8,14 +8,19 @@ usr_nums = list()
 
 count = 0
 while True :
-    usr_inp = input('enter numbers (enter done, when finished) >>> ')
+    usr_inp = input('enter value to sort (when finished, enter done) >>> ')
     if usr_inp == 'done': break
+    elif usr_inp == ' ' : continue
+    try :
+        f_usr_inp = float(usr_inp)
+    except ValueError : continue
     else :
-        usr_nums.append(usr_inp)
+        usr_nums.append(f_usr_inp)
     count += 1
 
 usr_min = min(usr_nums)
 usr_max = max(usr_nums)
+usr_sum = sum(usr_nums)
 
 print('%s was your MINIMUM value ' % usr_min)
 print('%s was your MAXIMUM value ' % usr_max)
