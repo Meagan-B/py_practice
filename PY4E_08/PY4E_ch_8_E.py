@@ -4,11 +4,12 @@
 #
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+print("welcome enter NUMBERS to sort, ENTER 'done' to process")
 usr_nums = list()
 
 count = 0
 while True :
-    usr_inp = input('enter value(ONLY SORTS NUMBERS) to sort (ENTER "done" TO SORT) >>> ')
+    usr_inp = input('enter value >>> ')
     if usr_inp == 'done': break
     elif usr_inp == ' ' : continue
     try :
