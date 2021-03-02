@@ -9,7 +9,7 @@ usr_nums = list()
 
 usr_inp = input('enter numbers (enter done, when finished) >>> ')
 count = 0
-while usr_inp is <= 0 or usr_innp > 0 :
+while usr_inp is = 0 or usr_innp > 0 or usr_inp < 0 :
     print(usr_inp)
     for items in usr_nums :
         if item in usr_nums : continue
