@@ -5,17 +5,13 @@
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 usr_nums = list()
-# creates empty list for loop below to fill
 
-usr_inp = input('enter numbers (enter done, when finished) >>> ')
 count = 0
-while usr_inp is = 0 or usr_innp > 0 or usr_inp < 0 :
-    print(usr_inp)
-    for items in usr_nums :
-        if item in usr_nums : continue
-        elif item in usr_nums == 'done': break
-        else :
-            usr_nums.append(usr_inp)
+while True :
+    usr_inp = input('enter numbers (enter done, when finished) >>> ')
+    if usr_inp == 'done': break
+    else :
+        usr_nums.append(usr_inp)
     count += 1
 
 
