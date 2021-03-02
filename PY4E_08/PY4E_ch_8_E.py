@@ -8,7 +8,7 @@ usr_nums = list()
 
 count = 0
 while True :
-    usr_inp = input('enter value(ONLY SORTS NUMBERS) to sort (when finished, enter done) >>> ')
+    usr_inp = input('enter value(ONLY SORTS NUMBERS) to sort (ENTER "done" TO SORT) >>> ')
     if usr_inp == 'done': break
     elif usr_inp == ' ' : continue
     try :
