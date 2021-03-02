@@ -9,13 +9,15 @@ usr_nums = list()
 
 usr_inp = input('enter numbers (enter done, when finished) >>> ')
 count = 0
-while usr_inp is =< 0 or > 0 :
+while usr_inp is <= 0 or usr_innp > 0 :
     print(usr_inp)
-    if item in usr_nums : continue
-    elif item in usr_nums == 'done': break
-    else :
-        usr_nums.append(usr_inp)
+    for items in usr_nums :
+        if item in usr_nums : continue
+        elif item in usr_nums == 'done': break
+        else :
+            usr_nums.append(usr_inp)
     count += 1
-    
+
 
 print(usr_nums)
+print(count)
