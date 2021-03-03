@@ -15,3 +15,14 @@
 
 a_lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c_lst = [a_lst, b_lst]
+e_lst = []
+
+for items in c_kst :
+    if item in a_list
+
+
+print(c_lst)
+
+for
+# e_lst = list()
