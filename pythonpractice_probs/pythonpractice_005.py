@@ -17,7 +17,7 @@ a_lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c_lst = [a_lst, b_lst]
 e_lst = list()
-s_lst = list()
+
 
 # for item in c_lst :
 while True :
@@ -25,11 +25,9 @@ while True :
         print(item)
         e_lst.append(item)
         print(e_lst)
-    elif item in b_lst == item in a_lst and not in e_lst :
+    elif item in b_lst == item in a_lst and item not in e_lst :
         print(item)
         e_lst.append(item)
-    elif :
-        s_lst.append(item)
         break
 
 print('end')
