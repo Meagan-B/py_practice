@@ -16,14 +16,21 @@
 a_lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c_lst = [a_lst, b_lst]
-e_lst = []
+e_lst = list()
+s_lst = list()
 
-for items in c_kst :
-    if item in a_list == item in b_lst :
+# for item in c_lst :
+while True :
+    if item in a_lst == item in b_lst :
+        print(item)
         e_lst.append(item)
+        print(e_lst)
+    elif item in b_lst == item in a_lst and not in e_lst :
+        print(item)
+        e_lst.append(item)
+    elif :
+        s_lst.append(item)
+        break
 
-
-print(e_lst)
-
-
+print('end')
 # e_lst = list()
