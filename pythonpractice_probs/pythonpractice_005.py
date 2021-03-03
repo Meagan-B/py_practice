@@ -19,10 +19,11 @@ c_lst = [a_lst, b_lst]
 e_lst = []
 
 for items in c_kst :
-    if item in a_list
+    if item in a_list == item in b_lst :
+        e_lst.append(item)
 
 
-print(c_lst)
+print(e_lst)
 
-for
+
 # e_lst = list()
