@@ -12,9 +12,8 @@ for word in fhandl :
     d[word] = d.get(word,0) + 1
 print(d)
 
-
-
-
+# long way?
+# 
 # for word in fhandl :
 #     items = lines.split()
 #     # splits the sting of words in fhandle into list items
