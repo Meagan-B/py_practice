@@ -16,20 +16,21 @@
 usr_inp = input('enter file name >>> ')
 fhandl = open(usr_inp)
 
-prsd_wrds = list()
+prsd_lines = list()
 count = 0
-for line in fhand:
+for line in fhandl:
     words = line.split()
     # print(words)
     # if len(words) < 1 or words == '' or words[0] != 'From':
     #     print('IGNORE', words)
     if len(words) < 1 or words == '' or words[0] != 'From': continue
-    count += 1
+    else :
+        prsd_lines.append(words[2:])
+        count += 1
 if count == 0 :
         print('NOT DETECTED')
-    else :
-        prsd_wrds.append(words)
-print(prsd_wrds)
+
+print(prsd_lines[0])
 
 # d = dict()
 #
