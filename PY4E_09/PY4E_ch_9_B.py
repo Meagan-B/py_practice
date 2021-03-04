@@ -12,3 +12,5 @@
 # {'Fri': 20, 'Thu': 6, 'Sat': 1}
 #
 #  >>>>>>>>>>>>>>>>>>>>>
+stuff = dict()
+print(stuff.get('candy',-1))
