@@ -25,15 +25,13 @@ for line in fhandl:
     #     print('IGNORE', words)
     if len(words) < 1 or words == '' or words[0] != 'From': continue
     else :
-        prsd_lines.append(words[2:])
+        prsd_lines.append(words[2])
         count += 1
 if count == 0 :
         print('NOT DETECTED')
 
-print(prsd_lines[0])
 
-# d = dict()
-#
-# for word in prsd :
-#     d[word] = d.get(word,0) + 1
-# print(d)
+d = dict()
+for dotw in prsd_lines :
+    d[dotw] = d.get(dotw,0) + 1
+print(d)
