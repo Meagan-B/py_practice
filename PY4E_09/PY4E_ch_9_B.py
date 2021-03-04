@@ -12,5 +12,27 @@
 # {'Fri': 20, 'Thu': 6, 'Sat': 1}
 #
 #  >>>>>>>>>>>>>>>>>>>>>
-stuff = dict()
-print(stuff.get('candy',-1))
+
+usr_inp = input('enter file name >>> ')
+fhandl = open(usr_inp)
+
+prsd_wrds = list()
+count = 0
+for line in fhand:
+    words = line.split()
+    # print(words)
+    # if len(words) < 1 or words == '' or words[0] != 'From':
+    #     print('IGNORE', words)
+    if len(words) < 1 or words == '' or words[0] != 'From': continue
+    count += 1
+if count == 0 :
+        print('NOT DETECTED')
+    else :
+        prsd_wrds.append(words)
+print(prsd_wrds)
+
+# d = dict()
+#
+# for word in prsd :
+#     d[word] = d.get(word,0) + 1
+# print(d)
