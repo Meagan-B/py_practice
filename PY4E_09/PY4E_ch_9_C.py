@@ -10,3 +10,29 @@
 # 'ray@media.berkeley.edu': 1}
 #
 #  >>>>>>>>>>>>>>>>>>>>>
+
+
+
+usr_inp = input('enter file name >>> ')
+fhandl = open(usr_inp)
+
+prsd_lines = list()
+count = 0
+for line in fhandl:
+    words = line.split()
+    # print(words)
+    # if len(words) < 1 or words == '' or words[0] != 'From':
+    #     print('IGNORE', words)
+    if len(words) < 1 or words == '' or words[0] != 'From': continue
+    else :
+        prsd_lines.append(words[1])
+        count += 1
+if count == 0 :
+        print('NOT DETECTED')
+
+# print(prsd_lines)
+
+d = dict()
+for dotw in prsd_lines :
+    d[dotw] = d.get(dotw,0) + 1
+print(d)
