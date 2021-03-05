@@ -39,22 +39,34 @@ for words in prsd_lines :
 # lst = list(d.values())
 # lst.sort()
 
-
-max_val = 0
-max_key = None
-min_val = None
-min_key = None
-for key,count in d.items():
+def dct_max_fun(d) :
+    max_val = 0
+    max_key = None
+    for key,count in d.items():
 # code from PY4E discussion, by Arran Patterson
 # if max is None or count > bigcount:
-    if count > max_val :
-        max_val = count
-        max_key = key
-        print( 'new MAX', max_key, max_val)
-    elif count is None or count < min_val :
-        min_val = count
-        min_key = key
-        print( 'new MIN', min_key, min_val)
+        if count > max_val :
+            max_val = count
+            max_key = key
+    print(max_key, max_val)
+
+dct_max_fun(d)
+
+def dct_min_fun(d) :
+    min_val = None
+    min_key = None
+    for key,count in d.items():
+        if count is None or count < min_val :
+            min_val = count
+            min_key = key
+    print(min_key, min_val)
+
+dct_min_fun(d)
+
+#     elif count is None or count < min_val :
+#         min_val = count
+#         min_key = key
+#         print( 'new MIN', min_key, min_val)
 # print(max_key, max_val)
 # print(min_key, min_val)
 # print('the MOST emails, %s ,were sent by, %s' % max_key, max_val)
