@@ -28,16 +28,11 @@ for line in fhandl:
 if count == 0 :
         print('NOT DETECTED')
 
-# print(prsd_lines)
 
 d = dict()
 for words in prsd_lines :
     d[words] = d.get(words,0) + 1
 
-
-# print(d)
-# lst = list(d.values())
-# lst.sort()
 
 def dct_max_fun(d) :
     max_val = 0
@@ -62,10 +57,9 @@ def dct_min_fun(d) :
     # print(min_key, min_val)
     print('the LEAST emails, {0}, were sent by {1}'.format(min_val, min_key))
 
+
 dct_max_fun(d)
 dct_min_fun(d)
-
-
 #  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ### geeks for geeks
 ## Using min() + list comprehension + values()
