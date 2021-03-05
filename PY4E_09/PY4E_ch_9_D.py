@@ -48,29 +48,23 @@ def dct_max_fun(d) :
         if count > max_val :
             max_val = count
             max_key = key
-    print(max_key, max_val)
+    # print(max_key, max_val)
+    print('the MOST emails, {0}, were sent by {1}'.format(max_val, max_key))
 
-dct_max_fun(d)
 
 def dct_min_fun(d) :
-    min_val = None
+    min_val = 1
     min_key = None
     for key,count in d.items():
-        if count is None or count < min_val :
+        if count == 1 or count < min_val :
             min_val = count
             min_key = key
-    print(min_key, min_val)
+    # print(min_key, min_val)
+    print('the LEAST emails, {0}, were sent by {1}'.format(min_val, min_key))
 
+dct_max_fun(d)
 dct_min_fun(d)
 
-#     elif count is None or count < min_val :
-#         min_val = count
-#         min_key = key
-#         print( 'new MIN', min_key, min_val)
-# print(max_key, max_val)
-# print(min_key, min_val)
-# print('the MOST emails, %s ,were sent by, %s' % max_key, max_val)
-# print('the LEAST emails, %s ,were sent by, %s' % min_key, min_val)
 
 #  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ### geeks for geeks
