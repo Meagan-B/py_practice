@@ -33,37 +33,32 @@ if count == 0 :
 d = dict()
 for words in prsd_lines :
     d[words] = d.get(words,0) + 1
+
+
 # print(d)
-#
 # lst = list(d.values())
 # lst.sort()
-# print(lst)
-for key in d :
-    print(key, d[key])
-for value in d :
-    print(value, d[value])
 
 
-# for val in d :
-#     if val >
-#
-# counts[key]
-
-
-
-
-# print(d.values())
-# max_val = max(d.values())
-# min_val = min(d.values())
-# print(max_val, min_val)
-# key_max = [ key for key in d if d[key] == max_val ]
-# key_min = [ key for key in d if d[key] == min_val ]
-# print(key_max, key_min)
-
-# itm_max = key_max.append(max_val)
-# itm_min = key_min.append(min_val)
-# print('the MOST emails were sent by, %s' % itm_max)
-# print('the LEAST emails were sent by, %s' % itm_min)
+max_val = 0
+max_key = None
+min_val = None
+min_key = None
+for key,count in d.items():
+# code from PY4E discussion, by Arran Patterson
+# if max is None or count > bigcount:
+    if count > max_val :
+        max_val = count
+        max_key = key
+        print( 'new MAX', max_key, max_val)
+    elif count is None or count < min_val :
+        min_val = count
+        min_key = key
+        print( 'new MIN', min_key, min_val)
+# print(max_key, max_val)
+# print(min_key, min_val)
+# print('the MOST emails, %s ,were sent by, %s' % max_key, max_val)
+# print('the LEAST emails, %s ,were sent by, %s' % min_key, min_val)
 
 #  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ### geeks for geeks
