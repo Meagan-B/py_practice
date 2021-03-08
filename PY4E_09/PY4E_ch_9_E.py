@@ -10,27 +10,26 @@
 import string
 
 
-usr_fil = input('Enter a file name: ')
-f_handl = open(usr_fil)
+usr_inp = input('enter file name >>> ')
+f_handl = open(usr_inp)
 
 
-email_d = dict()
-count = 0
-for line in f_handl :
-    if len(line) < 1 or line == ' ' or line[0] != 'From' : continue
-    else :
-        line = line.rstrip()
-        line = translate(maketrans('.', string.punctuation))
-        line = line.lower()
-        words = line.split()
-        for word in words :
-            if word not in email_d:
-                email_d[word] = 1
-            else :
-                email_d[word] += 1
-        prsd_lines.append(words)
-        print(prsd_lines)
-        count += 1
-# if count == 0 :
-#         print('NOT DETECTED')
-print(email_d)
+d = dict()
+for line in f_handl:
+    if line.startswith('From:') :
+        # print(line)
+        l_splt = line.split()
+        # print(l_splt[1])
+        e_addr = l_splt[1]
+        uname, domain = e_addr.split('@')
+        # print(domain)
+        d[domain] = d.get(domain, 0) + 1
+
+
+# print(d.keys())
+# print(d.values())
+# print(d.items())
+print(sorted([(v, k) for k, v in d.items()], reverse=True))
+
+#  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+### copypaste of code from PY4E_ch_9_D
