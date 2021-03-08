@@ -22,7 +22,8 @@ for line in f_handl:
         e_addr = l_splt[1]
         uname, domain = e_addr.split('@')
         # print(domain)
-        d[domain] = d.get(domain, 0) + 1
+        # d[domain] = d.get(domain, 0) + 1
+        d[uname] = d.get(uname, 0) + 1
 
 
 # print(d.keys())
@@ -42,7 +43,7 @@ def dct_max_fun(d) :
     # print(max_key, max_val)
     print('the MOST emails, {0}, were sent by {1}'.format(max_val, max_key))
 
-dct_max_fun()    
+dct_max_fun(d)
 
 #  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ### copypaste of code from PY4E_ch_8_D
