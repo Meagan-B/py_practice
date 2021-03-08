@@ -7,3 +7,25 @@
 # 'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}
 #
 #  >>>>>>>>>>>>>>>>>>>>>
+
+usr_fil = input('Enter a file name: ')
+f_handl = open(usr_fil)
+
+
+prsd_lines = list()
+count = 0
+for line in f_handl :
+    l_splt = line.split()
+    if len(l_splt) < 1 or l_splt == ' ' or l_splt[0] != 'From' : continue
+    else :
+        prsd_lines.append(line)
+        print(prsd_lines)
+        count += 1
+if count == 0 :
+        print('NOT DETECTED')
+
+
+email_d = dict()
+for words in prsd_lines :
+    email_d[words] = email.d(words, 0) + 1
+print(email_d)    
