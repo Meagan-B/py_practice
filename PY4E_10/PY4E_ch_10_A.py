@@ -46,4 +46,4 @@ def dct_max_fun(d) :
 dct_max_fun(d)
 
 #  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-### copypaste of code from PY4E_ch_8_D
+### copypaste of code from PY4E_ch_9_E
