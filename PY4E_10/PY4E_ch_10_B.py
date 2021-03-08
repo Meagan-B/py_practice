@@ -25,13 +25,13 @@ for line in f_handl:
         print(hrs_ext)
         # d[domain] = d.get(domain, 0) + 1
         # d[uname] = d.get(uname, 0) + 1
-        # d[hrs] = d.get(hrs, 0) + 1
+        d[hrs_ext] = d.get(hrs_ext, 0) + 1
 
 # print(d.keys())
 # print(d.values())
 # print(d.items())
-# print(sorted([(v, k) for k, v in d.items()], reverse=True))
-
+hrs_srtd = sorted([(k, v) for k, v in d.items()], reverse=True)
+print(hrs_srtd)
 
 # def dct_max_fun(d) :
 #     max_val = 0
@@ -43,8 +43,8 @@ for line in f_handl:
 #             max_val = count
 #             max_key = key
 #     # print(max_key, max_val)
-#     print('the MOST emails, {0}, were sent by {1}'.format(max_val, max_key))
-
+#     # print('the MOST emails, {0}, were sent by {1}'.format(max_val, max_key))
+#
 # dct_max_fun(d)
 
 #  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
