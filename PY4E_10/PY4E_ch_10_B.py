@@ -15,14 +15,15 @@ f_handl = open(usr_inp)
 d = dict()
 for line in f_handl:
     if line.startswith('From ') :
-        print(line)
+        # print(line)
         l_splt = line.split()
         # print(l_splt[1])
         # e_addr = l_splt[1]
         hrs = l_splt[5]
         time_brk = hrs.split(':')
+        # print(time_brk)
         hrs_ext = time_brk[0]
-        print(hrs_ext)
+        # print(hrs_ext)
         # d[domain] = d.get(domain, 0) + 1
         # d[uname] = d.get(uname, 0) + 1
         d[hrs_ext] = d.get(hrs_ext, 0) + 1
@@ -30,8 +31,10 @@ for line in f_handl:
 # print(d.keys())
 # print(d.values())
 # print(d.items())
-hrs_srtd = sorted([(k, v) for k, v in d.items()], reverse=True)
-print(hrs_srtd)
+for k, v in sorted(d.items()) :
+    print(k, v)
+# hrs_srtd = sorted([(k, v) for k, v in d.items()], reverse=True)
+# print(hrs_srtd)
 
 # def dct_max_fun(d) :
 #     max_val = 0
