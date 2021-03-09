@@ -5,3 +5,23 @@
 # Find text samples from several different languages and see how letter frequency varies between languages.
 # #
 # ------------------------------
+import string
+usr_file = input('FILE NAME >>>')
+f_handl = opent(usr_file)
+
+
+for line in fhandl :
+    line = line.rstrip()
+    line = line.translate(str.maketrans(' ' , string.punctuation))
+    line = line.lower()
+    words = line.split()
+    print(words)
+    lttrs = words.split
+    print(lttrs)
+
+# make dictionary of letters (lttrs)
+
+# d_lttrs = dict()
+
+
+# Sort the dictionary by value
