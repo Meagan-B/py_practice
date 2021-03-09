@@ -7,7 +7,7 @@
 # 'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}
 #
 #  >>>>>>>>>>>>>>>>>>>>>
-import string
+
 
 
 usr_inp = input('enter file name >>> ')
