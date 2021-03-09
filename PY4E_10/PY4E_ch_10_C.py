@@ -11,9 +11,12 @@ f_handl = opent(usr_file)
 
 
 for line in fhandl :
+    print(line)
     line = line.rstrip()
+    print(line)
     line = line.translate(str.maketrans(' ' , string.punctuation))
     line = line.lower()
+    print(line)
     words = line.split()
     print(words)
     lttrs = words.split
