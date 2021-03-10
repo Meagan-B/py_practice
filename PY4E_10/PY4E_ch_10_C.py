@@ -14,20 +14,24 @@ for line in f_handl :
     # print(line)
     line = line.rstrip()
     # print(line)
-    line = line.translate(str.maketrans('', '', string.punctuation))
     line = line.lower()
+    line = line.translate(str.maketrans('', '', string.punctuation))
     # print(line)
     words = line.split()
     # print(words)
-    lttrs = list(str(words))
+    # lttrs = list(str(words))
     # print(lttrs)
-    for l in lttrs :
-        if l == ' ' or l == "'" or l == None : continue
-        d_lttrs[l] = d_lttrs.get(l, 0) + 1
+    for word in words :
+        chars = tuple(word)
+        for ls in chars :
+            if ls == ' ' or ls == None : continue
+        d_lttrs[ls] = d_lttrs.get(ls, 0) + 1
 
 
-print(d_lttrs)
-
+for k, v in sorted([(k,v) for v, k in d_lttrs.items()], reverse=True) :
+    # print(v,k)
+    print(k,v)
+# print(sorted([(v, k) for k, v in d.items()], reverse=True))
 
 
     # lttrs = words.split
