@@ -37,6 +37,6 @@ elif score >= 0.7 :
 # user inout is greater than or equal to .6
 elif score >= 0.6 :
     print(score, ' = ', 'D')
-# if not above statements are met, else 
+# if not above statements are met, else
 else :
     print(score, ' = ', 'F')
