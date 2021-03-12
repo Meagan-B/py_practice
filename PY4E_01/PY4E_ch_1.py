@@ -1,4 +1,4 @@
 #what is wrong with the following code
 
-#prinmt 'hello world'
+# prints 'hello world'
 print('hello world')
