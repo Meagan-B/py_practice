@@ -10,9 +10,11 @@ try :
     # rate variable will contain a float given to C by user via the input() funtion, here an hourly rate
     rate = float(input('hourly rate: '))
 # if the try fails except will take over, maybe user enters a character instead of a number, this is a broad except and I need to spend
+# ?????????????????????????
 # additional time learning more about exceptions
 except :
-    # returns the argument inside () here that is a string, 'numbers only', this functions as a custom error message 
+# ?????????????????????????    
+    # returns the argument inside () here that is a string, 'numbers only', this functions as a custom error message
     print('numbers only')
 
 print('pay: ', hrs * rate)
