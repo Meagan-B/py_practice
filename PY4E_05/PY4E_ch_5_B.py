@@ -10,8 +10,12 @@
 #Enter a number: 7
 #Enter a number: done
 #16 3 5.333333333333333
+#
+# >>>>>>>>>>>>>>>>>>>>>>>>>>
 
+# count variable will hold value of number of items collected
 count = 0
+# total variable wil hold value of the sum of all numbers in user input filled list
 total = 0.0
 print('WELCOME, please enter numbers only & when you are done enter "done"')
 while True :
