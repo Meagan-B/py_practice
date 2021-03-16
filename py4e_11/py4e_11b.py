@@ -18,3 +18,4 @@ for line in f_handl :
             # num_collect.append(int(num_find))
 
 print(num_collect)
+# 
