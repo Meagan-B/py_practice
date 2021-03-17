@@ -10,12 +10,16 @@ f_handl = open(file_inp)
 
 num_collect = []
 for line in f_handl :
-    # line = line.rstrip()
-    if re.search('\s([0-9]+)', line) is not None :
-        num_find = re.findall('\s([0-9]+)', line)
-        if len(num_find) > 0 :
-            print(num_find)
-            # num_collect.append(int(num_find))
+    if re.search('[0-9]+', line) is not None:
+        line = line.rstrip()
+        line = line.split()
+        for item in line :
+            num_find = re.findall('[0-9]+', item)
+            # print(num_find)
+            if len(num_find) == 1 :
+                num_collect.append(int(num_find))
+            # elif len(num_find) > 1 :
+            #     for item
 
-print(num_collect)
-# 
+# print(num_collect)
+#
