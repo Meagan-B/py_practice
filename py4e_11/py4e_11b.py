@@ -24,8 +24,10 @@ for line in f_handl :
         for i in num_find :
             # if the length of element (i) is not equal to zero OR a value of None the following loop is executed
             if len(i) != 0 or len(i) is not None :
-                # converts element(i) from num_find to float value
-                num = float(i)
+                # # converts element(i) from num_find to float value
+                # num = float(i)
+                # converts element(i) from num_find to integer value
+                num = int(i)
                 # appends (adds to the end) value of num (assigned above)
                 num_collect.append(num)
             # cut else loop in favor of second for loop to break apart items in num_find, as some lines had multiple digits to collect.
