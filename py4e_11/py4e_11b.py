@@ -17,7 +17,7 @@ for line in f_handl :
         for i in num_find :
             if len(items) != 0 or len(items) is not None :
                 num = float(i)
-                # num_collect.append(num)
+                num_collect.append(num)
         # elif len(num_find) > 1 :
         #     print('Len=2', num_find)
         #     num_splt = item.split()
@@ -27,4 +27,4 @@ for line in f_handl :
                 # num_collect.append(num)
 
 
-# print(num_collect)
+print(num_collect)
