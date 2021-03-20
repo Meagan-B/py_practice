@@ -1,7 +1,7 @@
 # Ask the user for a string and print out whether this string is a palindrome or not. (A palindrome is a string that reads the same forwards and backwards.)
 #
 # >>>>>>>>>>>>>>>>>>>>>
-# WIP
+
 
 usr_word = input('enter STRING >>> ')
 print('checking for palindromes……')
@@ -14,7 +14,7 @@ if usr_chars == lst_rv :
 else :
     print('……better luck next time :(')
 
-    
+
 # def check_pdrone() :
 #     if usr_chars == lst_rv :
 #         print('……%s is a palindrome!' % usr_word)
