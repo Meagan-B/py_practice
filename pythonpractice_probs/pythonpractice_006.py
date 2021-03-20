@@ -5,14 +5,19 @@
 
 usr_word = input('enter STRING >>> ')
 print('checking for palindromes……')
-usr_chars = list(usr_word.rstrip())
 
 
-# # break usr_inp into single characters
-# def split(usr_word) :
-#     return(char for char in usr_word)
-#
-print(usr_chars[0])
+def reverse_fun(chars_reverse) :
+    chars_reverse = list(usr_word.rstrip())
+    chars_reverse.reverse()
+    return chars_reverse
 
+def palind_fun(usr_word) :
+    usr_chars = list(usr_word.rstrip())
+    if usr_chars[0] != [-1] :
+        return (usr_word, 'is NOT a palindrome!')
+    if usr_chars == chars_reverse :
+        return (usr_word, 'is a palindrome!')
 
-# if usr_inp[0] == usr_inp[-1] :
+reverse_fun(usr_chars)
+palind_fun(usr_word)
