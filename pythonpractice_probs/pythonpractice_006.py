@@ -3,10 +3,16 @@
 # >>>>>>>>>>>>>>>>>>>>>
 # WIP
 
-usr_inp = input('enter STRING >>> ')
+usr_word = input('enter STRING >>> ')
 print('checking for palindromes……')
-usr_inp = usr_inp.split()
-print(usr_inp)
+usr_chars = list(usr_word.rstrip())
+
+
+# # break usr_inp into single characters
+# def split(usr_word) :
+#     return(char for char in usr_word)
+#
+print(usr_chars[0])
 
 
 # if usr_inp[0] == usr_inp[-1] :
