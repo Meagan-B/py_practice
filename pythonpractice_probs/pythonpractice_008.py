@@ -6,7 +6,7 @@
 # Paper beats rock
 #
 # >>>>>>>>>>>>>>>>>>>>>
-
+# WIP
 player_one = input('enter name for player one >>> ')
 player_two = input('enter name for player two >>> ')
 
@@ -53,8 +53,8 @@ oneup = input('would you like to play again?\n enter Y for yes\n enter N for no'
 while True :
     if oneup == 'Y' :
         play_compare()
-    elif oneup == 'N' :
-        Print('~ FINAL SCORES ~\n %s had %s wins\n \n %s had %s wins\n thank you for playing!' % player_one, , player_two,)
+    # elif oneup == 'N' :
+    #     Print('~ FINAL SCORES ~\n %s had %s wins\n \n %s had %s wins\n thank you for playing!' % player_one, , player_two,)
 # ----
 
 
