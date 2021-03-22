@@ -11,6 +11,7 @@
 # Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)
 #
 #>>>>>>>>>>>>>>>>>>>>>
+
 import random
 
 #----
@@ -40,6 +41,7 @@ print('SET MATCH, checks for element matches, does not count duplicates……')
 # print(set_a.intersection(set_b))
 
 #----
+# empty list is created via [], while loop gives us a requirement (len of list, rand_a, to be 10) to complete the loop. for each of the 10 items, variable val is created using the .randit() method (from random module), using our predetermined range (0,100)/0-100, finally appends new value (variable val) to the empty list rand_a, same proccedure with second while loop,
 
 rand_a = []
 while len(rand_a) <10 :
@@ -53,12 +55,14 @@ while len(rand_b) <10 :
     rand_b.append(val)
 
 #----
+# converts our above lists to sets, then prints both using string formatting
 
 set_a = set((rand_a))
 set_b = set((rand_b))
 print('set A : %s' % set_a, 'set B : %s' % set_b)
 
 #----
+# var c contains an 'intersection'/matching of set_a and set_b, beacause we do not want to count dups, collection is a set
 
 c = set_a.intersection(set_b)
 print('%s MATCHES found……' % len(c), c)
