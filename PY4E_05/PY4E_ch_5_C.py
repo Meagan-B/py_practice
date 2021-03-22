@@ -1,9 +1,13 @@
 #Exercise 2: Write another program that prompts for a list of numbers as
 #above and at the end prints out both the maximum and minimum of the numbers
 #instead of the average.
-
+# >>>>>>>>>>>>>>>>>>>
+#
 max = None
 min = None
+
+#----
+#
 while True :
     usr_val = input('enter a number >')
     if usr_val == 'done' or usr_val == 'DONE':
@@ -24,5 +28,9 @@ while True :
         elif num > max :
             max = num
 
+#----
+
 print('Maximum is', max)
 print('Minimum is', min)
+
+#....................

@@ -12,18 +12,17 @@
 #16 3 5.333333333333333
 #
 # >>>>>>>>>>>>>>>>>>>>>>>>>>
-
-# count variable will hold value of number of items collected
+# count variable will hold value of number of items collected, total variable will hold value of the sum of all numbers in user input filled list,
 count = 0
-# total variable will hold value of the sum of all numbers in user input filled list
 total = 0.0
+
+#----
+#
 print('WELCOME, please enter numbers only & when you are done enter "done"')
 while True :
     usr_val = input('enter a number >')
     if usr_val == 'done' or usr_val == 'DONE':
         break
-    #if usr_val == exit :
-        #break
     try :
         float_usr_val = float(usr_val)
     except:
@@ -33,5 +32,9 @@ while True :
     count = count + 1
     total = total + float_usr_val
 
+#----
+
 print('COUNT:',count , '• TOTAL:',total , '• AVG:',total/count)
 print('END')
+
+#......................
