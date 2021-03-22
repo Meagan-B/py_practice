@@ -32,10 +32,10 @@ print('SET MATCH, checks for element matches, does not count duplicates……')
 #----
 
 rand_a = set()
-while len(rand_la) <10 :
+while len(rand_a) <10 :
     val = randint(0,100)
     rand_a.append(val)
-print(rand_a)    
+print(rand_a)
 # rand_b = set()
 # while len(rand_b) <10 :
 #     val = randint(0,100)
