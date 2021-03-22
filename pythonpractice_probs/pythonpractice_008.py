@@ -7,13 +7,14 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 
-player_one = input('enter name for player one')
-# player_two = input('enter name for player two')
+player_one = input('enter name for player one >>> ')
+player_two = input('enter name for player two >>> ')
 
 # ----
+print('~ HOW TO PLAY ~\n using numbers (1,2 or 3), make a play (ROCK, PAPER or SCISSORS)\n ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK\n ~ GAME CONTROLS ~\n 1) ROCK\n 2) PAPER\n 3) SCISSORS')
 
-# round_1_a = input
-round_1_b = input('%s enter play\n……' % , '1) rock', \n, '2) paper', \n '3) scissors')
+round_1_a = input('%s enter your play……\n' % player_one)
+round_1_b = input('%s enter your play……\n' % player_two)
 # ----
 
 
