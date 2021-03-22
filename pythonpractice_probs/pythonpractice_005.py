@@ -22,9 +22,9 @@ lst_b = list(input('enter items for set B >>> '))
 set_a = set((lst_a))
 set_b = set((lst_b))
 print(type(set_a))
-# c = set_a.intersection(set_b)
+c = set_a.intersection(set_b)
 # print(set_a.intersection(set_b))
-# print(c)
+print(type(c), c)
 
 
 # for i in c_lst :
