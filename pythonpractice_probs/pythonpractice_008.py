@@ -16,10 +16,14 @@ player_two = input('enter name for player two >>> ')
 print('~ HOW TO PLAY ~\n using numbers (1,2 or 3), make a play (ROCK, PAPER or SCISSORS)\n ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK\n ~ GAME CONTROLS ~\n 1) ROCK\n 2) PAPER\n 3) SCISSORS' )
 
 # ----
+p1_score = []
+p2_score = []
 
 def play_compare() :
     p1 = int(input('%s enter your play……\n' % player_one))
     p2 = int(input('%s enter your play……\n' % player_two))
+    global p1_score
+    global p2_score
     if p1 == p2:
         print("tie, there is NO winner")
     elif p1 == 1 and p2 == 2:
@@ -45,13 +49,11 @@ def play_compare() :
     # else :
         # print('error')
 
-p1_score = dict()
-p2_score = dict()
+# p1_score = dict()
+# p2_score = dict()
 play_compare()
 # ----
 
-# p1_score = dict()
-# p2_score = dict()
 
 oneup = input('would you like to play again?\n enter Y for yes\n enter N for no')
 while True :
