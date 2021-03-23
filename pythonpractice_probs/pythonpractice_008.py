@@ -35,38 +35,38 @@ while True :
     game = p1_play - p2_play
 
     if game == 0 :
-        print("tie, there is NO winner")
-        if str(input('would you like to play again?\n enter Y for yes\n enter N for no >>> ')) == 'Y' or 'y' : continue
+        print("DRAW, there is NO winner")
+        if str(input('\nwould you like to play again?\nenter Y for yes\nenter N for no\n*CASE SENSITIVE*\n >>> ')) == 'Y' : continue
         else :
             break
     elif game == 1 :
         print(('%s is the winner!' % player_one).upper())
         p1_score += 1
-        if str(input('would you like to play again?\n enter Y for yes\n enter N for no >>> ')) == 'Y' or 'y' : continue
+        if str(input('\nwould you like to play again?\nenter Y for yes\nenter N for no\n*CASE SENSITIVE*\n >>> ')) == 'Y' : continue
         else :
             break
     elif game == -1 :
         print(('%s is the winner!' % player_two).upper())
         p2_score += 1
-        if str(input('would you like to play again?\n enter Y for yes\n enter N for no >>> ')) == 'Y' or 'y' : continue
+        if str(input('\nwould you like to play again?\nenter Y for yes\nenter N for no\n*CASE SENSITIVE*\n >>> ')) == 'Y' : continue
         else :
             break
     elif game == 2 :
         print(('%s is the winner!' % player_two).upper())
         p2_score += 1
-        if str(input('would you like to play again?\n enter Y for yes\n enter N for no >>> ')) == 'Y' or 'y' : continue
+        if str(input('\nwould you like to play again?\nenter Y for yes\nenter N for no\n*CASE SENSITIVE*\n >>> ')) == 'Y' : continue
         else :
             break
     elif game == -2 :
         print(('%s is the winner!' % player_one).upper())
         p1_score += 1
-        if str(input('would you like to play again?\n enter Y for yes\n enter N for no >>> ')) == 'Y' or 'y' : continue
+        if str(input('\nwould you like to play again?\nenter Y for yes\nenter N for no\n*CASE SENSITIVE*\n >>> ')) == 'Y' : continue
         else :
             break
     elif game <= -3 or game >= 3 :
         print('invalid input')
-        if str(input('would you like to play again?\n enter Y for yes\n enter N for no >>> ')) == 'Y' or 'y' : continue
-        elif :
+        if str(input('\nwould you like to play again?\nenter Y for yes\nenter N for no\n*CASE SENSITIVE*\n >>> ')) == 'Y' : continue
+        else:
             break
 
 # ----
