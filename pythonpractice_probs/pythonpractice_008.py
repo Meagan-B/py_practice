@@ -7,6 +7,7 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 # WIP
+
 player_one = input('enter name for player one >>> ')
 player_two = input('enter name for player two >>> ')
 
