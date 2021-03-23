@@ -12,19 +12,19 @@ player_two = input('enter name for player two >>> ')
 
 # ----
 
-print('~ HOW TO PLAY ~\nmake a play by entering "R" for rock\n"P" for paper\n"S" for scissors\n ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK\n')
+print('~ HOW TO PLAY ~\nmake a play by entering "r" for rock\n"p" for paper\n"s" for scissors\n ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK\n')
 
 # ----
 
 p1_score = 0
 p2_score = 0
-rps_game_dict = {'R':1, 'P':2, 'S':3}
+rps_game_dict = {'r':1, 'p':2, 's':3}
 
 # ----
 
 while True :
-    p1 = str(input('%s enter your play……\n("R", "P" or "S")\n*case sensitive*\n >>> ' % player_one))
-    p2 = str(input('%s enter your play……\n("R", "P" or "S")\n*case sensitive*\n >>> ' % player_two))
+    p1 = str(input('%s enter your play……\n("r", "p" or "s")\n*case sensitive*\n >>> ' % player_one))
+    p2 = str(input('%s enter your play……\n("r", "p" or "s")\n*case sensitive*\n >>> ' % player_two))
     p1_play = rps_game_dict.get(p1)
     p2_play = rps_game_dict.get(p2)
     game = p1_play - p2_play
