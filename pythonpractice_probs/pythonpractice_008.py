@@ -17,38 +17,41 @@ print('~ HOW TO PLAY ~\n using numbers (1,2 or 3), make a play (ROCK, PAPER or S
 
 # ----
 
-p1_score = []
-p2_score = []
-
 def play_compare() :
-    p1 = input('%s enter your play……\n' % player_one)
-    p2 = input('%s enter your play……\n' % player_two)
+    p1 = int(input('%s enter your play……\n' % player_one))
+    p2 = int(input('%s enter your play……\n' % player_two))
     if p1 == p2:
         print("tie, there is NO winner")
     elif p1 == 1 and p2 == 2:
-        print('%s is the winner!' % p2)
+        print('%s is the winner!' % player_two)
         p2_score += 1
     elif p1 == 1 and p2 == 3:
-        print('%s is the winner!' % p1)
+        print('%s is the winner!' % player_one)
         p1_score += 1
     elif p1 == 2 and p2 == 3:
-        print('%s is the winner!' % p2)
+        print('%s is the winner!' % player_two)
         p2_score += 1
     elif p1 == 2 and p2 == 1:
-        print('%s is the winner!' % p1)
+        print('%s is the winner!' % player_one)
         p1_score += 1
     elif p1 == 3 and p2 == 2:
-        print('%s is the winner!' % p1)
+        print('%s is the winner!' % player_one)
         p1_score += 1
     elif p1 == 3 and p2 == 1:
-        print('%s is the winner!' % p2)
+        print('%s is the winner!' % player_two)
         p2_score += 1
     elif p1 > 3 or p1 < 1 or p2 > 3 or p2 < 1 :
         print('invalid input')
+    # else :
+        # print('error')
 
+p1_score = dict()
+p2_score = dict()
 play_compare()
-print(p1_score)
 # ----
+
+# p1_score = dict()
+# p2_score = dict()
 
 oneup = input('would you like to play again?\n enter Y for yes\n enter N for no')
 while True :
