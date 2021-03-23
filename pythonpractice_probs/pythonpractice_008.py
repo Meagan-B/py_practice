@@ -6,7 +6,6 @@
 # Paper beats rock
 #
 # >>>>>>>>>>>>>>>>>>>>>
-# WIP
 
 player_one = input('enter name for player one >>> ')
 player_two = input('enter name for player two >>> ')
@@ -24,8 +23,8 @@ rps_game_dict = {'R':1, 'P':2, 'S':3}
 # ----
 
 while True :
-    p1 = str(input('%s enter your play……\n("R", "P" or "S") >>> ' % player_one))
-    p2 = str(input('%s enter your play……\n("R", "P" or "S") >>> ' % player_two))
+    p1 = str(input('%s enter your play……\n("R", "P" or "S")\n*case sensitive*\n >>> ' % player_one))
+    p2 = str(input('%s enter your play……\n("R", "P" or "S")\n*case sensitive*\n >>> ' % player_two))
     p1_play = rps_game_dict.get(p1)
     p2_play = rps_game_dict.get(p2)
     game = p1_play - p2_play
@@ -67,5 +66,6 @@ while True :
 
 # ----
 
+print('thank you for playing\n~ GAME OVER ~')
 
 # ...........................
