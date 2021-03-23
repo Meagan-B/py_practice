@@ -13,38 +13,36 @@ player_two = input('enter name for player two >>> ')
 
 # ----
 
-print('~ HOW TO PLAY ~\n using numbers (1,2 or 3), make a play (ROCK, PAPER or SCISSORS)\n ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK\n ~ GAME CONTROLS ~\n 1) ROCK\n 2) PAPER\n 3) SCISSORS' )
+print('~ HOW TO PLAY ~\n using numbers (1,2 or 3), make a play (ROCK, PAPER or SCISSORS)\n ROCK beats SCISSORS\n SCISSORS beats PAPER\n PAPER beats ROCK\n' )
 
 # ----
+
 p1_score = []
 p2_score = []
+rps_game_dict = {'rock':1, 'paper':2, 'scissors':3}
+
 
 def play_compare() :
-    p1 = int(input('%s enter your play……\n' % player_one))
-    p2 = int(input('%s enter your play……\n' % player_two))
+    p1 = input('%s enter your play……\n (rock, paper or scissors)' % player_one)
+    p2 = input('%s enter your play……\n (rock, paper or scissors)' % player_two)
     global p1_score
     global p2_score
-    if p1 == p2:
+    game = p1 - p2
+    if game == 0 :
         print("tie, there is NO winner")
-    elif p1 == 1 and p2 == 2:
+    elif game == 1 :
+        print('%s is the winner!' % player_one)
+        p2_score += 1
+    elif game == -1 :
+        print('%s is the winner!' % player_two)
+        p1_score += 1
+    elif game == 2 :
         print('%s is the winner!' % player_two)
         p2_score += 1
-    elif p1 == 1 and p2 == 3:
+    elif game == -2 :
         print('%s is the winner!' % player_one)
         p1_score += 1
-    elif p1 == 2 and p2 == 3:
-        print('%s is the winner!' % player_two)
-        p2_score += 1
-    elif p1 == 2 and p2 == 1:
-        print('%s is the winner!' % player_one)
-        p1_score += 1
-    elif p1 == 3 and p2 == 2:
-        print('%s is the winner!' % player_one)
-        p1_score += 1
-    elif p1 == 3 and p2 == 1:
-        print('%s is the winner!' % player_two)
-        p2_score += 1
-    elif p1 > 3 or p1 < 1 or p2 > 3 or p2 < 1 :
+    elif game <= -3 or game >= 3 :
         print('invalid input')
     # else :
         # print('error')
