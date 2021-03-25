@@ -30,13 +30,16 @@ while True :
     rand_select = random.randint(1, 9)
 
     if game == 'exit' : break
-elif game is rand_select :
-    print('~~~~~~~~ WINNER ~~~~~~~~\nyour guess ( %s ) is correct!' % game)
-    # if game == 0 :
-    #     print('\n<<<< DRAW, there is NO winner >>>>')
-    #     if input('\nwould you like to play again?\n"Y" for yes\nenter to QUIT\n*CASE SENSITIVE*\n >>> ') == 'Y' : continue
-    #     else :
-    #         break
+    elif game is rand_select :
+        print('******** WINNER ********\nyour guess ( %s ) is correct!' % game)
+        if input('\nenter another number to continue playing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+    elif game is < rand_select :
+        print('\nyour guess ( %s ) is TOO LOW' % game)
+        if input('\nenter another number to continue playing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+    elif game is > rand_select :
+        print('\nyour guess ( %s ) is TOO HIGH' % game)
+        if input('\nenter another number to continue playing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+
 # ----
 
 print('\nxxXXXXxx GAME OVER xxXXXXxx')
