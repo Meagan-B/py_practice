@@ -11,12 +11,13 @@ import random
 
 # ----
 
-print('\n•••••••• HOW TO PLAY ••••••••\nguess a randomly selected number from 1-9\ninput a NUMBER from 1-9\nenter "exit" to end program\n')
+print('\n•••••••• HOW TO PLAY ••••••••\nguess a randomly selected number\ninput a NUMBER from 1-9\nenter "exit" to end program\n')
 
 # ----
 
 p_guess = 0
 game = None
+
 # ----
 
 rand_select = random.randint(1, 9)
