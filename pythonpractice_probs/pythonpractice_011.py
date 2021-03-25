@@ -5,7 +5,8 @@
 
 # ----
 
-usr_num = int(input('enter a number for a list of its divisors, from 1-10. >> '))
+def get_int() :
+    usr_num = int(input('enter a number for a list of its divisors, from 1-10. >> '))
 
 # ----
 
@@ -14,21 +15,18 @@ b = []
 
 # ----
 
-for i in nums :
-    if usr_num > 1 :
-        if usr_num % 2 == 0 : break
-    else :
+# for i in nums :
+if usr_num > 1 :
+    if usr_num % 2 == 0 :
         print('\n%s is NOT a prime number' % usr_num)
         break
 
 # ----
 
-print(b)
+# print(b)
 
 
 # ----
-
-print(math.gcd(list(range(1, 10))))
 
 # ----
 
