@@ -26,6 +26,10 @@ import random
 while True :
     print('\n•••••••• NEW GAME ••••••••\n')
 
+    game =
+    rand_select = random.randint(1, 9)
+
+    if game == 'exit' : break
     # if game == 0 :
     #     print('\n<<<< DRAW, there is NO winner >>>>')
     #     if input('\nwould you like to play again?\n"Y" for yes\nenter to QUIT\n*CASE SENSITIVE*\n >>> ') == 'Y' : continue
