@@ -5,12 +5,27 @@
 
 # ----
 
+usr_num = int(input('enter a number for a list of its divisors, from 1-10. >> '))
 
 # ----
 
+nums = list(range(1, 10))
+b = []
 
 # ----
 
+for i in nums :
+    if usr_num < 1 : continue
+    if usr_num % 2 == 0 : continue
+
+# ----
+
+print(b)
+
+
+# ----
+
+print(math.gcd(list(range(1, 10))))
 
 # ----
 
