@@ -16,33 +16,33 @@ print('\n•••••••• HOW TO PLAY ••••••••\nguess a 
 # ----
 
 p_guess = 0
-
+game = None
 # ----
 
 rand_select = random.randint(1, 9)
 
 # ----
 
-while True :
+while game != 'exit' :
 
     game = input('\nenter your guess below……\nNUMBERs from 1-9 ONLY\n>>> ')
 
-    if game != 'exit' :
-        game = int(game)
-    elif game == 'exit' : break
+    if game == 'exit' : break
+
+    game = int(game)
 
     if game is rand_select :
-        print('******** WINNER ********\nyour guess ( %s ) is correct!' % game)
         p_guess += 1
+        print('******** WINNER ********\nyour guess ( %s ) is correct!\nit took %s guesses to win' % (game, p_guess))
         break
     elif game < rand_select :
-        print('\nyour guess ( %s ) was TOO LOW\nthe random number was……%s' % game rand_select)
+        print('\nyour guess ( %s ) was TOO LOW\n' % game)
         p_guess += 1
-        if input('\nenter another number to continue guessing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+        continue
     elif game > rand_select :
-        print('\nyour guess ( %s ) was TOO HIGH\nthe random number was……%s' % game rand_select)
+        print('\nyour guess ( %s ) was TOO HIGH\n' % game)
         p_guess += 1
-        if input('\nenter another number to continue guessing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+        continue
 
 # ----
 
