@@ -26,7 +26,7 @@ import random
 while True :
     print('\n•••••••• NEW GAME ••••••••\n')
 
-    game = input()
+    game = input('\nenter your guess below……\nNUMBERs from 1-9 ONLY\n>>> ')
     rand_select = random.randint(1, 9)
 
     if game == 'exit' : break
