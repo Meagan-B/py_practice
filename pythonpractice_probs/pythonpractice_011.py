@@ -15,8 +15,11 @@ b = []
 # ----
 
 for i in nums :
-    if usr_num < 1 : continue
-    if usr_num % 2 == 0 : continue
+    if usr_num > 1 :
+        if usr_num % 2 == 0 : break
+    else :
+        print('\n%s is NOT a prime number' % usr_num)
+        break
 
 # ----
 
