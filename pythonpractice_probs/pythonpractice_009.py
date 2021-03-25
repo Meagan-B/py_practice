@@ -11,7 +11,7 @@ import random
 
 # ----
 
-print('\n•••••••• HOW TO PLAY ••••••••\nguess, a randomly selected number from 1-9\ninput a NUMBER from 1-9\nenter "exit" to end program\n')
+print('\n•••••••• HOW TO PLAY ••••••••\nguess a randomly selected number from 1-9\ninput a NUMBER from 1-9\nenter "exit" to end program\n')
 
 # ----
 
@@ -24,7 +24,6 @@ rand_select = random.randint(1, 9)
 # ----
 
 while True :
-    print('\n•••••••• NEW GAME ••••••••\n')
 
     game = input('\nenter your guess below……\nNUMBERs from 1-9 ONLY\n>>> ')
 
@@ -37,11 +36,11 @@ while True :
         p_guess += 1
         break
     elif game < rand_select :
-        print('\nyour guess ( %s ) was TOO LOW\nthe random number was……%s' % game, rand_select)
+        print('\nyour guess ( %s ) was TOO LOW\nthe random number was……%s' % game rand_select)
         p_guess += 1
         if input('\nenter another number to continue guessing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
     elif game > rand_select :
-        print('\nyour guess ( %s ) was TOO HIGH\nthe random number was……%s' % game, rand_select)
+        print('\nyour guess ( %s ) was TOO HIGH\nthe random number was……%s' % game rand_select)
         p_guess += 1
         if input('\nenter another number to continue guessing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
 
