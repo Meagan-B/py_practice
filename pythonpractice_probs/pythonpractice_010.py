@@ -14,15 +14,19 @@ import random
 
 # ----
 
+print('\n•••••••• RANDOM SET GENERATOR ••••••••')
+
+# ----
+
 set_a = set(random.sample(range(1, 25), 5))
 set_b = set(random.sample(range(1, 25), 5))
 
 # ----
 
-print('random set A = %s\n' % set_a)
-print('random set B = %s\n' % set_b)
+print('\nrandom set A = %s' % set_a)
+print('random set B = %s' % set_b)
 
-print('%s MATCHES found……' % len(set_a.intersection(set_b)), set_a.intersection(set_b))
+print('\n%s MATCHES found' % len(set_a.intersection(set_b)), set_a.intersection(set_b))
 
 # ----
 
@@ -33,9 +37,7 @@ while len(set_a.intersection(set_b)) != 5 :
     set_b = set(random.sample(range(1, 25), 5))
     rand_roll += 1
 
-print('TOTAL set match found in %s iterations' % rand_roll)
-print('matching sets = %s • %s' % (set_a, set_b))
-
-# ----
+print('\nTOTAL set match found in %s iterations' % rand_roll)
+print('\nmatching sets = %s • %s' % (set_a, set_b))
 
 # ...........................
