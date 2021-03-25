@@ -26,10 +26,12 @@ import random
 while True :
     print('\n•••••••• NEW GAME ••••••••\n')
 
-    game =
+    game = input()
     rand_select = random.randint(1, 9)
 
     if game == 'exit' : break
+elif game is rand_select :
+    print('~~~~~~~~ WINNER ~~~~~~~~\nyour guess ( %s ) is correct!' % game)
     # if game == 0 :
     #     print('\n<<<< DRAW, there is NO winner >>>>')
     #     if input('\nwould you like to play again?\n"Y" for yes\nenter to QUIT\n*CASE SENSITIVE*\n >>> ') == 'Y' : continue
