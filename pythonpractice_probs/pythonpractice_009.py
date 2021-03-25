@@ -11,15 +11,15 @@ import random
 
 # ----
 
-# print('\n~~~~~~~~ HOW TO PLAY ~~~~~~~~\n\n\n')
+print('\n•••••••• HOW TO PLAY ••••••••\nguess, a randomly selected number from 1-9\ninput a NUMBER from 1-9\nenter "exit" to end program\n')
 
 # ----
 
-# = input('')
+p_guess = 0
 
 # ----
 
-# p_score = 0
+rand_select = random.randint(1, 9)
 
 # ----
 
@@ -27,21 +27,26 @@ while True :
     print('\n•••••••• NEW GAME ••••••••\n')
 
     game = input('\nenter your guess below……\nNUMBERs from 1-9 ONLY\n>>> ')
-    rand_select = random.randint(1, 9)
 
-    if game == 'exit' : break
-    elif game is rand_select :
+    if game != 'exit' :
+        game = int(game)
+    elif game == 'exit' : break
+
+    if game is rand_select :
         print('******** WINNER ********\nyour guess ( %s ) is correct!' % game)
-        if input('\nenter another number to continue playing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
-    elif game is < rand_select :
-        print('\nyour guess ( %s ) is TOO LOW' % game)
-        if input('\nenter another number to continue playing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
-    elif game is > rand_select :
-        print('\nyour guess ( %s ) is TOO HIGH' % game)
-        if input('\nenter another number to continue playing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+        p_guess += 1
+        break
+    elif game < rand_select :
+        print('\nyour guess ( %s ) was TOO LOW\nthe random number was……%s' % game, rand_select)
+        p_guess += 1
+        if input('\nenter another number to continue guessing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
+    elif game > rand_select :
+        print('\nyour guess ( %s ) was TOO HIGH\nthe random number was……%s' % game, rand_select)
+        p_guess += 1
+        if input('\nenter another number to continue guessing\nenter "exit" to QUIT\n*CASE SENSITIVE*\n >>> ') != 'exit' : continue
 
 # ----
 
-print('\nxxXXXXxx GAME OVER xxXXXXxx')
+print('\nthanks for playing!\n++++++++ GAME OVER ++++++++')
 
 # ...........................
