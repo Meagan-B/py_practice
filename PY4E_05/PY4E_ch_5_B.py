@@ -16,7 +16,7 @@
 count = 0
 total = 0.0
 
-#----
+# ----
 #
 print('WELCOME, please enter numbers only & when you are done enter "done"')
 while True :
