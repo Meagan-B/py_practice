@@ -5,13 +5,17 @@
 
 # ----
 
-usr_n = int(input('enter a number to see if it is a PRIME NUMBER\n**** a prime number is a munber that has no divisors ****\n >>> '))
+usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
 
 # ----
 
 def prime_calc(usr_n) :
     if usr_n  <= 1 :
         return False
+
+    for i in usr_n :
+        print i[-1]
+        return 
 
     for i in range(2, usr_n) :
         if usr_n % i == 0 :
