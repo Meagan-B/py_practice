@@ -6,36 +6,41 @@ import re
 
 # ----
 
-# usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
+usr_n = input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> ')
+
+# ----
+
+print(len(usr_n))
+
+if len(usr_n) > 1 and re.search('$[02345689]', usr_n)  :
+    print('\n{0} is NOT a prime number\n'.format(n))
+else :
+    print('butts')
+
+
+
 
 # ----
 
 def prime_calc(n) :
-    # usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
-    if re.search('$[02345689]') :
-        print('\n%s is NOT a prime number\n' % n)
+    if len(usr_n) > 1 and re.search('$[02345689]', usr_n)  :
+        print('\n{0} is NOT a prime number\n'.format(n))
         return False
 
-    if n  <= 1 :
-        print('\n%s is NOT a prime number\n' % n)
+    n = int(n)
+    if n <= 1 :
+        print('\n{0} is NOT a prime number\n'.format(n))
         return False
 
     for i in range(2, n) :
         if usr_n % i == 0 :
-            print('\n%s is NOT a prime number\n' % n)
+            print('\n{0} is NOT a prime number\n'.format(n))
             return False
         else :
-            print('\n%s IS a prime number\n' % n)
+            print('\n{0} IS a prime number\n'.format(n))
             return True
 # ----
 
-usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
-
-prime_calc(usr_n)
-
-# if prime_calc(usr_n) is False :
-#     print('\n%s is NOT a prime number\n' % usr_n)
-# elif prime_calc(usr_n) is True :
-#     print('\n%s IS a prime number\n' % usr_n)
+# prime_calc(usr_n)
 
 # ...........................
