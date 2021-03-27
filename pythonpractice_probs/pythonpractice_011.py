@@ -20,7 +20,7 @@ while usr_num > 1 :
         print('\n%s is NOT a prime number' % usr_num)
         usr_num = 0
         break
-    elif usr_num % 3 == 0 :
+    elif usr_num % 3 == 0 : 
         print('\n%s is NOT a prime number' % usr_num)
         usr_num = 0
         break
