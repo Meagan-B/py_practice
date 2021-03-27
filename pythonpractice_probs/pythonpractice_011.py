@@ -5,28 +5,36 @@
 
 # ----
 
-usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
+# usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
 
 # ----
 
-def prime_calc(usr_n) :
-    if usr_n  <= 1 :
+def prime_calc(n) :
+    # usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
+    if n.endswith(2, 3, 4, 5, 6, 8, 9, 0) :
+        print('\n%s is NOT a prime number\n' % n)
         return False
 
-    for i in usr_n :
-        print i[-1]
-        return 
+    if n  <= 1 :
+        print('\n%s is NOT a prime number\n' % n)
+        return False
 
-    for i in range(2, usr_n) :
+    for i in range(2, n) :
         if usr_n % i == 0 :
+            print('\n%s is NOT a prime number\n' % n)
             return False
         else :
+            print('\n%s IS a prime number\n' % n)
             return True
 # ----
 
-if prime_calc(usr_n) is False :
-    print('\n%s is NOT a prime number\n' % usr_n)
-elif prime_calc(usr_n) is True :
-    print('\n%s IS a prime number\n' % usr_n)
+usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
+
+prime_calc(usr_n)
+
+# if prime_calc(usr_n) is False :
+#     print('\n%s is NOT a prime number\n' % usr_n)
+# elif prime_calc(usr_n) is True :
+#     print('\n%s IS a prime number\n' % usr_n)
 
 # ...........................
