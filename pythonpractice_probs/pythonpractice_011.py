@@ -5,8 +5,7 @@
 
 # ----
 
-def get_int() :
-    usr_num = int(input('enter a number for a list of its divisors, from 1-10. >> '))
+usr_num = int(input('enter a number for a list of its divisors, from 1-10. >> '))
 
 # ----
 
@@ -16,10 +15,16 @@ b = []
 # ----
 
 # for i in nums :
-if usr_num > 1 :
+while usr_num > 1 :
     if usr_num % 2 == 0 :
         print('\n%s is NOT a prime number' % usr_num)
+        usr_num = 0
         break
+    elif usr_num % 3 == 0 :
+        print('\n%s is NOT a prime number' % usr_num)
+        usr_num = 0
+        break
+    print('still in while loop')
 
 # ----
 
