@@ -5,7 +5,7 @@
 
 # ----
 
-usr_n = int(input('enter a number for a list of its divisors, from 1-10. >> '))
+usr_n = int(input('enter a number to see if it is a PRIME NUMBER\n**** a prime number is a munber that has no divisors ****\n >>> '))
 
 # ----
 
@@ -18,21 +18,11 @@ def prime_calc(usr_n) :
             return False
         else :
             return True
-    print('end of function')
 # ----
 
 if prime_calc(usr_n) is False :
-    print('\n%s is NOT a prime number' % usr_num)
+    print('\n%s is NOT a prime number\n' % usr_n)
 elif prime_calc(usr_n) is True :
-    print('\n%s IS a prime number' % usr_num)
-
-# ----
-
-
-
-# ----
-
-# ----
-
+    print('\n%s IS a prime number\n' % usr_n)
 
 # ...........................
