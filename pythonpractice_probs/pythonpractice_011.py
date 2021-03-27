@@ -5,36 +5,32 @@
 
 # ----
 
-usr_num = int(input('enter a number for a list of its divisors, from 1-10. >> '))
+usr_n = int(input('enter a number for a list of its divisors, from 1-10. >> '))
 
 # ----
 
-nums = list(range(1, 10))
-b = []
+def prime_calc(usr_n) :
+    if usr_n  <= 1 :
+        return False
+
+    for i in range(2, usr_n) :
+        if usr_n % i == 0 :
+            return False
+        else :
+            return True
 
 # ----
 
-# for i in nums :
-while usr_num > 1 :
-    if usr_num % 2 == 0 :
-        print('\n%s is NOT a prime number' % usr_num)
-        usr_num = 0
-        break
-    elif usr_num % 3 == 0 : 
-        print('\n%s is NOT a prime number' % usr_num)
-        usr_num = 0
-        break
-    print('still in while loop')
-
-# ----
-
-# print(b)
-
+if prime_calc(usr_n) is False :
+    print('\n%s is NOT a prime number' % usr_num)
+elif prime_calc(usr_n) is True :
+    print('\n%s IS a prime number' % usr_num)
 
 # ----
 
 # ----
 
+# ----
 
 # ----
 
