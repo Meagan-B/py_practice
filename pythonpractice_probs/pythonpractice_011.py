@@ -2,6 +2,7 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 
+import re
 
 # ----
 
@@ -11,7 +12,7 @@
 
 def prime_calc(n) :
     # usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
-    if n.endswith(2, 3, 4, 5, 6, 8, 9, 0) :
+    if re.search('$[02345689]') :
         print('\n%s is NOT a prime number\n' % n)
         return False
 
