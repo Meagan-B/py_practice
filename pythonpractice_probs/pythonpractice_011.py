@@ -18,7 +18,7 @@ def prime_calc(usr_n) :
             return False
         else :
             return True
-
+    print('end of function')
 # ----
 
 if prime_calc(usr_n) is False :
@@ -28,7 +28,7 @@ elif prime_calc(usr_n) is True :
 
 # ----
 
-# ----
+
 
 # ----
 
