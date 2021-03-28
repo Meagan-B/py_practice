@@ -15,11 +15,11 @@ print(len(usr_n))
 if len(usr_n) > 1 :
     if re.search('$[02345689]', usr_n) :
         print('\n{0} is NOT a prime number\n'.format(usr_n))
-        continue
-else :
-    print('butts')
 
+elif usr_n <= 1 :
+    print('\n{0} is NOT a prime number\n'.format(usr_n))
 
+print('out of loops')
 
 
 # ----
