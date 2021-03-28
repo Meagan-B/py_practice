@@ -6,21 +6,35 @@ import re
 
 # ----
 
-usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
+usr_n_str = input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> ')
+usr_n = int(usr_n_str)
 
 # ----
 
-print(len(usr_n))
+ints = [2, 3, 4, 5, 6, 8, 9]
+last_dig = usr_n % 10
 
-if len(usr_n) > 1 :
-    # if re.search('$[02345689]', usr_n) :
-    print(usr_n % 10)
-        # print('\n{0} is NOT a prime number\n'.format(usr_n))
 
-elif usr_n <= 1 :
+if len(usr_n_str) > 1 :
+    # print(type(last_dig))
+    print(last_dig)
+    for i in ints :
+        if last_dig == i :
+            # print('BOB1')
+            print('\n{0} is NOT a prime number\n'.format(usr_n))
+        else : continue
+
+if usr_n <= 1 :
+    # print('BOB2')
     print('\n{0} is NOT a prime number\n'.format(usr_n))
 
-print('out of loops')
+for n in range(2, usr_n) :
+    if usr_n % n == 0 :
+        # print('BOB3')
+        print('\n{0} is NOT a prime number\n'.format(usr_n))
+    else : continue
+
+print('out of loop')
 
 
 # ----
