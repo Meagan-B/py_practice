@@ -12,8 +12,10 @@ usr_n = input('\nenter a number below to see if it is a PRIME NUMBER……\n****
 
 print(len(usr_n))
 
-if len(usr_n) > 1 and re.search('$[02345689]', usr_n)  :
-    print('\n{0} is NOT a prime number\n'.format(n))
+if len(usr_n) > 1 :
+    if re.search('$[02345689]', usr_n) :
+        print('\n{0} is NOT a prime number\n'.format(usr_n))
+        continue
 else :
     print('butts')
 
