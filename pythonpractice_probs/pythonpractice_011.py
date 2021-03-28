@@ -6,15 +6,16 @@ import re
 
 # ----
 
-usr_n = input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> ')
+usr_n = int(input('\nenter a number below to see if it is a PRIME NUMBER……\n**** a prime number is a number with no divisors ****\n>>> '))
 
 # ----
 
 print(len(usr_n))
 
 if len(usr_n) > 1 :
-    if re.search('$[02345689]', usr_n) :
-        print('\n{0} is NOT a prime number\n'.format(usr_n))
+    # if re.search('$[02345689]', usr_n) :
+    print(usr_n % 10)
+        # print('\n{0} is NOT a prime number\n'.format(usr_n))
 
 elif usr_n <= 1 :
     print('\n{0} is NOT a prime number\n'.format(usr_n))
