@@ -9,28 +9,27 @@ usr_n_str = input('\nenter a number below to see if it is a PRIME NUMBER……\n
 def prime_calc(n) :
     global usr_n_str
     end_ints = [2, 3, 4, 5, 6, 8, 9]
-
-
     usr_n = int(usr_n_str)
-    last_dig = usr_n % 10
 
-    # if usr_n == 2 :
-    #     return True
-    #
-    # if usr_n <= 1 :
-    #     # print('exit 1')
-    #     return False
-    #
-    # elif len(usr_n_str) > 1 :
-    #     for i in end_ints :
-    #         if last_dig == i :
-    #             # print('exit 2')
-    #             return False
+    if usr_n == 2 :
+        return True
 
-    for n in range(2, usr_n, 1) :
-        print(n)
-        # if usr_n % n == 0 :
-        print('{0} divided by {1}'.format(usr_n, n),'•' , (usr_n/n), '•', (usr_n % n))
+    if usr_n <= 1 :
+        # print('exit 1')
+        return False
+
+    elif len(usr_n_str) > 1 :
+        print(usr_n_str)
+        last_dig = usr_n % 10
+        for i in end_ints :
+            if last_dig == i :
+                # print('exit 2')
+                return False
+
+    for n in range(2, usr_n) :
+        # print(n)
+        if usr_n % n == 0 :
+            print('{0} divided by {1}'.format(usr_n, n),'•' , (usr_n/n), '•', (usr_n % n))
         # # print('exit 3')
         #     return False
         # else :
