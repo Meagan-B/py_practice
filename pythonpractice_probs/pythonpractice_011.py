@@ -29,16 +29,16 @@ def prime_calc(n) :
                 print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, i, (usr_n//i)))
                 return False
 
-    for n in range(2, usr_n, 1) :
+    for n in range(2, usr_n) :
         # print(n)
-        usr_n = usr_n // n
-        print(usr_n)
+        usr_n_chk = usr_n / n
+        print(usr_n_chk)
         if usr_n == 0 :
         # print('exit 4')
-            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, n, (usr_n//n)))
+            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, n, (usr_n/n)))
             return False
         else :
-            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, n, (usr_n//n)))
+            print('{0} divided by {1} is {2}, with a remainder of {3}…'.format(usr_n, n, (usr_n / n), float(usr_n % n)))
             print('exit 5')
             return True
 
