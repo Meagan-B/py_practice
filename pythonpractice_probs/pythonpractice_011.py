@@ -13,9 +13,9 @@ def prime_calc(n) :
     usr_n = int(usr_n_str)
     last_dig = usr_n % 10
 
-    # for i in end_ints :
-    #     if i == usr_n :
-    #         return False
+    for i in end_ints :
+        if i == usr_n :
+            return True
 
     if usr_n <= 1 :
         # print('exit 1')
