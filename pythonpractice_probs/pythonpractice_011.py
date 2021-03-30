@@ -10,12 +10,12 @@ def prime_calc(n) :
     global usr_n_str
     end_ints = [2, 3, 4, 5, 6, 8, 9]
 
+
     usr_n = int(usr_n_str)
     last_dig = usr_n % 10
 
-    for i in end_ints :
-        if i == usr_n :
-            return True
+    if usr_n == 2 :
+        return True
 
     if usr_n <= 1 :
         # print('exit 1')
