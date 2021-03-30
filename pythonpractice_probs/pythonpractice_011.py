@@ -9,36 +9,37 @@ usr_n_str = input('\nenter a number below to see if it is a PRIME NUMBER……\n
 def prime_calc(n) :
     global usr_n_str
     end_ints = [2, 3, 4, 5, 6, 8, 9]
-    usr_n = int(usr_n_str)
+    usr_fl = float(usr_n_str)
+    usr_i = int(usr_n_str)
 
-    if usr_n == 2 :
+    if usr_fl == 2 :
         print('exit 1')
         return True
 
-    if usr_n <= 1 :
+    if usr_fl <= 1 :
         # print('exit 2')
-        print('{0} is less than 1'.format(usr_n))
+        print('{0} is less than 1'.format(usr_fl))
         return False
 
     elif len(usr_n_str) > 1 :
         print(usr_n_str)
-        last_dig = usr_n % 10
+        last_dig = usr_fl % 10
         for i in end_ints :
             if last_dig == i :
                 # print('exit 3')
-                print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, i, (usr_n//i)))
+                print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_fl, i, (usr_fl//i)))
                 return False
 
-    for n in range(2, usr_n) :
+    for n in range(2, usr_i) :
         # print(n)
-        usr_n_chk = usr_n / n
-        print(usr_n_chk)
-        if usr_n == 0 :
+        usr_n_chk = usr_fl / n
+        print(usr_n_chk, n)
+        if usr_fl == 0 :
         # print('exit 4')
-            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, n, (usr_n/n)))
+            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_fl, n, (usr_fl/n)))
             return False
         else :
-            print('{0} divided by {1} is {2}, with a remainder of {3}…'.format(usr_n, n, (usr_n / n), float(usr_n % n)))
+            print('{0} divided by {1} is {2}, with a remainder of {3}…'.format(usr_fl, n, (usr_fl / n), float(usr_fl % n)))
             print('exit 5')
             return True
 
