@@ -30,8 +30,8 @@ def prime_calc(n) :
         # print(n)
         if usr_n % n == 0 :
             print('{0} divided by {1}'.format(usr_n, n),'•' , (usr_n/n), '•', (usr_n % n))
-        # # print('exit 3')
-        #     return False
+        # print('exit 3')
+            return False
         # else :
         #     # print('exit 4')
         #     print('{0} divided by {1}'.format(usr_n, n))
