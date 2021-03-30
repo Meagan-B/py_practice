@@ -12,10 +12,11 @@ def prime_calc(n) :
     usr_n = int(usr_n_str)
 
     if usr_n == 2 :
+        print('exit 1')
         return True
 
     if usr_n <= 1 :
-        # print('exit 1')
+        # print('exit 2')
         print('{0} is less than 1'.format(usr_n))
         return False
 
@@ -24,18 +25,21 @@ def prime_calc(n) :
         last_dig = usr_n % 10
         for i in end_ints :
             if last_dig == i :
-                # print('exit 2')
+                # print('exit 3')
                 print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, i, (usr_n//i)))
                 return False
 
-    for n in range(2, usr_n) :
+    for n in range(2, usr_n, 1) :
         # print(n)
-        if usr_n % n == 0 :
-        # print('exit 3')
+        usr_n = usr_n // n
+        print(usr_n)
+        if usr_n == 0 :
+        # print('exit 4')
             print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, n, (usr_n//n)))
             return False
         else :
-        #     # print('exit 4')
+            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_n, n, (usr_n//n)))
+            print('exit 5')
             return True
 
 # ----
