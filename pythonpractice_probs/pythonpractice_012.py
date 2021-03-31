@@ -2,31 +2,17 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 
-
-# ----
-
 def bookendz() :
     lst = input('enter a list of items below\nuse WHITESPACE (spacebar) to seperate list items\n>>> ').rstrip()
-    print(type(lst))
-    print(len(lst))
-    print(lst)
     lst = lst.split(' ')
-    print(type(lst))
-    print(len(lst))
-    print(lst)
-    # front =
-    # back =
+
+    front = lst[0]
+    back = lst[-1]
+    
+    print('the FIRST item of your list is…{0}\nthe LAST item of your list is…{1}'.format(front, back))
+
 # ----
 
 bookendz()
-
-# ----
-
-
-# ----
-
-
-# ----
-
 
 # ...........................
