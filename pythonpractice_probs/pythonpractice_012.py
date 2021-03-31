@@ -5,9 +5,15 @@
 
 # ----
 
-
+def bookendz() :
+    lst = input('enter a list of items below\nuse WHITESPACE (spacebar) to seperate list items\n>>> ').rstrip()
+    print(type(lst))
+    print(lst)
+    # front =
+    # back =
 # ----
 
+bookendz()
 
 # ----
 
