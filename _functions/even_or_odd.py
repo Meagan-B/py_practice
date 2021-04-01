@@ -7,19 +7,19 @@
 # Ask the user for two numbers: one number to check (call it num) and one number to divide by (check).
 # If check divides evenly into num, tell that to the user. If not, print a different appropriate message.
 # >>>>>>>>>>>>>>>>>
-# WIP
-# MAKE INTO FUNCTION
 
-num = input("enter a number >>")
-fl_num = float(num)
+def even_or_odd() :
+
+    num = input("enter a number below\n>>> ").rstrip()
+    fl_num = float(num)
+
+    if fl_num % 2 == 0 :
+        print("{0} is even".format(fl_num))
+    else :
+        print("{0} is odd".format(fl_num))
 
 #----
 
-if fl_num % 4 == 0 :
-    print("%s is MAGIC" % fl_num)
-elif fl_num % 2 == 0 :
-    print("%s is even" % fl_num)
-else :
-    print("%s is odd" % fl_num)
+even_or_odd()
 
 #................
