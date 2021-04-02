@@ -13,10 +13,6 @@ import random
 
 # ----
 
-print('\n•••••••• HOW TO PLAY ••••••••\nguess a randomly selected number\ninput a NUMBER from 1-9\nenter "exit" to end program\n')
-
-# ----
-
 def random_set_buildr() :
     import random
 
