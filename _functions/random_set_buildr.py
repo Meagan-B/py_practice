@@ -22,7 +22,7 @@ def random_set_buildr() :
     # set_end += 1
 
     # print(set_length, set_start, set_end)
-    rand_select = random.randint(set_start, set_end) ** set_length
+    rand_select = [random.randint(set_start, set_end) for i in range(set_length)]
     print(rand_select)
 # ----
 
