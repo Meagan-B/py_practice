@@ -20,7 +20,8 @@ print('\n•••••••• HOW TO PLAY ••••••••\nguess a 
 def random_set_buildr() :
     import random
 
-rand_select = random.randint(1, 9)
+    set_length = int(input('enter desired length of random number set below\n>>> '))
+    rand_select = random.randint(1, 9)
 
 while game != 'exit' :
 
