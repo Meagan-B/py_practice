@@ -19,7 +19,9 @@ def random_set_buildr() :
     set_length = int(input('enter desired length of random number set below\n>>> '))
     set_start = int(input('enter range START, for random number set, below\n>>> '))
     set_end = int(input('enter range END, for random number set, below\n>>> '))
-    rand_select = random.randint(set_start, set_end + 1, set_length)
+    set_end += 1
+
+    rand_select = random.randint(set_start, set_end, set_length)
 
 # ----
 
