@@ -18,8 +18,7 @@ print('\n•••••••• HOW TO PLAY ••••••••\nguess a 
 # ----
 
 def random_set_buildr() :
-p_guess = 0
-game = None
+    import random
 
 rand_select = random.randint(1, 9)
 
