@@ -21,4 +21,8 @@ def random_set_buildr() :
     set_end = int(input('enter range END, for random number set, below\n>>> '))
     rand_select = random.randint(set_start, set_end + 1, set_length)
 
+# ----
+
+random_set_buildr()
+
 # ...........................
