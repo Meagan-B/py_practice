@@ -21,31 +21,8 @@ def random_set_buildr() :
     import random
 
     set_length = int(input('enter desired length of random number set below\n>>> '))
-    rand_select = random.randint(1, 9)
-
-while game != 'exit' :
-
-    game = input('\nenter your guess below……\nNUMBERs from 1-9 ONLY\n>>> ')
-
-    if game == 'exit' : break
-
-    game = int(game)
-
-    if game is rand_select :
-        p_guess += 1
-        print('******** WINNER ********\nyour guess ( %s ) is correct!\nit took %s guesses to win' % (game, p_guess))
-        break
-    elif game < rand_select :
-        print('\nyour guess ( %s ) was TOO LOW\n' % game)
-        p_guess += 1
-        continue
-    elif game > rand_select :
-        print('\nyour guess ( %s ) was TOO HIGH\n' % game)
-        p_guess += 1
-        continue
-
-# ----
-
-print('\nthanks for playing!\n++++++++ GAME OVER ++++++++')
+    set_start = int(input('enter range START, for random number set, below\n>>> '))
+    set_end = int(input('enter range END, for random number set, below\n>>> '))
+    rand_select = random.randint(set_start, set_end + 1, set_length)
 
 # ...........................
