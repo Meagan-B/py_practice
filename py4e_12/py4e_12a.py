@@ -26,27 +26,19 @@ import socket
 usr_url = str(input('enter URL below\n>>> '))
 usr_url = usr_url.rstrip()
 
-if re.search('/+') :
-    # usr_url = usr_url.split('/')
-    print(usr_url)
-elif :
-    usr_url = usr_url.split()
-    print(usr_url)
+if re.search('/+', usr_url) :
+    usr_url = usr_url.split('/')
+    # print(usr_url)
+    for i in usr_url :
+        if re.search('^.+\..+\.[a-z]+$', i) :
+            usr_url = i
+            print(usr_url)
+
 # print(type(usr_url), usr_url)
-
-for i in usr_url :
-    if re.search('^.+\..+\.[a-z]+$', i) :
-        usr_url = i
-        # print(usr_url)
-
 # ----
 
-
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# #
-# try :
-#     if
-# sock.connect((input('enter URL below\n>>> ')))
+# sock.connect((usr_url))
 # ----
 
 # ----
