@@ -29,8 +29,8 @@ usr_url = usr_url.split('/')
 print(type(usr_url), usr_url)
 
 for i in usr_url :
-    if re.search('^.+\..+\.[a-z]+$', i)
-        print(i)        
+    if re.search('^.+\..+\.[a-z]+$', i) :
+        print(i)
 
 
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
