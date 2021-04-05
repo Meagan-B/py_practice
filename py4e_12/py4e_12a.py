@@ -18,13 +18,25 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>>>
 
+import re
 import socket
 
 # ----
-testsock = print(input('enter URL below\n>>> '))
+
+usr_url = str(input('enter URL below\n>>> '))
+usr_url = usr_url.rstrip()
+usr_url = usr_url.split('/')
+print(type(usr_url), usr_url)
+
+for i in usr_url :
+    if re.search('^.+\..+\.[a-z]+$', i)
+        print(i)        
 
 
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# #
+# try :
+#     if
 # sock.connect((input('enter URL below\n>>> ')))
 # ----
 
