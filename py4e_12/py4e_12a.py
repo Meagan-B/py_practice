@@ -44,18 +44,19 @@ try :
     # h_proto = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
     h_proto = 'GET http://data.pr4e.org/ HTTP/1.0\r\n\r\n'.encode()
     sock.send(h_proto)
-
     while True :
         data = sock.recv(512)
         if len(data) < 1 :
             break
-
-    links = re.findall(b'href="(http[s]?://.*?)"', data)
-    for link in links :
-        print(links.decode())
-        
 except :
     print('OOPS, bad link')
+
+
+links = re.findall(b'href="(http[s]?://.*?)"', data)
+for link in links :
+    print(links.decode())
+
+# ----
 
 sock.close()
 
