@@ -35,8 +35,8 @@ while True :
     # time.sleep(0.05)
     if len(data) < 1 : break
     count += len(data)
-    print(data.decode())
-print('{0} characters, including HEADER'.format(count))
+    print(data[:30].decode())
+print('{0} characters total, including HEADER'.format(count))
     # data_collect = data_collect.write(data.decode())
 
 # ----
