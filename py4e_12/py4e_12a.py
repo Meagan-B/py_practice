@@ -51,9 +51,9 @@ try :
             break
 
     links = re.findall(b'href="(http[s]?://.*?)"', data)
-    print(type(links))
-    print(links)
-    print(links.decode())
+    for link in links :
+        print(links.decode())
+        
 except :
     print('OOPS, bad link')
 
