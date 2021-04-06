@@ -49,8 +49,11 @@ try :
         data = sock.recv(512)
         if len(data) < 1 :
             break
-        links = re.findall(b'href="(http[s]?://.*?)"', data)    
-        print(links.decode(), end='')
+
+    links = re.findall(b'href="(http[s]?://.*?)"', data)
+    print(type(links))
+    print(links)
+    print(links.decode())
 except :
     print('OOPS, bad link')
 
