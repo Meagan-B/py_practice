@@ -42,10 +42,14 @@ sock.connect((usr_url))
 h_proto = 'GET {0} HTTP/1.0\n\n'.format(usr_url).encode()
 sock.send(h_proto)
 
-# ----
+while True :
+   data = sock.recv(512)
+   if len(data) < 1 :
+       break
+    print(data.decode(), end='')
 
 # ----
 
-# ----
+sock.close()
 
 # ...........................
