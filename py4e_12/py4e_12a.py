@@ -39,6 +39,9 @@ if re.search('/+', usr_url) :
 
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # sock.connect((usr_url))
+
+b_loop = 'GET '
+
 # ----
 
 # ----
