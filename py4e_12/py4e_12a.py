@@ -32,9 +32,9 @@ if re.search('/+', usr_url) :
     for i in usr_url :
         if re.search('^.+\..+\.[a-z]+$', i) :
             usr_url = i
-            print(usr_url)
+            # print(usr_url)
 
-# print(type(usr_url), usr_url)
+print(type(usr_url), usr_url)
 # ----
 
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
