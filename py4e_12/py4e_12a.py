@@ -40,17 +40,19 @@ print(type(usr_url), usr_url)
 try :
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect((usr_url, 80))
-    # h_proto = ('GET {0} HTTP/1.0\r\n\r\n'.format(usr_url)).encode()
-    h_proto = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+    # h_proto = ('GET {0} HTTP/1.0\r\n\r\n'.format(qqqq)).encode()
+    # h_proto = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+    h_proto = 'GET http://data.pr4e.org/ HTTP/1.0\r\n\r\n'.encode()
     sock.send(h_proto)
 
     while True :
         data = sock.recv(512)
+        links = re.findall(b'href="(http[s]?://.*?)"', data)
         if len(data) < 1 :
             break
-        print(data.decode(), end='')
+        print(links.decode(), end='')
 except :
-    print('OOPS, bad link')        
+    print('OOPS, bad link')
 
 sock.close()
 
