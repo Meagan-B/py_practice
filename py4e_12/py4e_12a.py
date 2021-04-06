@@ -37,16 +37,20 @@ if re.search('/+', usr_url) :
 print(type(usr_url), usr_url)
 # ----
 
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((usr_url, 80))
-h_proto = 'GET {0} HTTP/1.0\r\n\r\n'.format(usr_url).encode()
-sock.send(h_proto)
+try :
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((usr_url, 80))
+    # h_proto = ('GET {0} HTTP/1.0\r\n\r\n'.format(usr_url)).encode()
+    h_proto = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+    sock.send(h_proto)
 
-while True :
-    data = sock.recv(512)
-    if len(data) < 1 :
-        break
-    print(data.decode(), end='')
+    while True :
+        data = sock.recv(512)
+        if len(data) < 1 :
+            break
+        print(data.decode(), end='')
+except :
+    print('OOPS, bad link')        
 
 # ----
 
