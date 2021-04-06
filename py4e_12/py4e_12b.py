@@ -21,28 +21,25 @@ if re.search('/+', usr_host) :
 # ----
 data_collect = str()
 
-try :
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect((usr_host, 80))
-    # h_proto = ('GET {0} HTTP/1.0\r\n\r\n'.format(usr_host)).encode()
-    h_proto = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
-    # h_proto = 'GET http://data.pr4e.org/ HTTP/1.0\r\n\r\n'.encode()
-    sock.send(h_proto)
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.connect((usr_host, 80))
+# h_proto = ('GET {0} HTTP/1.0\r\n\r\n'.format(usr_host)).encode()
+h_proto = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+# h_proto = 'GET http://data.pr4e.org/ HTTP/1.0\r\n\r\n'.encode()
+sock.send(h_proto)
 
-    count = 0
-    while True :
-        data = sock.recv(600)
-        # print(data)
-        # time.sleep(0.05)
-        if len(data) < 1 : break
-        count += len(data)
-        print(data.decode())
-    print('{0} characters, including HEADER'.fprmat(count))
-        # data_collect = data_collect.write(data.decode())
+count = 0
+while True :
+    data = sock.recv(600)
+    # print(data)
+    # time.sleep(0.05)
+    if len(data) < 1 : break
+    count += len(data)
+    print(data.decode())
+print('{0} characters, including HEADER'.format(count))
+    # data_collect = data_collect.write(data.decode())
 
-except :
-    print('OOPS, bad link')
-
+# ----
 
 # links = re.findall(b'href="(http[s]?://.*?)"', u_fhand)
 # for link in links :
