@@ -52,8 +52,6 @@ try :
 except :
     print('OOPS, bad link')        
 
-# ----
-
 sock.close()
 
 # ...........................
