@@ -29,12 +29,14 @@ try :
     # h_proto = 'GET http://data.pr4e.org/ HTTP/1.0\r\n\r\n'.encode()
     sock.send(h_proto)
 
+    count = 0
     while True :
         data = sock.recv(10)
         # print(data)
         # time.sleep(0.05)
-        if len(data) < 1 :
-            break
+        if len(data) < 1 : break
+        count += len(data)
+        print(count)
         print(data.decode())
         # data_collect = data_collect.write(data.decode())
 
