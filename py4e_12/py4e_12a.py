@@ -46,13 +46,14 @@ try :
     sock.send(h_proto)
     while True :
         data = sock.recv(512)
+        u_fhand = u_fhand.write(data)
         if len(data) < 1 :
             break
 except :
     print('OOPS, bad link')
 
 
-links = re.findall(b'href="(http[s]?://.*?)"', data)
+links = re.findall(b'href="(http[s]?://.*?)"', u_fhand)
 for link in links :
     print(links.decode())
 
