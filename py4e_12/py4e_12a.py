@@ -38,7 +38,7 @@ print(type(usr_url), usr_url)
 # ----
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect((usr_url))
+sock.connect((usr_url, 80))
 h_proto = 'GET {0} HTTP/1.0\n\n'.format(usr_url).encode()
 sock.send(h_proto)
 
