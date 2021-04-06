@@ -31,13 +31,13 @@ try :
 
     count = 0
     while True :
-        data = sock.recv(512)
+        data = sock.recv(600)
         # print(data)
         # time.sleep(0.05)
         if len(data) < 1 : break
         count += len(data)
-    print(data.decode())
-    print(count)
+        print(data.decode())
+    print('{0} characters, including HEADER'.fprmat(count))
         # data_collect = data_collect.write(data.decode())
 
 except :
