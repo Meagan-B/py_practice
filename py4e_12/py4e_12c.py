@@ -13,9 +13,13 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
+
     links = re.findall(b'href="(.*?\..*?)"', html)
     for link in links :
         print(link.decode())
+
+    link_pik = input('\r\n\r\nenter a link, from list above\n>>> ').urlopen(link_pik)
+
     # print(html)
 
 # ----
