@@ -24,10 +24,9 @@ with urllib.request.urlopen(usr_host) as response :
     print(html[:3000].decode())
     print('\n{0} characters found'.format(doc_len))
 
+# ----
 
-
-
-print(len('Butsoftwhatlightthroughyonderwindowbreaks It is the east and Juliet is the sun Arise fair sun and kill the envious moon Who is already sick and pale with grief'))
+print(len('ButsoftwhatlightthroughyonderwindowbreaksItistheeastandJulietisthesunArisefairsunandkilltheenviousmoonWhoisalreadysickandpalewithgrief'))
 
 # ----
 
