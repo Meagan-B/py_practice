@@ -19,9 +19,14 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
+    # print(type(html))
+    # html = html.decode()
+    # html_brk = html.split()
+    # print(html_brk)
     doc_len = re.sub(r' ', '', html)
+    print(doc_len.decode())
     doc_len = len(html)
-    print(html[:3000].decode())
+    print(html[:3000])
     print('\n{0} characters found'.format(doc_len))
 
 # ----
