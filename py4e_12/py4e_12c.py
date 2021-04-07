@@ -19,6 +19,7 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
+    doc_len = len(html)
     print(html[:3000].decode())
 
 # ----
