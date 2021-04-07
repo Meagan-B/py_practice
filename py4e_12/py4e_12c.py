@@ -15,33 +15,8 @@ with urllib.request.urlopen(usr_host) as response :
     html = response.read()
     links = re.findall(b'href="(.*?)"', html)
     for link in links :
-        print(link)
-    print(html)
-
-
-# ----
-
-
-# print(type(usr_host), usr_host)
-# ----
-# data_collect = str()
-#
-# count = 0
-# while True :
-#     # time.sleep(0.05)
-#     if len(data) < 1 : break
-#     count += len(data)
-#     print(data[:30].decode())
-# print('{0} characters total, including HEADER'.format(count))
-    # data_collect = data_collect.write(data.decode())
-
-# ----
-
-# links = re.findall(b'href="(http[s]?://.*?)"', u_fhand)
-# for link in links :
-#     print(links.decode())
-
-# ----
+        print(link.decode())
+    # print(html)
 
 # ----
 
