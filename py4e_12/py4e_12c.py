@@ -13,23 +13,14 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
+    links = re.findall(b'href="(http[s]?://.*?)"', html)
+    for link in links :
+        print(links.decode())
+
+
 
 # ----
 
-# ----
-
-# ----
-
-# ----
-
-
-# if re.search('/+', usr_host) :
-#     usr_host = usr_host.split('/')
-#     # print(usr_url)
-#     for i in usr_host :
-#         if re.search('^.+\..+\.[a-z]+$', i) :
-#             usr_host = i
-            # print(usr_url)
 
 # print(type(usr_host), usr_host)
 # ----
