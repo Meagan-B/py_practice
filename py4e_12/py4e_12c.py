@@ -13,7 +13,7 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
-    print(html[:30].decode())
+    print(html[:3000].decode())
 
 # ----
 
