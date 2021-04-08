@@ -3,7 +3,7 @@
 # To run this, download the BeautifulSoup zip file
 # http://www.py4e.com/code3/bs4.zip
 # and unzip it in the same directory as this file
-# 
+#
 # import urllib.request, urllib.parse, urllib.error
 # from bs4 import BeautifulSoup
 # import ssl
@@ -27,8 +27,6 @@
 
 import re
 import urllib.request
-from gtts import gTTS
-import os
 
 # ----
 
@@ -39,28 +37,29 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
-    html = html.decode()
-    if
 
-    # doc_len = re.sub(r' ', '', html)
-    # doc_len = re.sub(r'\n', '', doc_len)
-    # doc_len = re.sub(r'\r', '', doc_len)
-    # doc_len = len(doc_len)
+html = html.decode()
 
-    # print('\n')
-    # print(html[:3000])
-    # print('\n**** {0} characters found ****\n'.format(doc_len))
+# doc_len = re.sub(r' ', '', html)
+# doc_len = re.sub(r'\n', '', doc_len)
+# doc_len = re.sub(r'\r', '', doc_len)
+# doc_len = len(doc_len)
 
-# ----
-
-language = 'en'
-
-audio_read = gTTS(text=html, lang=language, slow=False)
-audio_read.save("but_soft.mp3")
+# print('\n')
+# print(html[:3000])
 
 # ----
 
-os.system("afplay but_soft.mp3")
+para_count = 0
+para_tag = soup('p')
+
+for tag in para_tag :
+    para_count += 1
+
+# ----
+
+print('\n**** {0} paragraphs found ****\n'.format(para_count))
+
 # ----
 
 # ----
