@@ -19,29 +19,21 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
-    # print(type(html))
-    # html = html.decode()
-    # html_brk = html.split()
-    # print(html_brk)
+    print(type(html))
+    html = html.decode()
+    print(type(html))
     doc_len = re.sub(r' ', '', html)
-    print(doc_len.decode())
-    doc_len = len(html)
-    print(html[:3000])
-    print('\n{0} characters found'.format(doc_len))
+    print(doc_len)
+    doc_len = len(doc_len)
+    print(doc_len)
+    # print(html[:3000])
+    # print('\n{0} characters found'.format(doc_len))
 
 # ----
 
-print(len('ButsoftwhatlightthroughyonderwindowbreaksItistheeastandJulietisthesunArisefairsunandkilltheenviousmoonWhoisalreadysickandpalewithgrief'))
+# print(len('ButsoftwhatlightthroughyonderwindowbreaksItistheeastandJulietisthesunArisefairsunandkilltheenviousmoonWhoisalreadysickandpalewithgrief'))
 
 # ----
-
-    # links = re.findall(b'href="(.*?\..*?)"', html)
-    # for link in links :
-    #     print(link.decode())
-    #
-    # link_pik = input('\r\n\r\nenter a link, from list above\n>>> ').urlopen(link_pik)
-
-    # print(html)
 
 # ----
 
