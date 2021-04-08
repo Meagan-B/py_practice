@@ -8,7 +8,7 @@
 # from bs4 import BeautifulSoup
 # import ssl
 #
-# # Ignore SSL certificate errors
+# Ignore SSL certificate errors
 # ctx = ssl.create_default_context()
 # ctx.check_hostname = False
 # ctx.verify_mode = ssl.CERT_NONE
@@ -26,8 +26,15 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 import re
-import urllib.request, urllib.parse
+import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
+
+# ----
+# Ignore SSL certificate errors (from PY4E, because i do not understand, but need to use this code to test example)
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
