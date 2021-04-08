@@ -5,6 +5,8 @@
 # (2) displaying up to 3000 characters, and
 #
 # (3) counting the overall number of characters in the document. Don’t worry about the headers for this exercise, simply show the first 3000 characters of the document contents.
+#
+# http://data.pr4e.org/romeo.txt
 # >>>>>>>>>>>>>>>>>>>>>>>
 import re
 import urllib.request
@@ -23,6 +25,8 @@ with urllib.request.urlopen(usr_host) as response :
     html = html.decode()
     print(type(html))
     doc_len = re.sub(r' ', '', html)
+    print(doc_len)
+    doc_len = re.sub(r'\n', '', doc_len)
     print(doc_len)
     doc_len = len(doc_len)
     print(doc_len)
