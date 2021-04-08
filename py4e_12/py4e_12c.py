@@ -21,28 +21,18 @@ usr_host = usr_host.rstrip()
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
-    print(type(html))
     html = html.decode()
-    print(type(html))
+    # print(type(html))
     doc_len = re.sub(r' ', '', html)
-    print(doc_len)
     doc_len = re.sub(r'\n', '', doc_len)
-    print(doc_len)
+    doc_len = re.sub(r'\r', '', doc_len)
     doc_len = len(doc_len)
-    print(doc_len)
-    # print(html[:3000])
-    # print('\n{0} characters found'.format(doc_len))
+    # print(doc_len)
+    print(html[:3000])
+    print('\n{0}, non-whitespace, characters found'.format(doc_len))
 
 # ----
 
-# print(len('ButsoftwhatlightthroughyonderwindowbreaksItistheeastandJulietisthesunArisefairsunandkilltheenviousmoonWhoisalreadysickandpalewithgrief'))
-
-# ----
-
-# ----
-
-# ----
-
-# ----
+#print(len('ButsoftwhatlightthroughyonderwindowbreaksItistheeastandJulietisthesunArisefairsunandkilltheenviousmoonWhoisalreadysickandpalewithgrief'))
 
 # ...........................
