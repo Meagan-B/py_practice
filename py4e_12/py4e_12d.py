@@ -23,11 +23,14 @@
 #     print(tag.get('href', None))
 #
 # # Code: http://www.py4e.com/code3/urllinks.py
+#
+# https://docs.python.org
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 import re
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
+import ssl
 
 # ----
 # Ignore SSL certificate errors (from PY4E, because i do not understand, but need to use this code to test example)
@@ -39,28 +42,15 @@ ctx.verify_mode = ssl.CERT_NONE
 # ----
 
 usr_host = str(input('enter URL below\n>>> '))
-print(usr_host)
 usr_host = usr_host.rstrip()
-print(usr_host)
 
 # ----
 
-with urllib.request.urlopen(usr_host) as response :
-    html = response.read()
-    print(html)
+html = urllib.request.urlopen(usr_host, context=ctx).read()
+# print(html.decode())
 
 soup = BeautifulSoup(html, 'html.parser')
-print(soup)
-
-# html = html.decode()
-
-# doc_len = re.sub(r' ', '', html)
-# doc_len = re.sub(r'\n', '', doc_len)
-# doc_len = re.sub(r'\r', '', doc_len)
-# doc_len = len(doc_len)
-
-# print('\n')
-# print(html[:3000])
+# print(soup)
 
 # ----
 
