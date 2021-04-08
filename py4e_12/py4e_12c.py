@@ -29,7 +29,7 @@ with urllib.request.urlopen(usr_host) as response :
     doc_len = len(doc_len)
     # print(doc_len)
     print(html[:3000])
-    print('\n{0}, non-whitespace, characters found'.format(doc_len))
+    print('\n{0} characters found'.format(doc_len))
 
 # ----
 
