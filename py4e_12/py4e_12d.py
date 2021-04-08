@@ -26,19 +26,26 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 import re
-import urllib.request
+import urllib.request, urllib.parse
+from bs4 import BeautifulSoup
 
 # ----
 
 usr_host = str(input('enter URL below\n>>> '))
+print(usr_host)
 usr_host = usr_host.rstrip()
+print(usr_host)
 
 # ----
 
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
+    print(html)
 
-html = html.decode()
+soup = BeautifulSoup(html, 'html.parser')
+print(soup)
+
+# html = html.decode()
 
 # doc_len = re.sub(r' ', '', html)
 # doc_len = re.sub(r'\n', '', doc_len)
