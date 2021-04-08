@@ -30,8 +30,7 @@ with urllib.request.urlopen(usr_host) as response :
     # print(doc_len)
     print('\n')
     print(html[:3000])
-    print('\n')
-    print('{0} characters found'.format(doc_len))
+    print('\n**** {0} characters found ****\n'.format(doc_len))
 
 # ----
 
