@@ -10,7 +10,8 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 import re
 import urllib.request
-# import time
+from gtts import gTTS
+import os
 
 # ----
 
@@ -23,14 +24,26 @@ with urllib.request.urlopen(usr_host) as response :
     html = response.read()
     html = html.decode()
     # print(type(html))
+
     doc_len = re.sub(r' ', '', html)
     doc_len = re.sub(r'\n', '', doc_len)
     doc_len = re.sub(r'\r', '', doc_len)
     doc_len = len(doc_len)
-    # print(doc_len)
+
     print('\n')
     print(html[:3000])
     print('\n**** {0} characters found ****\n'.format(doc_len))
+
+# ----
+
+language = 'en'
+
+audio_read = gTTS(text=html, lang=language, slow=False)
+audio_read.save("but_soft.mp3")
+
+# ----
+
+os.system("afplay but_soft.mp3")
 
 # ----
 
