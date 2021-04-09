@@ -45,12 +45,23 @@ except :
 
 # ----
 
+data_str = 'data_str\n'
+
 while True :
     data = sock.recv(512)
-    # print(data)
+    data_str.append(data)
     if len(data) < 1 :
+        # data_str = data.decode()
+        print(data_str)
+        # data_no_hed = re.split('(\r\n\r\n)?', data_str)
+        # print(data_no_hed)
         break
-    print(data.decode())
+# ----
+
+# print(data)
+# print(data.decode())
+# print('\n••••••••••\n')
+# data = re.split('(\r\n\r\n)?', data)
 
 # ----
 
