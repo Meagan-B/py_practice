@@ -40,22 +40,17 @@ try :
     # h_proto = ('GET {0} HTTP/1.0\r\n\r\n'.format(usr_host)).encode()
     h_proto = 'GET http://data.pr4e.org/ HTTP/1.0\r\n\r\n'.encode()
     sock.send(h_proto)
-
-    while True :
-        data = sock.recv(512)
-        # print(data)
-        if len(data) < 1 :
-            break
-        print(data.decode())
-        data_collect = data_collect.write(data.decode())
-
 except :
     print('OOPS, bad link')
 
+# ----
 
-# links = re.findall(b'href="(http[s]?://.*?)"', u_fhand)
-# for link in links :
-#     print(links.decode())
+while True :
+    data = sock.recv(512)
+    # print(data)
+    if len(data) < 1 :
+        break
+    print(data.decode())
 
 # ----
 
