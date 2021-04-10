@@ -49,14 +49,12 @@ soup = BeautifulSoup(html, 'html.parser')
 # print('\n**** {0} paragraphs found ****\n'.format(para_count))
 #
 # ----
-for tag in soup.find_all(re.compile("^b")):
-    print(tag.name)
 
+# num_count = 0
 
-num_count = 0
-
-for tag in soup.find_all(re.compile('^<tr>.+\s.+>\d+<')) :
-    num_count += 1
+for tag in soup.find_all(string=re.compile('comments=')) :
+    # '^<tr>.+\s.+>\d+<'
+    # num_count += 1
     print('TAG:',tag)
    # print('URL:',tag.get('href', None))
    # print('Contents:',tag.contents[0])
