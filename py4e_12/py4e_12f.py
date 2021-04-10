@@ -39,21 +39,21 @@ soup = BeautifulSoup(html, 'html.parser')
 # print(soup)
 
 # ----
-
-para_count = 0
-para_tag = soup('p')
-
-for tag in para_tag :
-    para_count += 1
-
-print('\n**** {0} paragraphs found ****\n'.format(para_count))
-
+#
+# para_count = 0
+# para_tag = soup('p')
+#
+# for tag in para_tag :
+#     para_count += 1
+#
+# print('\n**** {0} paragraphs found ****\n'.format(para_count))
+#
 # ----
 
 num_count = 0
 num_tag = soup.find_all((['class=\S+>(\d)</span>']))
 
-for tag in para_tag :
+for tag in num_tag :
    print('TAG:',tag)
    print('URL:',tag.get('href', None))
    print('Contents:',tag.contents[0])
