@@ -34,7 +34,7 @@ usr_host = usr_host.rstrip()
 
 html = urllib.request.urlopen(usr_host, context=ctx).read()
 # print(html.decode())
-
+# print('\n***********\n')
 soup = BeautifulSoup(html, 'html.parser')
 # print(soup)
 
@@ -51,7 +51,8 @@ soup = BeautifulSoup(html, 'html.parser')
 # ----
 
 num_count = 0
-num_tag = soup.find_all('class=\S+>(\d)</span>')
+num_tag = soup.find_all('>\d+<')
+# num_tag = soup.find_all('>2</span></td></tr>')
 
 for tag in num_tag :
    print('TAG:',tag)
