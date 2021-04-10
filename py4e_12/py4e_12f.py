@@ -51,7 +51,7 @@ soup = BeautifulSoup(html, 'html.parser')
 # ----
 
 num_count = 0
-num_tag = soup.find_all((['class=\S+>(\d)</span>']))
+num_tag = soup.find_all('class=\S+>(\d)</span>')
 
 for tag in num_tag :
    print('TAG:',tag)
