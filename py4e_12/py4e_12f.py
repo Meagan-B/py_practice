@@ -4,6 +4,10 @@
 #
 # The program will use urllib to read the HTML from the data files below, and parse the data, extracting numbers and compute the sum of the numbers in the file.
 #
+# <tr><td>Modu</td><td><span class="comments">90</span></td></tr>
+# <tr><td>Kenzie</td><td><span class="comments">88</span></td></tr>
+# <tr><td>Hubert</td><td><span class="comments">87</span></td></tr>
+#
 # Sample data: http://py4e-data.dr-chuck.net/comments_42.html (Sum=2553)
 # Actual data: http://py4e-data.dr-chuck.net/comments_1154830.html (Sum ends with 77)
 #
@@ -47,7 +51,7 @@ print('\n**** {0} paragraphs found ****\n'.format(para_count))
 # ----
 
 num_count = 0
-num_tag = soup.find_all((['p']))
+num_tag = soup.find_all((['class=\S+>(\d)</span>'']))
 
 for tag in para_tag :
    print 'TAG:',tag
