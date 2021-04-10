@@ -64,12 +64,4 @@ for tag in para_tag :
 
 print('\n**** {0} paragraphs found ****\n'.format(para_count))
 
-# ----
-
-# ----
-
-# ----
-
-# ----
-
 # ...........................
