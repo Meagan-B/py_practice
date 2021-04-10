@@ -34,20 +34,9 @@ usr_host = usr_host.rstrip()
 
 html = urllib.request.urlopen(usr_host, context=ctx).read()
 # print(html.decode())
-# print('\n***********\n')
 soup = BeautifulSoup(html, 'html.parser')
 # print(soup)
 
-# ----
-#
-# para_count = 0
-# para_tag = soup('p')
-#
-# for tag in para_tag :
-#     para_count += 1
-#
-# print('\n**** {0} paragraphs found ****\n'.format(para_count))
-#
 # ----
 
 # num_count = 0
@@ -64,8 +53,5 @@ for tag in soup.find_all(string=re.compile(('span'), class='comments')) :
 
 # ----
 
-# ----
-
-# ----
 
 # ...........................
