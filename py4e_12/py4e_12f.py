@@ -51,7 +51,7 @@ print('\n**** {0} paragraphs found ****\n'.format(para_count))
 # ----
 
 num_count = 0
-num_tag = soup.find_all(['class=\S+>(\d)</span>''])
+num_tag = soup.find_all((['class=\S+>(\d)</span>']))
 
 for tag in para_tag :
    print 'TAG:',tag
