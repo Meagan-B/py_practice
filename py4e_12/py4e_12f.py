@@ -54,10 +54,10 @@ num_count = 0
 num_tag = soup.find_all((['class=\S+>(\d)</span>']))
 
 for tag in para_tag :
-   print 'TAG:',tag
-   print 'URL:',tag.get('href', None)
-   print 'Contents:',tag.contents[0]
-   print 'Attrs:',tag.attrs
+   print('TAG:',tag)
+   print('URL:',tag.get('href', None))
+   print('Contents:',tag.contents[0])
+   print('Attrs:',tag.attrs)
    # ^PY4E
 
 # ----
