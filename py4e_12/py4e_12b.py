@@ -41,15 +41,5 @@ print('{0} characters total, including HEADER'.format(count))
 
 # ----
 
-# links = re.findall(b'href="(http[s]?://.*?)"', u_fhand)
-# for link in links :
-#     print(links.decode())
-
-# ----
-
-# ----
-
-# ----
-
 sock.close()
 # ...........................
