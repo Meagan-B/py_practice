@@ -46,8 +46,8 @@ print('\n**** {0} paragraphs found ****\n'.format(para_count))
 
 # ----
 
-para_count = 0
-para_tag = soup('p')
+num_count = 0
+num_tag = soup.find_all((['p']))
 
 for tag in para_tag :
    print 'TAG:',tag
