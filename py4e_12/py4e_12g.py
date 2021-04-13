@@ -53,9 +53,14 @@ soup = BeautifulSoup(html, 'html.parser')
 
 # ----
 
+tag_collect = []
+
 tags = soup('a')
 for tag in tags :
-    print(tag)
+    # print(tag)
+    tag_collect.append(tag)
+
+print(tag_collect)
 
 
 
