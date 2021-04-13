@@ -60,7 +60,7 @@ a = (s / l)
 # ----
 
 # print(nums_2_sum)
-print('\n\nSUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}'.format(s, l, a))
+print('\n\nSUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}\n\n'.format(s, l, a))
 
 # ----
 
