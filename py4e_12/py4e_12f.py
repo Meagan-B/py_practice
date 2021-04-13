@@ -39,7 +39,6 @@ soup = BeautifulSoup(html, 'html.parser')
 
 # ----
 
-num_count = 0
 nums_2_sum = []
 
 for tag in soup.find_all('span') :
@@ -51,12 +50,11 @@ for tag in soup.find_all('span') :
     for n in num :
         num_i = int(n)
         nums_2_sum.append(num_i)
-        num_count += 1
 
+# ----
 
 print(nums_2_sum)
-print(num_count)
-# print(sum(num))
+print(sum(nums_2_sum) // len(nums_2_sum))
 
 
 # for tag in soup.find_all(re.compile('^t')) :
