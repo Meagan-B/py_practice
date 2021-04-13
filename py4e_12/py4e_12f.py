@@ -53,13 +53,16 @@ for tag in soup.find_all('span') :
 
 # ----
 
-# print(nums_2_sum)
 s = sum(nums_2_sum)
-l = len(nums_2_sum))
+l = len(nums_2_sum)
 a = (s // l)
 
+# ----
+
+# print(nums_2_sum)
 print('SUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}'.format(s, l, a)
 
+# ----
 
 # for tag in soup.find_all(re.compile('^t')) :
 #
@@ -67,8 +70,5 @@ print('SUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers co
 # print('Contents:',tag.contents[0])
 # print('Attrs:',tag.attrs)
 # ^PY4E
-
-# ----
-
 
 # ...........................
