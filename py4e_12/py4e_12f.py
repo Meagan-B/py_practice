@@ -42,8 +42,11 @@ soup = BeautifulSoup(html, 'html.parser')
 # num_count = 0
 
 # for tag in soup.find_all(id=re.compile('comments')) :
-for tag in soup.find_all(re.compile('^t')) :
-    print(tag.name)
+# for tag in soup.find_all(re.compile('^t')) :
+#     print(tag.name)
+
+for tag in soup.find_all('span') :
+    print(tag)
     # '^<tr>.+\s.+>\d+<'
     # num_count += 1
     # print('TAG:',tag)
