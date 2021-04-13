@@ -40,8 +40,7 @@ soup = BeautifulSoup(html, 'html.parser')
 # ----
 
 # num_count = 0
-
-# for tag in soup.find_all(re.compile('^t')) :
+nums_2_sum = []
 
 for tag in soup.find_all('span') :
     span_tag = tag.decode()
@@ -51,18 +50,21 @@ for tag in soup.find_all('span') :
     print(num)
     for n in num :
         num_i = int(n)
-        print(n)
-        print(type(n))
+        nums_2_sum.append(num_i)
+
+    print(nums_2_sum)
     # sum = sum(num)
     # print(sum)
     # print(sum(num))
     # num_count += 1
 
 
-   # print('URL:',tag.get('href', None))
-   # print('Contents:',tag.contents[0])
-   # print('Attrs:',tag.attrs)
-   # ^PY4E
+# for tag in soup.find_all(re.compile('^t')) :
+#
+# print('URL:',tag.get('href', None))
+# print('Contents:',tag.contents[0])
+# print('Attrs:',tag.attrs)
+# ^PY4E
 
 # ----
 
