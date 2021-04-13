@@ -47,11 +47,11 @@ for tag in soup.find_all('span') :
     span_tag = tag.decode()
     # print(span_tag)
     # print(type(span_tag))
-    num = re.findall('\d+', span_tag)
-    print(num)
-    sum = sum(num)
-    print(sum)
-    print(sum(num))
+    num = int(re.findall('\d+', span_tag))
+    print(type(num))
+    # sum = sum(num)
+    # print(sum)
+    # print(sum(num))
     # num_count += 1
 
 
