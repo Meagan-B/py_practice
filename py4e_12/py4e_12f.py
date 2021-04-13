@@ -44,8 +44,9 @@ soup = BeautifulSoup(html, 'html.parser')
 # for tag in soup.find_all(re.compile('^t')) :
 
 for tag in soup.find_all('span') :
-    print(tag)
-    print(type(tag))
+    # print(tag)
+    # print(type(tag))
+    print(tag.decode())
     # for num in tag.find('>\d+<') :
         # print(num)
     # num_count += 1
