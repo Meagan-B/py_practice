@@ -41,10 +41,11 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-tag_collect = []
 count = 0
 
 while True :
+    tag_collect = []
+
     if count < 1 :
         usr_host = str(input('enter URL below\n>>> '))
         usr_host = usr_host.rstrip()
