@@ -49,6 +49,9 @@ for tag in soup.find_all('span') :
     # print(type(span_tag))
     num = re.findall('\d+', span_tag)
     print(num)
+    sum = sum(num)
+    print(sum)
+    print(sum(num))
     # num_count += 1
 
 
