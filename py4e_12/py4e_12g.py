@@ -41,6 +41,7 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
+
 count = 0
 
 while True :
@@ -49,8 +50,9 @@ while True :
     if count < 1 :
         usr_host = str(input('enter URL below\n>>> '))
         usr_host = usr_host.rstrip()
-    elif count >1 :
-        usr_host = link_collect[2]
+    elif count >=1 :
+        usr_host = next_link
+        link_collect.clear()
 
     # ----
 
@@ -67,16 +69,20 @@ while True :
 
     # ----
 
-    print('\n', link_collect[2])
+    next_link = link_collect[2]
+    print('\nnext link to follow…\n{0}\n'.format(next_link))
     # usr_host = tag_collect[2]
     # print(usr_host)
     count += 1
+
 
     # ----
 
     cont = input('want to follow another link?\nY for yes, N for no\n>>> ')
 
-    if cont == 'Y' or cont == 'y' : continue
+    if cont == 'Y' or cont == 'y' :
+        # link_collect.clear()
+        continue
     elif cont == 'N' or cont == 'n'  : break
 
 # ----
