@@ -53,14 +53,14 @@ for tag in soup.find_all('span') :
 
 # ----
 
-s = sum(nums_2_sum)
+s = float(sum(nums_2_sum))
 l = len(nums_2_sum)
-a = (s // l)
+a = (s / l)
 
 # ----
 
 # print(nums_2_sum)
-print('SUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}'.format(s, l, a))
+print('\n\nSUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}'.format(s, l, a))
 
 # ----
 
