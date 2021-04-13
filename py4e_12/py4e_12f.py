@@ -45,10 +45,10 @@ soup = BeautifulSoup(html, 'html.parser')
 
 for tag in soup.find_all('span') :
     span_tag = tag.decode()
-    print(span_tag)
-    print(type(span_tag))
-    # for num in tag.find('>\d+<') :
-        # print(num)
+    # print(span_tag)
+    # print(type(span_tag))
+    for num in span_tag.find('>\d+<') :
+        print(num)
     # num_count += 1
 
 
