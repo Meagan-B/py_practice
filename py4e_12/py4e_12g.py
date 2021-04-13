@@ -85,24 +85,4 @@ while True :
     if cont == 'Y' or cont == 'y' : continue
     elif cont == 'N' or cont == 'n'  : break
 
-# ----
-
-
-
-# for tag in soup.find_all('span') :
-#     span_tag = tag.decode()
-    # print(span_tag)
-    # print(type(span_tag))
-    # num = re.findall('\d+', span_tag)
-    # print(num)
-    # for n in num :
-    #     num_i = int(n)
-    #     nums_2_sum.append(num_i)
-
-# ----
-
-# ----
-
-# print('\n\nSUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}\n\n'.format(s, l, a))
-
 # ...........................
