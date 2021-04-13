@@ -57,8 +57,8 @@ tag_collect = []
 
 tags = soup('a')
 for tag in tags :
-    print(tag)
     tag_collect.append(tag)
+    print(tag.get('href', None))
 
 print(tag_collect[2])
 
