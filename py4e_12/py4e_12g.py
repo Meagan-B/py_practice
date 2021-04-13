@@ -67,7 +67,7 @@ while True :
 
     # ----
 
-    print(link_collect[2])
+    print('\n', link_collect[2])
     # usr_host = tag_collect[2]
     # print(usr_host)
     count += 1
