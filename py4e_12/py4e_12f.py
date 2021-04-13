@@ -62,13 +62,4 @@ a = (s / l)
 # print(nums_2_sum)
 print('\n\nSUM of numbers collected: {0}\nLENGTH of list: {1}\nAVERAGE of numbers collected: {2}\n\n'.format(s, l, a))
 
-# ----
-
-# for tag in soup.find_all(re.compile('^t')) :
-#
-# print('URL:',tag.get('href', None))
-# print('Contents:',tag.contents[0])
-# print('Attrs:',tag.attrs)
-# ^PY4E
-
 # ...........................
