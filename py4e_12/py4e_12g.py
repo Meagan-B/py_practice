@@ -41,11 +41,15 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
+tag_collect = []
 count = 0
 
 while count < 6 :
-    usr_host = str(input('enter URL below\n>>> '))
-    usr_host = usr_host.rstrip()
+    if count <= 1 :
+        usr_host = str(input('enter URL below\n>>> '))
+        usr_host = usr_host.rstrip()
+    elif count >1 :
+        usr_host = tag_collect[2]
 
     # ----
 
@@ -53,8 +57,6 @@ while count < 6 :
     soup = BeautifulSoup(html, 'html.parser')
 
     # ----
-
-    tag_collect = []
 
     tags = soup('a')
     for tag in tags :
