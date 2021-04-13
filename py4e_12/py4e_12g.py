@@ -46,21 +46,29 @@ usr_host = usr_host.rstrip()
 
 # ----
 
-html = urllib.request.urlopen(usr_host, context=ctx).read()
-# print(html.decode())
-soup = BeautifulSoup(html, 'html.parser')
-# print(soup)
+count = 0
 
-# ----
+while count < 6 :
+    html = urllib.request.urlopen(usr_host, context=ctx).read()
+    soup = BeautifulSoup(html, 'html.parser')
 
-tag_collect = []
+    # ----
 
-tags = soup('a')
-for tag in tags :
-    tag_collect.append(tag)
-    print(tag.get('href', None))
+    tag_collect = []
 
-print(tag_collect[2])
+    tags = soup('a')
+    for tag in tags :
+        tag_collect.append(tag)
+        print(tag.get('href', None))
+
+    # ----
+
+    print(tag_collect[2])
+    usr_host = tag_collect[2]
+    print(usr_host)
+    count += 1
+
+
 
 
 
