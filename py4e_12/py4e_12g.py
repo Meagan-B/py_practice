@@ -41,14 +41,14 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-usr_host = str(input('enter URL below\n>>> '))
-usr_host = usr_host.rstrip()
-
-# ----
-
 count = 0
 
 while count < 6 :
+    usr_host = str(input('enter URL below\n>>> '))
+    usr_host = usr_host.rstrip()
+
+    # ----
+
     html = urllib.request.urlopen(usr_host, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -64,8 +64,8 @@ while count < 6 :
     # ----
 
     print(tag_collect[2])
-    usr_host = tag_collect[2]
-    print(usr_host)
+    # usr_host = tag_collect[2]
+    # print(usr_host)
     count += 1
 
 
