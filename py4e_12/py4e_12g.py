@@ -58,8 +58,9 @@ while count < 6 :
 
     tags = soup('a')
     for tag in tags :
-        tag_collect.append(tag)
-        print(tag.get('href', None))
+        # tag_collect.append(tag)
+        # print(tag.get('href', None))
+        tag_collect.append(tag.get('href', None))
 
     # ----
 
