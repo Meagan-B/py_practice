@@ -57,10 +57,10 @@ tag_collect = []
 
 tags = soup('a')
 for tag in tags :
-    # print(tag)
+    print(tag)
     tag_collect.append(tag)
 
-print(tag_collect)
+print(tag_collect[2])
 
 
 
