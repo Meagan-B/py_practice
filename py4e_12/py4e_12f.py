@@ -47,7 +47,7 @@ for tag in soup.find_all('span') :
     span_tag = tag.decode()
     # print(span_tag)
     # print(type(span_tag))
-    num = (re.search('\d+'), span_tag)
+    num = (re.findall('\d'), span_tag)
     print(num)
     # num_count += 1
 
