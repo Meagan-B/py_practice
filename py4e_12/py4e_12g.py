@@ -42,15 +42,15 @@ ctx.verify_mode = ssl.CERT_NONE
 # ----
 
 
-count = int(input('how many iterations would you like?\n>>> '))
+count = 0
 
-while count > 0 :
+while True :
     link_collect = []
 
-    if count == count - 1 :
+    if count < 1 :
         usr_host = str(input('enter URL below\n>>> '))
         usr_host = usr_host.rstrip()
-    else :
+    elif count >=1 :
         usr_host = next_link
         link_collect.clear()
 
@@ -63,15 +63,20 @@ while count > 0 :
 
     tags = soup('a')
     for tag in tags :
+        # tag_collect.append(tag)
         # print(tag.get('href', None))
         link_collect.append(tag.get('href', None))
 
     # ----
+    i = input('\nenter position\n>>> ')
+    i = int(i) - 1
 
-    next_link = link_collect[2]
+
+    next_link = link_collect[i]
     print('\nnext link to follow…\n{0}\n'.format(next_link))
-    count -= 1
-
+    # usr_host = tag_collect[2]
+    # print(usr_host)
+    count += 1
 
     # ----
 
