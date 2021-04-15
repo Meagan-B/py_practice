@@ -68,6 +68,7 @@ while True :
         link_collect.append(tag.get('href', None))
 
     # ----
+
     i = input('\nenter position\n>>> ')
     i = int(i) - 1
 
