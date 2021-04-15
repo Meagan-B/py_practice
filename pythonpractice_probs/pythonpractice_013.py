@@ -9,9 +9,9 @@ def Fibonnaci() :
     fib_lst = [1, 1]
     lst_len = int(input('enter number for length of Fibonnaci below\n>>> '))
 
-    count = 0
+    count = 2
 
-    while count == 0 :
+    while count == 2 :
         a = 1
         b = 1
         c = a + b
@@ -20,7 +20,7 @@ def Fibonnaci() :
         b = a
         a = c
 
-    while count > 0 and count < lst_len :
+    while count > 2 and count < lst_len :
         c = a + b
         fib_lst.append(c)
         count += 1
