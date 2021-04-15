@@ -6,7 +6,7 @@
 # ----
 
 def Fibonnaci() :
-    fib_lst = 
+    fib_lst = []
     lst_len = input('enter number for length of Fibonnaci below\n>>> ')
 
     count = 0
@@ -14,11 +14,12 @@ def Fibonnaci() :
         a = 1
         b = 1
         c = a + b
-        print(c)
+        fib_lst.append(c)
         count += 1
-        a = b
+        a = c
+        b = a
 
-
+     print(fib_lst)
 # ----
 
 
