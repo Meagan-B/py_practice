@@ -10,7 +10,7 @@ def Fibonnaci() :
     lst_len = int(input('enter number for length of Fibonnaci below\n>>> '))
 
     count = 0
-    while count <= lst_len :
+    while count < lst_len :
         a = 1
         print('A: {0}'.format(a))
         b = 1
