@@ -2,8 +2,10 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 
+list_len = input('enter number for length of Fibonnaci below\n>>> ')
 
 # ----
+
 
 
 # ----
