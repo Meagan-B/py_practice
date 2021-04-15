@@ -10,14 +10,24 @@ def Fibonnaci() :
     lst_len = int(input('enter number for length of Fibonnaci below\n>>> '))
 
     count = 0
-    while count < lst_len :
+
+    while count == 0 :
         a = 1
-        print('A: {0}'.format(a))
         b = 1
+        c = a + b
+        fib_lst.append(c)
+        count += 1
+        a = c
+        b = a
+
+    while count > 0 and count < lst_len :
+        # a = 1
+        print('A: {0}'.format(a))
+        # b = 1
         print('B: {0}'.format(b))
         c = a + b
         print('C: {0}'.format(c))
-        # fib_lst.append(c)
+        fib_lst.append(c)
         count += 1
         print('COUNT: {0}'.format(count))
         a = c
