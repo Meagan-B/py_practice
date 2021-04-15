@@ -17,25 +17,23 @@ def Fibonnaci() :
         c = a + b
         fib_lst.append(c)
         count += 1
-        a = c
         b = a
+        a = c
 
     while count > 0 and count < lst_len :
-        # a = 1
-        print('A: {0}'.format(a))
-        # b = 1
-        print('B: {0}'.format(b))
         c = a + b
-        print('C: {0}'.format(c))
         fib_lst.append(c)
         count += 1
-        print('COUNT: {0}'.format(count))
-        a = c
-        print('A2: {0}'.format(a))
         b = a
+        a = c
+        print('A: {0}'.format(a))
+        print('B: {0}'.format(b))
+        print('C: {0}'.format(c))
+        print('COUNT: {0}'.format(count))
+        print('A2: {0}'.format(a))
         print('B2: {0}'.format(b))
 
-    # print(fib_lst)
+    print(fib_lst)
 
     return
 
