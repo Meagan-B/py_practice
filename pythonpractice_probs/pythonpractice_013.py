@@ -20,16 +20,11 @@ def Fibonnaci() :
         b = a
 
      print(fib_lst)
-# ----
 
-
-# ----
-
+     return
 
 # ----
 
-
-# ----
-
+Fibonnaci()
 
 # ...........................
