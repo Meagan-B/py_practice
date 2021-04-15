@@ -2,10 +2,21 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 
-list_len = input('enter number for length of Fibonnaci below\n>>> ')
 
 # ----
 
+def Fibonnaci() :
+    fib_lst = 
+    lst_len = input('enter number for length of Fibonnaci below\n>>> ')
+
+    count = 0
+    while count <= lst_len :
+        a = 1
+        b = 1
+        c = a + b
+        print(c)
+        count += 1
+        a = b
 
 
 # ----
