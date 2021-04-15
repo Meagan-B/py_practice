@@ -12,22 +12,21 @@ def Fibonnaci() :
     count = 0
     while count <= lst_len :
         a = 1
-        print(a)
+        print('A: {0}'.format(a))
         b = 1
-        print(b)
+        print('B: {0}'.format(b))
         c = a + b
-        print(c)
+        print('C: {0}'.format(c))
         # fib_lst.append(c)
         count += 1
         print('COUNT: {0}'.format(count))
         a = c
-        print(a)
+        print('A2: {0}'.format(a))
         b = a
-        print(b)
+        print('B2: {0}'.format(b))
 
-    # print(fib_lst)
-
-    return
+.format(
+    )return
 
 # ----
 
