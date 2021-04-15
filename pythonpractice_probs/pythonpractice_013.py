@@ -25,8 +25,9 @@ def Fibonnaci() :
         b = a
         print('B2: {0}'.format(b))
 
-.format(
-    )return
+    # print(fib_lst)
+
+    return
 
 # ----
 
