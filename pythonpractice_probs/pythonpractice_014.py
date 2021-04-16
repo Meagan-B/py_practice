@@ -6,7 +6,7 @@
 # Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 # >>>>>>>>>>>>>>>>>>>>>
 
-usr_lst = [input('enter list items below\n>>> ')]
+usr_lst = input('enter list items below\n>>> ').split(' ')
 print(usr_lst)
 
 # ----
