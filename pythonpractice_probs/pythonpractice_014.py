@@ -7,7 +7,8 @@
 # >>>>>>>>>>>>>>>>>>>>>
 
 usr_lst = input('enter list items below\n>>> ').split(' ')
-# print(usr_lst)
+usr_lst = [i.strip(' ') for i in usr_lst]
+print(usr_lst)
 
 # ----
 
@@ -25,7 +26,6 @@ def dup_cut_1() :
     len_diff = org_len - new_len
 
     print('dup_cut_1 found {0} duplicates'.format(len_diff))
-    # print(type(new_lst))
     print('ORIGINAL list\n{0}\nNEW list\n{1}'.format(usr_lst, new_lst))
 
 # ----
@@ -46,7 +46,7 @@ def dup_cut_2() :
 
 # ----
 
-dup_cut_1()
-dup_cut_2()
+# dup_cut_1()
+# dup_cut_2()
 
 # ...........................
