@@ -19,7 +19,6 @@ def dup_cut_1() :
     for i in usr_lst :
         if i in new_lst : continue
         elif i not in new_lst :
-            print(i)
             new_lst.append(i)
 
     new_len = len(new_lst)
@@ -44,10 +43,10 @@ def dup_cut_2() :
     print('dup_cut_2 found {0} duplicates'.format(len_diff))
     # print(type(usr_lst))
     print('ORIGINAL list\n{0}\nNEW list\n{1}'.format(usr_lst, new_lst))
-    
+
 # ----
 
 dup_cut_1()
-# dup_cut_2()
+dup_cut_2()
 
 # ...........................
