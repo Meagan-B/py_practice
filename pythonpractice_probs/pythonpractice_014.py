@@ -6,8 +6,9 @@
 # Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 # >>>>>>>>>>>>>>>>>>>>>
 
-usr_lst = input('enter list items below\n>>> ').split(' ')
-usr_lst = [i.strip(' ') for i in usr_lst]
+usr_lst = input('enter list items below\n>>> ').strip()
+usr_lst = usr_lst.split(' ')
+# usr_lst = [i.strip(' ') for i in usr_lst]
 print(usr_lst)
 
 # ----
