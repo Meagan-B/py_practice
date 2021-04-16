@@ -6,13 +6,18 @@
 # Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 # >>>>>>>>>>>>>>>>>>>>>
 
-def dup_cut_1() :
+usr_lst = [input('enter list items below\n>>> ')]
+print(usr_lst)
+
+# ----
+
+# def dup_cut_1() :
 
 
 # ----
 # ----
 
-def dup_cut_2() :
+# def dup_cut_2() :
 
 # ----
 # ----
