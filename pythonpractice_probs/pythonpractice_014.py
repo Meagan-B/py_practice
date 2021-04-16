@@ -11,13 +11,20 @@ print(usr_lst)
 
 # ----
 
-# def dup_cut_1() :
+def dup_cut_1() :
+    global usr_lst
+
+    for i in usr_lst :
+
 
 
 # ----
 # ----
 
-# def dup_cut_2() :
+def dup_cut_2() :
+    global usr_lst
+
+    
 
 # ----
 # ----
