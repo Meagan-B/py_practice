@@ -13,6 +13,7 @@ usr_lst = input('enter list items below\n>>> ').split(' ')
 
 def dup_cut_1() :
     global usr_lst
+    org_len = len(usr_lst)
     new_lst = []
 
     for i in usr_lst :
@@ -21,23 +22,29 @@ def dup_cut_1() :
             print(i)
             new_lst.append(i)
 
-    print('dup_cut_1')
-    print(type(new_lst))
-    print(new_lst)
+    new_len = len(new_lst)
+    len_diff = org_len - new_len
+
+    print('dup_cut_1 found {0} duplicates'.format(len_diff))
+    # print(type(new_lst))
+    print('ORIGINAL list\n{0}\nNEW list\n{1}'.format(usr_lst, new_lst))
 
 # ----
 
 def dup_cut_2() :
     global usr_lst
+    org_len = len(usr_lst)
 
-    usr_lst = set(usr_lst)
-    usr_lst = list(usr_lst)
+    new_lst = set(usr_lst)
+    new_lst = list(usr_lst)
 
-    print('dup_cut_2')
-    print(type(usr_lst))
-    print(usr_lst)
+    new_len = len(new_lst)
+    len_diff = org_len - new_len
 
-# ----
+    print('dup_cut_2 found {0} duplicates'.format(len_diff))
+    # print(type(usr_lst))
+    print('ORIGINAL list\n{0}\nNEW list\n{1}'.format(usr_lst, new_lst))
+    
 # ----
 
 dup_cut_1()
