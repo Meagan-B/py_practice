@@ -7,7 +7,7 @@
 # >>>>>>>>>>>>>>>>>>>>>
 
 usr_lst = input('enter list items below\n>>> ').split(' ')
-print(usr_lst)
+# print(usr_lst)
 
 # ----
 
@@ -18,11 +18,12 @@ def dup_cut_1() :
     for i in usr_lst :
         if i in new_lst : continue
         elif i not in new_lst :
+            print(i)
             new_lst.append(i)
 
     print('dup_cut_1')
-    print(type(usr_lst))
-    print(usr_lst)
+    print(type(new_lst))
+    print(new_lst)
 
 # ----
 
@@ -40,6 +41,6 @@ def dup_cut_2() :
 # ----
 
 dup_cut_1()
-dup_cut_2()
+# dup_cut_2()
 
 # ...........................
