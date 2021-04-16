@@ -13,17 +13,17 @@ print(usr_lst)
 
 def dup_cut_1() :
     global usr_lst
+    new_lst = []
 
     for i in usr_lst :
         if i in new_lst : continue
         elif i not in new_lst :
             new_lst.append(i)
-            
+
+    print('dup_cut_1')
     print(type(usr_lst))
     print(usr_lst)
 
-
-# ----
 # ----
 
 def dup_cut_2() :
@@ -32,12 +32,14 @@ def dup_cut_2() :
     usr_lst = set(usr_lst)
     usr_lst = list(usr_lst)
 
+    print('dup_cut_2')
     print(type(usr_lst))
     print(usr_lst)
 
 # ----
 # ----
 
-
+dup_cut_1()
+dup_cut_2()
 
 # ...........................
