@@ -9,7 +9,7 @@
 usr_lst = input('enter list items below\n>>> ').strip()
 usr_lst = usr_lst.split(' ')
 # usr_lst = [i.strip(' ') for i in usr_lst]
-print(usr_lst)
+# print(usr_lst)
 
 # ----
 
@@ -20,6 +20,7 @@ def dup_cut_1() :
 
     for i in usr_lst :
         if i in new_lst : continue
+        elif i == '' or i == ' ' : continue
         elif i not in new_lst :
             new_lst.append(i)
 
@@ -35,6 +36,7 @@ def dup_cut_2() :
     global usr_lst
     org_len = len(usr_lst)
 
+    new_lst = usr_lst.split()
     new_lst = set(usr_lst)
     new_lst = list(new_lst)
 
@@ -47,7 +49,7 @@ def dup_cut_2() :
 
 # ----
 
-# dup_cut_1()
-# dup_cut_2()
+dup_cut_1()
+dup_cut_2()
 
 # ...........................
