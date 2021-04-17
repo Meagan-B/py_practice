@@ -36,9 +36,14 @@ def dup_cut_2() :
     global usr_lst
     org_len = len(usr_lst)
 
-    new_lst = usr_lst.split()
-    new_lst = set(usr_lst)
+    new_lst = str(usr_lst)
+    print(new_lst)
+    new_lst = new_lst.split(' ')
+    print(new_lst)
+    new_lst = set(new_lst)
+    print(new_lst)
     new_lst = list(new_lst)
+    print(new_lst)
 
     new_len = len(new_lst)
     len_diff = org_len - new_len
