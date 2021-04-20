@@ -2,9 +2,19 @@
 # >>>>>>>>>>>>>>>>>>>>>
 
 # ----
+usr_str = input('enter list items below\n>>> ').strip()
+print(usr_str)
+# usr_str = usr_lst.split(' ')
+# print(usr_lst)
+
+# ----
+
+def dup_cut_1() :
 
 
-
+# ----
+# ----
+# ----
 # ----
 
 
