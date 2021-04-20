@@ -5,8 +5,11 @@
 
 usr_str = input('enter string below\n>>> ').strip()
 print(usr_str)
+
 usr_str = usr_str.split(' ')
+
 usr_str.reverse()
+
 usr_str = str(usr_str)
 print(usr_str)
 
