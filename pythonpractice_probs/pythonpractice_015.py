@@ -3,7 +3,10 @@
 
 # ----
 usr_str = input('enter string below\n>>> ').strip()
+print(usr_str)
 usr_str = usr_str.split(' ')
+print(usr_str)
+usr_str.reverse()
 print(usr_str)
 
 # ----
