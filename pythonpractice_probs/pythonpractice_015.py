@@ -6,22 +6,25 @@
 usr_str = input('enter string below\n>>> ').strip()
 print(usr_str)
 
-usr_str = usr_str.split(' ')
+# ----
 
+usr_str = usr_str.split(' ')
 usr_str.reverse()
 
-usr_str = str(usr_str)
-print(usr_str)
+# ----
+
+rev_str = ''
+
+for i in usr_str :
+    rev_str += i
 
 # ----
 
-# def dup_cut_1() :
+print(rev_str)
+
+# ----
 
 
-# ----
-# ----
-# ----
-# ----
 
 
 
