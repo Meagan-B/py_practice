@@ -6,8 +6,12 @@ usr_str = input('enter string below\n>>> ').strip()
 print(usr_str)
 usr_str = usr_str.split(' ')
 usr_str.reverse()
-rev_str = str(usr_str)
-print(rev_str)
+
+rev_str = []
+
+for i in usr_str :
+    rev_str.append(i)
+    print(rev_str)
 
 # ----
 
