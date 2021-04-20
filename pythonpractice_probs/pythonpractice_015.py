@@ -17,7 +17,7 @@ def flip_it_and_revrs_it() :
 
     for i in usr_str :
         rev_str += i
-
+        rev_str += ' '
 # ----
 
     print(rev_str)
