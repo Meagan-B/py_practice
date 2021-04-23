@@ -6,12 +6,18 @@
 # >>>>>>>>>>>>>>>>>>>>>
 
 pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
+
 # ----
+weak_pass =
+stong_pass =
+
 
 # ----
 
 # ----
+if pass_rating == 'WEAK' or pass_rating == 'weak' :
 
+elif pass_rating == 'STONG' or pass_rating 'strong' :
 
 # ----
 
