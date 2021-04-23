@@ -5,7 +5,7 @@
 # Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
 # >>>>>>>>>>>>>>>>>>>>>
 
-
+pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
 # ----
 
 # ----
