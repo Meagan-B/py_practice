@@ -7,29 +7,35 @@
 
 import random
 import string
-from english_words import english_words_set
+from english_words import english_words_alpha_set
 
 # ----
 
-print('~~~~ PASSWORD GENERATOR ~~~~\nSTRONG passwords will consist of 15, randomly selected, characters\nWEAK passwords will consist of 3, randomly selected, english words\n••••••••\n')
-
-# ----
-# pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
-
+print('~~~~ PASSWORD GENERATOR ~~~~\n\nSTRONG passwords will consist of 15, randomly selected, characters\n\nWEAK passwords will consist of 3, randomly selected, english words\n\n••••••••••••••••••••\n\n')
 
 # ----
 
-# if pass_rating == 'WEAK' or pass_rating == 'weak' :
+pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
 
-# words = english_words_alpha_set
-print(english_words_alpha_set)
+# ----
 
-# weak_pass = ''.join([random.choice(words) for wrd in range(3)])
+words = []
+count = 0
+for wrd in english_words_alpha_set while count < 4 :
+    words.append(random.choice(english_words_alpha_set))
+    count += 1
+print(words)
 
 # print('your {0} password below\n{1}'.format(pass_rating, weak_pass))
 
 
 # ----
+
+# if pass_rating == 'WEAK':
+    # print(pass_rating)
+# else :
+    # print('butt')
+
 # elif pass_rating == 'STONG' or pass_rating 'strong' :
 
 
