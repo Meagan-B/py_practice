@@ -10,33 +10,32 @@ import string
 
 # ----
 
-pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
+print('~~~~ PASSWORD GENERATOR ~~~~\nSTRONG passwords will consist of 15, randomly selected, characters\nWEAK passwords will consist of 3, randomly selected, english words\n••••••••\n')
 
 # ----
+# pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
 
-printable = string.printable
-# print(printable)
-
-
-
-
-# ----
-
-# weak_pass =
-strong_pass = [random.choice(printable) for char in range(15)]
-strong_pass = ''.join(strong_pass)
-
-print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
-
-
-# ----
 
 # ----
 # if pass_rating == 'WEAK' or pass_rating == 'weak' :
+words = open(romeo.txt)
+print(words)
 
-# elif pass_rating == 'STONG' or pass_rating 'strong' :
+
+
+# weak_pass = ''.join([random.choice(words) for wrd in range(3)])
 
 # ----
+# elif pass_rating == 'STONG' or pass_rating 'strong' :
+
+
+# strong_pass = ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for char in range(15)])
+
+
+# print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
+
+
+#
 
 
 # ...........................
