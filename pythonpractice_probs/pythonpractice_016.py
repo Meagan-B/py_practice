@@ -7,6 +7,7 @@
 
 import random
 import string
+from english_words import english_words_set
 
 # ----
 
@@ -19,12 +20,9 @@ print('~~~~ PASSWORD GENERATOR ~~~~\nSTRONG passwords will consist of 15, random
 # ----
 
 # if pass_rating == 'WEAK' or pass_rating == 'weak' :
-words_lst = []
-words = open('romeo.txt')
-for wrd in words :
-    words_lst += wrd
 
-print(words_lst)
+words = english_words_alpha_set
+print(words)
 
 # weak_pass = ''.join([random.choice(words) for wrd in range(3)])
 
