@@ -21,8 +21,8 @@ print('~~~~ PASSWORD GENERATOR ~~~~\nSTRONG passwords will consist of 15, random
 
 # if pass_rating == 'WEAK' or pass_rating == 'weak' :
 
-words = english_words_alpha_set
-print(words)
+# words = english_words_alpha_set
+print(english_words_alpha_set)
 
 # weak_pass = ''.join([random.choice(words) for wrd in range(3)])
 
