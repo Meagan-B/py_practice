@@ -23,8 +23,10 @@ printable = string.printable
 # ----
 
 # weak_pass =
-strong_pass = str([random.choice(printable) for char in range(15)])
-print(strong_pass)
+strong_pass = [random.choice(printable) for char in range(15)]
+strong_pass = ''.join(strong_pass)
+
+print(len(strong_pass), strong_pass)
 
 
 # ----
