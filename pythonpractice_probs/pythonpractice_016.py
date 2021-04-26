@@ -26,7 +26,7 @@ printable = string.printable
 strong_pass = [random.choice(printable) for char in range(15)]
 strong_pass = ''.join(strong_pass)
 
-print(len(strong_pass), strong_pass)
+print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
 
 
 # ----
