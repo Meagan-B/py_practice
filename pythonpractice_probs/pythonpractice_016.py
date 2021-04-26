@@ -13,17 +13,24 @@ import string
 
 # ----
 
-ascii_lower = string.ascii_lowercase
-ascii_upper = string.ascii_uppercase
-ascii_letters = string.ascii_letters
-ascii_digits = string.ascii_digits
-ascii_hexdigits = string.ascii_hexdigits
-ascii_octdigits = string.ascii_octdigits
-ascii_punctuation = string.ascii_punctuation
-ascii_printable = string.ascii_printable
+# ascii_lower = string.ascii_lowercase
+# print(ascii_lower)
+# ascii_upper = string.ascii_uppercase
+# print(ascii_upper)
+# ascii_letters = string.ascii_letters
+# print(ascii_letters)
+# digits = string.digits
+# print(digits)
+# hexdigits = string.hexdigits
+# print(hexdigits)
+# octdigits = string.octdigits
+# print(octdigits)
+# punctuation = string.punctuation
+# print(punctuation)
+printable = string.printable
+print(printable)
 
 
-print(alpha_lower, '\n', ascii_upper, '\n', ascii_letters, '\n', ascii_digits, '\n', ascii_hexdigits, '\n', ascii_octdigits, '\n', ascii_punctuation, '\n', ascii_printable)
 
 
 # ----
