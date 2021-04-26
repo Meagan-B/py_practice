@@ -15,7 +15,7 @@ print('~~~~ PASSWORD GENERATOR ~~~~\n\nSTRONG passwords will consist of 15, rand
 
 # ----
 
-pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
+pass_rating = input('how strong of a password would you like?\n\nenter W/w for a WEAK password\nenter S/s for a STRONG password\n\n>>> ')
 
 # ----
 eng_set_lst = list(english_words_alpha_set)
@@ -31,17 +31,18 @@ weak_pass = ''.join(words)
 
 # ----
 
-strong_pass = ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for char in range(15)])
+strong_pass = ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for char in range(25)])
 
 # ----
 
-# if pass_rating == 'WEAK':
+if pass_rating == 'W' or pass_rating == 'w':
     # print(pass_rating)
-    # print('your {0} password below\n{1}'.format(pass_rating, weak_pass))
-# elif pass_rating == 'STONG' or pass_rating 'strong' :
+    print('your {0} password below\n{1}'.format(pass_rating, weak_pass))
+elif pass_rating == 'S' or pass_rating == 's' :
+    # print(pass_rating)
+    print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
 # else :
     # print('butt')
-    # print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
 
 
 
