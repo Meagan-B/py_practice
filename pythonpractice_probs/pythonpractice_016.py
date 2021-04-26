@@ -18,11 +18,12 @@ print('~~~~ PASSWORD GENERATOR ~~~~\n\nSTRONG passwords will consist of 15, rand
 pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
 
 # ----
-
+eng_set_lst = list(english_words_alpha_set)
 words = []
 count = 0
-for wrd in english_words_alpha_set while count < 4 :
-    words.append(random.choice(english_words_alpha_set))
+
+while count < 3 :
+    words.append(random.choice(eng_set_lst))
     count += 1
 print(words)
 
