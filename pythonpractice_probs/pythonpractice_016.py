@@ -9,33 +9,22 @@ import random
 import string
 
 # ----
-# pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
+
+pass_rating = input('how strong of a password would you like?\nenter WEAK or STRONG below\n>>> ')
 
 # ----
 
-# ascii_lower = string.ascii_lowercase
-# print(ascii_lower)
-# ascii_upper = string.ascii_uppercase
-# print(ascii_upper)
-# ascii_letters = string.ascii_letters
-# print(ascii_letters)
-# digits = string.digits
-# print(digits)
-# hexdigits = string.hexdigits
-# print(hexdigits)
-# octdigits = string.octdigits
-# print(octdigits)
-# punctuation = string.punctuation
-# print(punctuation)
 printable = string.printable
-print(printable)
+# print(printable)
 
 
 
 
 # ----
+
 # weak_pass =
-# stong_pass =
+strong_pass = str([random.choice(printable) for char in range(15)])
+print(strong_pass)
 
 
 # ----
