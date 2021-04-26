@@ -17,13 +17,19 @@ print('~~~~ PASSWORD GENERATOR ~~~~\nSTRONG passwords will consist of 15, random
 
 
 # ----
+
 # if pass_rating == 'WEAK' or pass_rating == 'weak' :
-words = open(romeo.txt)
-print(words)
+words_lst = []
+words = open('romeo.txt')
+for wrd in words :
+    words_lst += wrd
 
-
+print(words_lst)
 
 # weak_pass = ''.join([random.choice(words) for wrd in range(3)])
+
+# print('your {0} password below\n{1}'.format(pass_rating, weak_pass))
+
 
 # ----
 # elif pass_rating == 'STONG' or pass_rating 'strong' :
