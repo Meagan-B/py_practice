@@ -26,29 +26,26 @@ while count < 3 :
     words.append(random.choice(eng_set_lst))
     count += 1
 
-words = ''.join(words)
-print(words)
+weak_pass = ''.join(words)
+# print(words)
 
-# print('your {0} password below\n{1}'.format(pass_rating, weak_pass))
+# ----
 
+strong_pass = ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for char in range(15)])
 
 # ----
 
 # if pass_rating == 'WEAK':
     # print(pass_rating)
+    # print('your {0} password below\n{1}'.format(pass_rating, weak_pass))
+# elif pass_rating == 'STONG' or pass_rating 'strong' :
 # else :
     # print('butt')
-
-# elif pass_rating == 'STONG' or pass_rating 'strong' :
-
-
-strong_pass = ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation) for char in range(15)])
+    # print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
 
 
-# print('your {0} password below\n{1}'.format(pass_rating, strong_pass))
 
 
-#
 
 
 # ...........................
