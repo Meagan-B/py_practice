@@ -13,7 +13,7 @@ usr_host = 'http://www.nytimes.com'
 
 # ----
 
-html = request.get(usr_host)
+html = requests.get(usr_host)
 # print(html.decode())
 print(html)
 
