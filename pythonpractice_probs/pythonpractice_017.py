@@ -18,9 +18,16 @@ usr_host = 'http://www.nytimes.com'
 # print(html)
 
 soup = BeautifulSoup(requests.get(usr_host).text, 'html.parser')
-print(soup)
+# print(soup)
+
+for story_head in soup.find_all(class="css-svu3ba e1lsht870") :
+    print(story_head)
 
 # ----
+
+# <h3 class="css-svu3ba e1lsht870" size="500">Can You Have Alcohol After the Covid Vaccine?</h3>
+# <h3 class="css-1bxzzgs e1lsht870" size="300">Why Iowa Has Become Such a Heartbreaker for Democrats</h3>
+
 
 # para_count = 0
 # para_tag = soup('p')
