@@ -6,27 +6,27 @@ import urllib.request, urllib.parse, urllib.error
 import requests
 from bs4 import BeautifulSoup
 
-
+# usr_host = input('enter web address below\n>>> ')
 usr_host = 'http://www.nytimes.com'
 html = requests.get(usr_host)
 soup = BeautifulSoup(requests.get(usr_host).text, 'lxml')
-# soup = BeautifulSoup(requests.get('http://www.nytimes.com').text, 'lxml')
-# print(soup)
+
+# ----
 
 count = 0
-link_collect =[]
+
+while count < 10 :
+    link_collect =[]
 
 
-    # ----
+    tags = soup.find_all('a')
+    tags = soup.p
+    for tag in tags :
+#       print(tag.get('href', None))
+        link_collect.append(tag)
+        count += 1
 
-tags = soup('a')
-for tag in tags :
-    # tag_collect.append(tag)
-    # print(tag)
-    print(tag.get('href', None))
-    link_collect.append(tag.get('href', None))
-
-# print(link_collect)
+print(link_collect)
     # ----
 
     # i = input('\nenter position\n>>> ')
