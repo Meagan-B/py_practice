@@ -14,17 +14,25 @@ soup = BeautifulSoup(requests.get(usr_host).text, 'lxml')
 # ----
 
 count = 0
+link_collect =[]
 
-while count < 10 :
-    link_collect =[]
+# tags = soup.find_all('a', [class_="css-xxaj7r")
+# print(tags)
 
-
+while count < 4 :
     tags = soup.find_all('a')
-    tags = soup.p
+    # tags = soup.find_all("a", class_="css-xxaj7r e1lsht870")
+    # tags = soup.title
+    # tags = soup.title.name
+    # tags = soup.title.string
+    # tags = soup.title.parent.name
+    # tags = soup.p
     for tag in tags :
-#       print(tag.get('href', None))
-        link_collect.append(tag)
-        count += 1
+        if tag.re('class= css-xxaj7r') :
+            # link_collect.append(tag.get('href'))
+            link_collect.append(tag)
+            count += 1
+        else : continue
 
 print(link_collect)
     # ----
