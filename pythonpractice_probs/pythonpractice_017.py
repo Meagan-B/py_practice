@@ -13,16 +13,20 @@ usr_host = 'http://www.nytimes.com'
 
 # ----
 
-# html = requests.get(usr_host)
+html = requests.get(usr_host)
 # print(html.decode())
 # print(html)
 
-soup = BeautifulSoup(requests.get(usr_host).text, 'html.parser')
+# soup = BeautifulSoup(requests.get(usr_host).text, 'html.parser')
+soup = BeautifulSoup(usr_host.text, 'html.parser')
 # print(soup)
 
-for story_head in soup.find_all(class="css-svu3ba e1lsht870") :
-    print(story_head)
+collection_pot = []
+for story_head in soup.find_all(class_='story-wrapper css-dqoo0l') :
+    collection_pot += story_head
+    # print(story_head)
 
+print(collection_pot)
 # ----
 
 # <h3 class="css-svu3ba e1lsht870" size="500">Can You Have Alcohol After the Covid Vaccine?</h3>
