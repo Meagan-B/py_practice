@@ -17,7 +17,6 @@ count = 0
 link_collect =[]
 
 # tags = soup.find_all('a', [class_="css-xxaj7r")
-# print(tags)
 
 while count < 4 :
     tags = soup.find_all('a')
