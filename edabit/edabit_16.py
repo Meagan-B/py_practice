@@ -8,4 +8,7 @@ def true_equations(a_string) :
     print(type(a_string), a_string)
     return a_string
 
-true_equations(string_1)
+# true_equations(string_1)
+
+
+print(string_1.split())
