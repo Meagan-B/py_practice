@@ -8,8 +8,6 @@
 
 def random_set_buildr(set_length) :
     import random
-
-    global set_length
     # set_length = int(input('enter desired length of random number set below\n>>> '))
 
     rand_select = [random.randint(0, 10) for i in range(set_length)]
