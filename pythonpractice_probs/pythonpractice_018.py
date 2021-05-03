@@ -6,18 +6,18 @@
 
 # ----
 
-def random_set_buildr(set_length) :
+def random_set_buildr(num) :
     import random
     # set_length = int(input('enter desired length of random number set below\n>>> '))
 
-    rand_select = [random.randint(0, 10) for i in range(set_length)]
-    print(rand_select)
+    rand_select = [random.randint(0, 9) for i in range(num)]
+    # print(rand_select)
+
+random_set_buildr(4)
 
 # ----
 
-set_length = int(input('enter desired length of random number set below\n>>> '))
-random_set_buildr(set_length)
-
+\
 # ----
 
 # ----
