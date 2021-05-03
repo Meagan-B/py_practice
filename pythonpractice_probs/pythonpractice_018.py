@@ -16,7 +16,7 @@ def random_set_buildr(num) :
 
     rand_select = [random.randint(0, 9) for i in range(num)]
     return rand_select
-    # print(rand_select)
+    print(rand_select)
 
 random_set_buildr(4)
 
@@ -27,12 +27,17 @@ usr_guess = input('enter any 4 digit number to make you first guess\n>>> ').spli
 count = 0
 
 while usr_guess != rand_select :
-    for (i, n) in (usr_guess, rand_select) :
-        if i == n :
-            print(i)
+    # for (i, n) in (usr_guess, rand_select) :
+    c = [i for i in usr_guess if i == rand_select]
+        # if i == n :
+            # print(i)
+    print(c)
 
     count += 1
     usr_guess = input('guess again\n>>> ')
+
+    if usr_guess == 'q' : break
+    
 
 # ----
 
