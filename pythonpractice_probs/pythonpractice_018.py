@@ -14,8 +14,9 @@ def random_set_buildr(a, b) :
     # set_length = int(input('enter desired length of random number set below\n>>> '))
 
     rand_num_gen = random.randint(a, b)
-    print(rand_num_gen)
-    return rand_num_gen
+    rand_lst = [rand_num_gen.split()]
+    print(rand_num_gen, rand_lst)
+    return rand_lst
 
 random_set_buildr(1000, 9999)
 
