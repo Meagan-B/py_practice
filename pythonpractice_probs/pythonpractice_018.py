@@ -9,16 +9,14 @@ welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 # ----
 
 
-def random_set_buildr(a, b) :
+def random_set_buildr(num) :
     import random
     # set_length = int(input('enter desired length of random number set below\n>>> '))
+    rand_num_gen = [random.randint(0, 9) for i in range(num)]
+    print(rand_num_gen)
+    return rand_num_gen
 
-    rand_num_gen = random.randint(a, b)
-    rand_lst = [rand_num_gen.split()]
-    print(rand_num_gen, rand_lst)
-    return rand_lst
-
-random_set_buildr(1000, 9999)
+random_set_buildr(4)
 
 
 
@@ -34,11 +32,17 @@ while (u_guess != ('quit', 'q')) and (cows != 4) :
         # if i == n :
             # print(i)
     print(c)
+    cows = 0
+    bulls = 0
 
-    count += 1
+
+    guesses += 1
+    cows += 1
+
+    guesses += 1
+    bulls += 1
+
     usr_guess = input('guess again\n>>> ')
-
-    if usr_guess == 'q' : break
 
 
 # ----
