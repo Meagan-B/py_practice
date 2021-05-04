@@ -7,23 +7,23 @@ welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 # print(welcome)
 
 # ----
-rand_select = []
 
-def random_set_buildr(num) :
-    global rand_select
+
+def random_set_buildr(a, b) :
     import random
     # set_length = int(input('enter desired length of random number set below\n>>> '))
 
-    rand_select = [random.randint(0, 9) for i in range(num)]
-    return rand_select
-    print(rand_select)
+    rand_num_gen = random.randint(a, b)
+    print(rand_num_gen)
+    return rand_num_gen
 
-random_set_buildr(4)
+random_set_buildr(1000, 9999)
 
 
 
 # ----
-usr_guess = input('enter any 4 digit number to make you first guess\n>>> ').split()
+
+usr_guess = input('enter any 4 digit number\n(from 1000-9999)\nmake thy first guess\n>>> ').split()
 count = 0
 
 while usr_guess != rand_select :
@@ -37,7 +37,7 @@ while usr_guess != rand_select :
     usr_guess = input('guess again\n>>> ')
 
     if usr_guess == 'q' : break
-    
+
 
 # ----
 
