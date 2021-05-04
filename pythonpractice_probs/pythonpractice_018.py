@@ -24,11 +24,12 @@ random_set_buildr(1000, 9999)
 # ----
 
 usr_guess = input('enter any 4 digit number\n(from 1000-9999)\nmake thy first guess\n>>> ').split()
-count = 0
+guesses = 0
+cows = 0
+bulls = 0
 
-while usr_guess != rand_select :
+while (u_guess != ('quit', 'q')) and (cows != 4) :
     # for (i, n) in (usr_guess, rand_select) :
-    c = [i for i in usr_guess if i == rand_select]
         # if i == n :
             # print(i)
     print(c)
