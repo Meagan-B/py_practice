@@ -22,27 +22,26 @@ random_set_buildr(4)
 
 # ----
 
-usr_guess = input('enter any 4 digit number\n(from 1000-9999)\nmake thy first guess\n>>> ').split()
+usr_guess = input('enter any 4 digit number\n\nmake thy first guess\n>>> ').split()
 guesses = 0
 cows = 0
 bulls = 0
 
 while (u_guess != ('quit', 'q')) and (cows != 4) :
-    # for (i, n) in (usr_guess, rand_select) :
-        # if i == n :
-            # print(i)
-    print(c)
-    cows = 0
-    bulls = 0
-
-
-    guesses += 1
-    cows += 1
-
-    guesses += 1
-    bulls += 1
-
-    usr_guess = input('guess again\n>>> ')
+    for i in range(0,4) :
+        if u_guess[i] in rand_num_gen :
+            print('cool!')
+    # cows = 0
+    # bulls = 0
+    #
+    #
+    # guesses += 1
+    # cows += 1
+    #
+    # guesses += 1
+    # bulls += 1
+    #
+    u_guess = input('guess again\n>>> ')
 
 
 # ----
