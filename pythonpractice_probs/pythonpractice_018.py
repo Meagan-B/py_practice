@@ -13,22 +13,24 @@ rand_num_gen = [random.randint(0, 9) for i in range(4)]
 num_strs = [str(n) for n in rand_num_gen]
 rand_str = int("".join(num_strs))
 
-print('*random number generated: {0}*'.format(rand_str))
+print('* random number generated: {0} *'.format(rand_str))
 # ----
 
-# u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
-# g_lst = []
-#
-# for i in u_guess :
-#     g_lst.append(int(i))
-# print(g_lst)
-#
-# # ----
-#
+u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
+g_lst = [str(i) for i in u_guess]
+g_str = int("".join(g_lst))
+
+for i in u_guess :
+    g_lst.append(i)
+print('* user guess: {0}'.format(g_lst))
+print(type(g_lst))
+
+# ----
+
 # guesses = 0
 # cows = 0
 # bulls = 0
-#
+
 # while (u_guess != 'quit') and (cows != 4) :
 #     if u_guess == rand_str :
 #         print('you have {0} COWS!!!'.format(4))
@@ -47,7 +49,7 @@ print('*random number generated: {0}*'.format(rand_str))
 #     # bulls += 1
 #     #
 #     u_guess = input('guess again\n>>> ')
-#
+
 
 # ----
 
