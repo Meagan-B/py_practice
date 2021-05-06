@@ -8,53 +8,49 @@ welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 
 # ----
 import random
-
+# ----
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
-for n in rand_num_gen :
-    n = str(n)
-    print(n)
-    
 
-rand_str = str(rand_num_gen)
-print(rand_str)
-''.join(rand_str)
-print(rand_str)
-# print(rand_num_gen, rand_str)
-# XXX:
-# ----
+def num_convert(list) :
+    num_strs = [str(n) for n in lst]
+    rand_str = int("".join(num_strs))
 
-u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
-g_lst = []
-
-for i in u_guess :
-    g_lst.append(int(i))
-print(g_lst)
+print(num_convert(rand_num_gen))
 
 # ----
 
-guesses = 0
-cows = 0
-bulls = 0
-
-while (u_guess != 'quit') and (cows != 4) :
-    if u_guess == rand_str :
-        print('you have {0} COWS!!!'.format(4))
-    for i in u_guess :
-        print(i)
-        if i == rand_num_gen :
-            print('cool!')
-    # cows = 0
-    # bulls = 0
-    #
-    #
-    # guesses += 1
-    # cows += 1
-    #
-    # guesses += 1
-    # bulls += 1
-    #
-    u_guess = input('guess again\n>>> ')
-
+# u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
+# g_lst = []
+#
+# for i in u_guess :
+#     g_lst.append(int(i))
+# print(g_lst)
+#
+# # ----
+#
+# guesses = 0
+# cows = 0
+# bulls = 0
+#
+# while (u_guess != 'quit') and (cows != 4) :
+#     if u_guess == rand_str :
+#         print('you have {0} COWS!!!'.format(4))
+#     for i in u_guess :
+#         print(i)
+#         if i == rand_num_gen :
+#             print('cool!')
+#     # cows = 0
+#     # bulls = 0
+#     #
+#     #
+#     # guesses += 1
+#     # cows += 1
+#     #
+#     # guesses += 1
+#     # bulls += 1
+#     #
+#     u_guess = input('guess again\n>>> ')
+#
 
 # ----
 
