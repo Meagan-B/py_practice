@@ -12,7 +12,7 @@ import random
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
 rand_str = str(rand_num_gen)
 print(rand_str)
-rand_str = ''.join(rand_str)
+''.join(rand_str)
 print(rand_str)
 # print(rand_num_gen, rand_str)
 # XXX:
