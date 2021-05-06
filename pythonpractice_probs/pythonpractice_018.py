@@ -26,12 +26,14 @@ cows = 0
 bulls = 0
 
 while True :
-    if u_guess == 'quit' : return False
+    if u_guess == 'quit' : break
     elif u_guess == rand_str :
         cows = 4
         print('you have {0} COWS!!!'.format(cows))
-        return False
-    else : break    
+        break
+    else :
+        print('* else *')
+        break
     # else :
     #     for i in u_guess :
     #     print(i)
