@@ -10,6 +10,7 @@ welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 import random
 
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
+rand_str = ''.join(rand_num_gen)
 print(rand_num_gen)
 # XXX:
 # ----
@@ -28,6 +29,8 @@ cows = 0
 bulls = 0
 
 while (u_guess != 'quit') and (cows != 4) :
+    if u_guess == rand_str :
+        print('you have {0} COWS!!!'.format(4))
     for i in u_guess :
         print(i)
         if i == rand_num_gen :
