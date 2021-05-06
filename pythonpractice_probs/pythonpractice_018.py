@@ -10,6 +10,11 @@ welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 import random
 
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
+for n in rand_num_gen :
+    n = str(n)
+    print(n)
+    
+
 rand_str = str(rand_num_gen)
 print(rand_str)
 ''.join(rand_str)
