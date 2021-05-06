@@ -5,7 +5,7 @@
 
 welcome = '\n@@@@@@@@@@@@@@@@\n~~~~ WELCOME ~~~~\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 how_to_play = 'For every correctly guessed digit in the CORRECT placement,\nyou shall receive a COW\nFor every correctly guessed digit in the INCORRECT placement,\nyou shall receive a BULL\n\n!!!!4 COWs wins the game!!!!\n\n'
-print(welcome, how_to_play)
+print(welcome + how_to_play)
 
 # ----
 import random
@@ -21,28 +21,33 @@ u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
 print('* user guess #1: {0} *'.format(u_guess))
 # ----
 
-# guesses = 0
-# cows = 0
-# bulls = 0
+guesses = 1
+cows = 0
+bulls = 0
 
-# while (u_guess != 'quit') and (cows != 4) :
-#     if u_guess == rand_str :
-#         print('you have {0} COWS!!!'.format(4))
-#     for i in u_guess :
-#         print(i)
-#         if i == rand_num_gen :
-#             print('cool!')
-#     # cows = 0
-#     # bulls = 0
-#     #
-#     #
-#     # guesses += 1
-#     # cows += 1
-#     #
-#     # guesses += 1
-#     # bulls += 1
-#     #
-#     u_guess = input('guess again\n>>> ')
+while True :
+    if u_guess == 'quit' : return False
+    elif u_guess == rand_str :
+        cows = 4
+        print('you have {0} COWS!!!'.format(cows))
+        return False
+    else : break    
+    # else :
+    #     for i in u_guess :
+    #     print(i)
+    #     if i == rand_num_gen :
+    #         print('cool!')
+    # cows = 0
+    # bulls = 0
+    #
+    #
+    # guesses += 1
+    # cows += 1
+    #
+    # guesses += 1
+    # bulls += 1
+    #
+    u_guess = input('guess again\n>>> ')
 
 
 # ----
