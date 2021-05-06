@@ -4,7 +4,7 @@
 # >>>>>>>>>>>>>>>>>>>>>
 
 welcome = '\n@@@@@@@@@@@@@@@@\n~~~~ WELCOME ~~~~\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
-how_to_play = '$$$$ For every correctly guessed digit in the CORRECT placement, you shall receive a COW $$$$\n\n++++ For every correctly guessed digit in the INCORRECT placement, you shall receive a BULL ++++\n\n!!!! 4 COWs wins the game !!!!\n\n'
+how_to_play = 'For every correctly guessed digit in the CORRECT placement,\nyou shall receive a COW\nFor every correctly guessed digit in the INCORRECT placement,\nyou shall receive a BULL\n\n!!!!4 COWs wins the game!!!!\n\n'
 print(welcome, how_to_play)
 
 # ----
