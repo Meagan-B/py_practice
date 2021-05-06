@@ -11,7 +11,7 @@ import random
 
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
 print(rand_num_gen)
-
+# XXX:
 # ----
 
 u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
@@ -27,7 +27,7 @@ guesses = 0
 cows = 0
 bulls = 0
 
-while (u_guess != ('quit', 'q')) and (cows != 4) :
+while (u_guess != 'quit') and (cows != 4) :
     for i in range(0,4) :
         if u_guess[i] in rand_num_gen :
             print('cool!')
