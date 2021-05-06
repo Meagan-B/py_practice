@@ -10,12 +10,10 @@ welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
 import random
 # ----
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
+num_strs = [str(n) for n in rand_num_gen]
+rand_str = int("".join(num_strs))
 
-def num_convert(list) :
-    num_strs = [str(n) for n in lst]
-    rand_str = int("".join(num_strs))
-
-print(num_convert(rand_num_gen))
+print(rand_str)
 
 # ----
 
