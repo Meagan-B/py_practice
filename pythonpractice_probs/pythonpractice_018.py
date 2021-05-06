@@ -18,7 +18,7 @@ u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
 g_lst = []
 
 for i in u_guess :
-    g_lst.append(i)
+    g_lst.append(int(i))
 print(g_lst)
 
 # ----
