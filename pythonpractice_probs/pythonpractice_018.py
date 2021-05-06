@@ -13,8 +13,7 @@ rand_num_gen = [random.randint(0, 9) for i in range(4)]
 num_strs = [str(n) for n in rand_num_gen]
 rand_str = int("".join(num_strs))
 
-print(rand_str)
-
+print('*random number generated: {0}*'.format(rand_str))
 # ----
 
 # u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
