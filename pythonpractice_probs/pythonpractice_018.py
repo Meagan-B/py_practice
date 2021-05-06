@@ -28,8 +28,9 @@ cows = 0
 bulls = 0
 
 while (u_guess != 'quit') and (cows != 4) :
-    for i in range(0,4) :
-        if u_guess[i] in rand_num_gen :
+    for i in u_guess :
+        print(i)
+        if i == rand_num_gen :
             print('cool!')
     # cows = 0
     # bulls = 0
