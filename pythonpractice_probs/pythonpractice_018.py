@@ -3,8 +3,9 @@
 # Randomly generate a 4-digit number. Ask the user to guess a 4-digit number. For every digit that the user guessed correctly in the correct place, they have a “cow”. For every digit the user guessed correctly in the wrong place is a “bull.” Every time the user makes a guess, tell them how many “cows” and “bulls” they have. Once the user guesses the correct number, the game is over. Keep track of the number of guesses the user makes throughout teh game and tell the user at the end.
 # >>>>>>>>>>>>>>>>>>>>>
 
-welcome = 'WELCOME\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
-# print(welcome)
+welcome = '\n@@@@@@@@@@@@@@@@\n~~~~ WELCOME ~~~~\nto "cows & bulls"\n@@@@@@@@@@@@@@@@\n\n'
+how_to_play = '$$$$ For every correctly guessed digit in the CORRECT placement, you shall receive a COW $$$$\n\n++++ For every correctly guessed digit in the INCORRECT placement, you shall receive a BULL ++++\n\n!!!! 4 COWs wins the game !!!!\n\n'
+print(welcome, how_to_play)
 
 # ----
 import random
@@ -15,16 +16,9 @@ rand_str = int("".join(num_strs))
 
 print('* random number generated: {0} *'.format(rand_str))
 # ----
-
 u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
-g_lst = [str(i) for i in u_guess]
-g_str = int("".join(g_lst))
 
-for i in u_guess :
-    g_lst.append(i)
-print('* user guess: {0}'.format(g_lst))
-print(type(g_lst))
-
+print('* user guess #1: {0} *'.format(u_guess))
 # ----
 
 # guesses = 0
