@@ -8,17 +8,21 @@
 # You do not need to save these files to your folder since your program will read the data directly from the URL. Note: Each student will have a distinct data url for the assignment - so only use your own data url for analysis.
 # >>>>>>>>>>>>>>>>>>>>>>>
 
+import urllib.request, urllib.parse, urllib.error
+import xml.etree.ElementTree as ET
+import ssl
 
+# ----
+# Ignore SSL certificate errors (from PY4E, because i do not understand, but need to use this code to test example)
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-# ----
-
-
-
-# ----
-
-
+data = user_inp
+tree = ET.fromstring(data)
 
 # ----
 
