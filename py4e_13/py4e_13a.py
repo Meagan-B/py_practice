@@ -45,9 +45,9 @@ data_pnts = len(counts)
 sum = 0
 
 for i in counts :
-    print(i)
+    # print(i)
     c = i.find('count').text
-    print(c)
+    # print(c)
     c = int(c)
     sum += c
 
