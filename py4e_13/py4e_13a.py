@@ -21,8 +21,10 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-data = urllib.request.urlopen('http://www.python.org/').read().decode()
+data = urllib.request.urlopen('http://py4e-data.dr-chuck.net/comments_42.xml').read().decode()
 tree = ET.fromstring(data)
+
+print(tree)
 
 # ----
 
