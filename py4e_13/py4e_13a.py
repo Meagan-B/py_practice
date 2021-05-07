@@ -41,8 +41,12 @@ counts = tree.findall('.//count')
 data_pnts = len(counts)
 # print(data_pnts)
 
-nums = tree.findtext('count')
-print(nums)
+for i in counts :
+    i = i.findtext('count').text
+    print(i)
+
+# nums = tree.findtext('count')
+# print(nums)
 
 # ----
 
