@@ -39,7 +39,6 @@ counts = tree.findall('comments/comment')
 # print(type(counts), counts)
 
 data_pnts = len(counts)
-# print(data_pnts)
 
 # ----
 
@@ -52,11 +51,12 @@ for i in counts :
     c = int(c)
     sum += c
 
-# print(sum)
-
 # ----
 
 print('number of data points {0}\nsum of comments {1}'.format(data_pnts, sum))
+
+avg = (sum / data_pnts)
+print(avg)
 
 
 # ----
