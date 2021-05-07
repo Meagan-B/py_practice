@@ -21,7 +21,7 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-data = user_inp
+data = urllib.request.urlopen('http://www.python.org/').read().decode()
 tree = ET.fromstring(data)
 
 # ----
