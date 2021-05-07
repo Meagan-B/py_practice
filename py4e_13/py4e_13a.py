@@ -29,27 +29,34 @@ url = 'http://py4e-data.dr-chuck.net/comments_42.xml'
 # ----
 
 data = urllib.request.urlopen(url, context=ctx).read().decode()
-# print(type(data), data)
+print(type(data), data)
 tree = ET.fromstring(data)
 # print(type(tree), tree)
 
 # ----
 
-counts = tree.findall('.//count')
+counts = tree.findall('comments/comment')
 # print(type(counts), counts)
 
 data_pnts = len(counts)
 # print(data_pnts)
 
-for i in counts :
-    i = i.findtext('count').text
-    print(i)
+# ----
 
-# nums = tree.findtext('count')
-# print(nums)
+sum = 0
+
+for i in counts :
+    print(i)
+    c = i.find('count').text
+    print(c)
+    c = int(c)
+    sum += c
+
+# print(sum)
 
 # ----
 
+print('number of data points {0}\nsum of comments {1}'.format(data_pnts, sum))
 
 
 # ----
