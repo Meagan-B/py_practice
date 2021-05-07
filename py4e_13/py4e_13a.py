@@ -29,16 +29,21 @@ url = 'http://py4e-data.dr-chuck.net/comments_42.xml'
 # ----
 
 data = urllib.request.urlopen(url, context=ctx).read().decode()
-print(type(data), data)
+# print(type(data), data)
 tree = ET.fromstring(data)
-print(type(tree), tree)
-counts = tree.findall('.//count')
-print(type(counts), counts)
+# print(type(tree), tree)
 
 # ----
 
+counts = tree.findall('.//count')
+# print(type(counts), counts)
+
 data_pnts = len(counts)
-print(data_pnts)
+# print(data_pnts)
+
+nums = tree.findtext('count')
+print(nums)
+
 # ----
 
 
