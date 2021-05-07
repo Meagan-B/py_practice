@@ -20,6 +20,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 # ----
+
 # url = input('enter URL below\n>>> ')
 url = 'http://py4e-data.dr-chuck.net/comments_42.xml'
 # url = "http://py4e-data.dr-chuck.net/comments_1154832.xml"
@@ -34,6 +35,11 @@ counts = tree.findall('.//count')
 print(counts)
 
 # ----
+
+data_pnts = len(counts)
+print(data_pnts)
+# ----
+
 
 
 # ----
