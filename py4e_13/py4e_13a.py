@@ -29,7 +29,7 @@ url = 'http://py4e-data.dr-chuck.net/comments_42.xml'
 # ----
 
 data = urllib.request.urlopen(url, context=ctx).read().decode()
-print(type(data), data)
+# print(type(data), data)
 tree = ET.fromstring(data)
 # print(type(tree), tree)
 
@@ -53,17 +53,11 @@ for i in counts :
 
 # ----
 
-print('number of data points {0}\nsum of comments {1}'.format(data_pnts, sum))
-
 avg = (sum / data_pnts)
 print(avg)
 
-
 # ----
 
-
-
-# ----
-
+print('COUNT of data points {0}\nSUM of comments {1}\nAVERAGE comments made per person {2}'.format(data_pnts, sum, avg))
 
 # ...........................
