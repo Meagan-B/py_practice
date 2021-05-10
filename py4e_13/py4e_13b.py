@@ -40,7 +40,8 @@ url_content = urllib.request.urlopen(url, context=ctx).read().decode()
 # ----
 
 data = json.loads(url_content)
-print(data)
+# print(data)
+print('number of users : {0}'.format(len(data)))
 # ----
 
 
