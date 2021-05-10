@@ -7,7 +7,7 @@
 #
 # You do not need to save these files to your folder since your program will read the data directly from the URL. Note: Each student will have a distinct data url for the assignment - so only use your own data url for analysis.
 #
-# 
+#
 # Enter location: http://py4e-data.dr-chuck.net/comments_42.json
 # Retrieving http://py4e-data.dr-chuck.net/comments_42.json
 # Retrieved 2733 characters
@@ -15,9 +15,9 @@
 # Sum: 2...
 # >>>>>>>>>>>>>>>>>>>>>>>
 
-# import urllib.request, urllib.parse, urllib.error
-# import xml.etree.ElementTree as ET
-# import ssl
+import urllib.request, urllib.parse, urllib.error
+import json
+import ssl
 
 # ----
 # # Ignore SSL certificate errors (from PY4E, because i do not understand, but need to use this code to test example)
@@ -28,10 +28,11 @@
 
 # ----
 
-
+url = input('enter URL below\n>>> ')
 
 # ----
 
+data = json.loads(url)
 # ----
 
 
