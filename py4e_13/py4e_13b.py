@@ -15,7 +15,7 @@
 # Sum: 2...
 # >>>>>>>>>>>>>>>>>>>>>>>
 
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 import json
 import ssl
 
@@ -35,22 +35,25 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-url_content = urllib.request.urlopen(url, context=ctx).read().decode()
+response = urllib.request.urlopen(url, context=ctx)
 
-# ----
-
-data = json.loads(url_content)
+data = json.loads(response.read())
 # print(data)
-print('number of users : {0}'.format(len(data)))
+# print(type(data))
+
+# ----
+count = 0
+
+for i in data['comments', ['counts']] :
+    # count += 1
+    print(i)
+    print(type(i))
+
+
+
 # ----
 
 
-# ----
-
-
-# ----
-
-
-# ----
+# print('number of users : {0}'.format(len(data)))
 
 # ...........................
