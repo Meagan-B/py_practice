@@ -21,9 +21,9 @@ import ssl
 
 # ----
 
-url = 'http://py4e-data.dr-chuck.net/comments_42.json'
+# url = 'http://py4e-data.dr-chuck.net/comments_42.json'
 # url = 'http://py4e-data.dr-chuck.net/comments_1154833.json'
-# url = input('enter URL below\n>>> ')
+url = input('enter URL below\n>>> ')
 
 # ----
 
@@ -42,18 +42,20 @@ data = json.loads(response.read())
 # print(type(data))
 
 # ----
-count = 0
 
-for i in data['comments', ['counts']] :
+counts = 0
+sum = 0
+
+for i in data['comments'] :
     # count += 1
-    print(i)
-    print(type(i))
-
-
+    # print(i, type(i))
+    c = int((i["count"]))
+    counts += 1
+    sum += c
 
 # ----
 
 
-# print('number of users : {0}'.format(len(data)))
+print('number of users : {0}\nsum of all comments made: {1}'.format(counts, sum))
 
 # ...........................
