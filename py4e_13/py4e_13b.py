@@ -55,7 +55,6 @@ for i in data['comments'] :
 
 # ----
 
-
 print('number of users : {0}\nsum of all comments made: {1}'.format(counts, sum))
 
 # ...........................
