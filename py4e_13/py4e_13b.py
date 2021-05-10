@@ -18,6 +18,7 @@
 import urllib.request
 import json
 import ssl
+import time
 
 # ----
 
@@ -40,6 +41,16 @@ response = urllib.request.urlopen(url, context=ctx)
 data = json.loads(response.read())
 # print(data)
 # print(type(data))
+
+# ----
+
+# print('GATHERING, {0}'.format(url))
+print('GATHERING')
+time.sleep(.5)
+print('......')
+time.sleep(1)
+print('...')
+time.sleep(1)
 
 # ----
 
