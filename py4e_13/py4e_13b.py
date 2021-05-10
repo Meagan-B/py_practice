@@ -20,19 +20,27 @@ import json
 import ssl
 
 # ----
-# # Ignore SSL certificate errors (from PY4E, because i do not understand, but need to use this code to test example)
-#
-# ctx = ssl.create_default_context()
-# ctx.check_hostname = False
-# ctx.verify_mode = ssl.CERT_NONE
+
+url = 'http://py4e-data.dr-chuck.net/comments_42.json'
+# url = 'http://py4e-data.dr-chuck.net/comments_1154833.json'
+# url = input('enter URL below\n>>> ')
 
 # ----
 
-url = input('enter URL below\n>>> ')
+# Ignore SSL certificate errors (from PY4E, because i do not understand, but need to use this code to test example)
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
 # ----
 
-data = json.loads(url)
+url_content = urllib.request.urlopen(url, context=ctx).read().decode()
+
+# ----
+
+data = json.loads(url_content)
+print(data)
 # ----
 
 
