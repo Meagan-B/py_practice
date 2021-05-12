@@ -49,6 +49,10 @@ while (u_gs != 'quit') and (cows <4) :
 
 
 # ----
+if y == x :
+    cow
+if x in y :
+    bull
 
 # ----
 
