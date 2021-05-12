@@ -27,22 +27,16 @@ print('* random number generated: {0} *'.format(rand_str))
 u_guess = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
 print('* user guess #1: {0} *'.format(u_guess))
 
-
 # ----
-
 
 cows = 0
 bulls = 0
-
-
-# u_guess = ""
-
 
 while (u_guess != 'quit') and (cows <4) :
     guesses = 1
 
     x = (u_guess == rand_str)
-    print(x)
+    # print(x)
 
     if x == True :
         print('!!!! YOU WIN !!!!\nyou have {0} COWS, in {1} turns'.format(4, guesses))
@@ -61,17 +55,9 @@ while (u_guess != 'quit') and (cows <4) :
 
 
 # ----
-if y == x :
-    cow
-if x in y :
-    bull
 
 # ----
 
-
 # ----
-
-
-
 
 # ...........................
