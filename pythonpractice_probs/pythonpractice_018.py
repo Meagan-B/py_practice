@@ -21,8 +21,12 @@ print('* random number generated: {0} *'.format(rand_str))
 
 # ----
 
-u_guess_1 = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
-print('* user guess #1: {0} *'.format(u_guess_1))
+# u_guess_1 = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
+# print('* user guess #1: {0} *'.format(u_guess_1))
+
+u_guess = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
+print('* user guess #1: {0} *'.format(u_guess))
+
 
 # ----
 
@@ -31,13 +35,13 @@ cows = 0
 bulls = 0
 
 
-u_gs = ""
+# u_guess = ""
 
 
-while (u_gs != 'quit') and (cows <4) :
+while (u_guess != 'quit') and (cows <4) :
     guesses = 1
 
-    x = (u_guess_1 == rand_str)
+    x = (u_guess == rand_str)
     print(x)
 
     if x == True :
@@ -45,7 +49,15 @@ while (u_gs != 'quit') and (cows <4) :
         break
     elif x == False : continue
 
-    u_gs = input('guess again\n>>> ')
+    for i in u_guess :
+        if u_guess[i] == rand_str[i] :
+            cow += 1
+        elif u_guess[i] in rand_str[i] :
+            bull += 1
+        else :
+            print('WHOPPSIES')
+
+    u_guess = input('guess again\n>>> ')
 
 
 # ----
