@@ -29,10 +29,10 @@ print('* user guess #1: {0} *'.format(u_guess))
 
 # ----
 
-cows = 0
-bulls = 0
 
-while (u_guess != 'quit') and (cows <4) :
+while (u_guess != 'quit') and (u_guess != rand_str) :
+    cows = 0
+    bulls = 0
     guesses = 1
 
     x = (u_guess == rand_str)
