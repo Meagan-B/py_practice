@@ -13,19 +13,19 @@ import random
 
 # ----
 
+# need to address occasional 3 digit numbers
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
-num_strs = [str(n) for n in rand_num_gen]
-rand_str = int("".join(num_strs))
+rand_lst = list(rand_num_gen)
+# num_strs = [str(n) for n in rand_num_gen]
+# rand_str = int("".join(num_strs))
 
 print('* random number generated: {0} *'.format(rand_str))
 
 # ----
 
-# u_guess_1 = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
-# print('* user guess #1: {0} *'.format(u_guess_1))
-
 u_guess = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
 print('* user guess #1: {0} *'.format(u_guess))
+u_guess = list(u_guess.split())
 
 # ----
 
@@ -62,13 +62,14 @@ def cowbullgame(guess, random_lst) :
 guesses = 0
 
 while (u_guess != 'quit'):
-
-    cowbullgame(u_guess, rand_num_gen)
+    print('GUESS #{0}\n'.format(guesses))
+    cowbullgame(u_guess, rand_lst)
 
     if cow_bull[0] == 4 :
         u_guess = 'quit'
 
     u_guess = input('guess again\n>>> ')
+    u_guess = list(u_guess.split())
 
     guesses += 1
 
