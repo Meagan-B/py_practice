@@ -52,7 +52,25 @@ def numOfBullsCows(num,guess):
 
 def cowbullgame() :
     cow_bull = [0,0]
-    
+    rand_num_gen
+    u_guess
+
+
+    if u_guess == rand_str :
+        cow_bull[0] = 4
+        return cow_bull
+    else : continue
+
+
+    for i, n in (u_guess, rand_num_gen) :
+
+        if i in rand_num_gen :
+
+            cow += 1
+        elif u_guess[i] in rand_str[i] :
+            bull += 1
+        else :
+            print('WHOPPSIES')
 
 
 while (u_guess != 'quit') and (u_guess != rand_str) :
