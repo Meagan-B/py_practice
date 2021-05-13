@@ -29,48 +29,24 @@ print('* user guess #1: {0} *'.format(u_guess))
 
 # ----
 
-# def numOfBullsCows(num,guess):
-#     bull_cow = [0,0]
-#     num_li = getDigits(num)
-#     guess_li = getDigits(guess)
-#
-    # for i,j in zip(num_li,guess_li):
 
-#        # common digit present
-        # if j in num_li:
-
-#            # common digit exact match
-            if j == i:
-                bull_cow[0] += 1
-
-            # common digit match but in wrong position
-            else:
-                bull_cow[1] += 1
-
-#     return bull_cow
-
-
-def cowbullgame() :
+def cowbullgame(guess, random_lst) :
     cow_bull = [0,0]
-    rand_num_gen
-    u_guess
+    # rand_num_gen
+    # u_guess
 
-
-    if u_guess == rand_str :
+    if guess == random_lst :
         cow_bull[0] = 4
-
     else : continue
 
+    for i, n in (guess, random_lst) :
 
-    for i, n in (u_guess, rand_num_gen) :
-
-        if i in rand_num_gen :
+        if i in random_lst :
 
             if i = n :
                 cow_bull[0] += 1
             else :
                 cow_bull[1] += 1
-
 
     return cow_bull
 
@@ -78,15 +54,40 @@ def cowbullgame() :
 
 guesses = 0
 
-while (u_guess != 'quit') and (u_guess != rand_str) :
+while (u_guess != 'quit') and cow_bull[0] != 4 :
+
+    cowbullgame(u_guess, rand_num_gen)
 
     u_guess = input('guess again\n>>> ')
-
+    
+    guesses += 1
 
 # ----
 
-# ----
+
 
 # ----
 
 # ...........................
+
+# Geeks for Geek code that saved me,
+#
+# def numOfBullsCows(num,guess):
+#     bull_cow = [0,0]
+#     num_li = getDigits(num)
+#     guess_li = getDigits(guess)
+#
+#     for i,j in zip(num_li,guess_li):
+#
+#         # common digit present
+#         if j in num_li:
+#
+#             # common digit exact match
+#             if j == i:
+#                 bull_cow[0] += 1
+#
+#             common digit match but in wrong position
+#             else:
+#                 bull_cow[1] += 1
+#
+#     return bull_cow
