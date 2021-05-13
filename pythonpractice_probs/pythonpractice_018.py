@@ -16,23 +16,26 @@ import random
 # need to address occasional 3 digit numbers
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
 rand_lst = list(rand_num_gen)
-# num_strs = [str(n) for n in rand_num_gen]
+num_strs = [str(n) for n in rand_num_gen]
 rand_str = int("".join(num_strs))
 
 print('* random number generated: {0} *'.format(rand_str))
 
 # ----
 
-u_guess = int(input('enter any 4 digit number\nmake thy first guess\n>>> '))
+u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
 print('* user guess #1: {0} *'.format(u_guess))
 u_guess = list(u_guess.split())
 
 # ----
 
-def cowbullgame(guess, random_lst) :
-    cow_bull = [0,0]
+cow_bull = [0,0]
 
-    for i, n in (guess, random_lst) :
+def cowbullgame(guess, random_lst) :
+    # cow_bull = [0,0]
+    global cow_bull
+
+    for i, n in zip(guess, random_lst) :
 
         if i in random_lst :
 
