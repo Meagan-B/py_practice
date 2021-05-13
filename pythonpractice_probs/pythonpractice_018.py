@@ -29,11 +29,8 @@ print('* user guess #1: {0} *'.format(u_guess))
 
 # ----
 
-
 def cowbullgame(guess, random_lst) :
     cow_bull = [0,0]
-    # rand_num_gen
-    # u_guess
 
     if guess == random_lst :
         cow_bull[0] = 4
@@ -48,19 +45,31 @@ def cowbullgame(guess, random_lst) :
             else :
                 cow_bull[1] += 1
 
-    return cow_bull
+    if cow_bull[0] > 1 or cow_bull[0] == 0 :
+        print('you have {0} COWS'.format(cow_bull[0]))
+    elif cow_bull[0] == 1 :
+        print('you have {0} COW'.format(cow_bull[0]))
 
+        elif cow_bull[0] > 1 or cow_bull[0] == 0 :
+            print('\n& {0} BULLS'.format(cow_bull[1]))
+
+
+
+    return cow_bull
 # ----
 
 guesses = 0
 
-while (u_guess != 'quit') and cow_bull[0] != 4 :
+while (u_guess != 'quit'):
 
     cowbullgame(u_guess, rand_num_gen)
 
     u_guess = input('guess again\n>>> ')
-    
+
     guesses += 1
+
+    if cow_bull[0] == 4 :
+        print('!!!!!! YOU WIN !!!!!!')
 
 # ----
 
