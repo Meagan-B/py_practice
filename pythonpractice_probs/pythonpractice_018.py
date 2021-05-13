@@ -40,7 +40,7 @@ def cowbullgame(guess, random_lst) :
 
         if i in random_lst :
 
-            if i = n :
+            if i == n :
                 cow_bull[0] += 1
             else :
                 cow_bull[1] += 1
