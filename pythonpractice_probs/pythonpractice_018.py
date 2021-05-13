@@ -37,9 +37,9 @@ print('* user guess #1: {0} *'.format(u_guess))
     # for i,j in zip(num_li,guess_li):
 
 #        # common digit present
-        if j in num_li:
+        # if j in num_li:
 
-            # common digit exact match
+#            # common digit exact match
             if j == i:
                 bull_cow[0] += 1
 
@@ -67,33 +67,18 @@ def cowbullgame() :
         if i in rand_num_gen :
 
             if i = n :
-
-        else :
-            print('WHOPPSIES')
+                cow_bull[0] += 1
+            else :
+                cow_bull[1] += 1
 
 
     return cow_bull
 
+# ----
+
+guesses = 0
+
 while (u_guess != 'quit') and (u_guess != rand_str) :
-    cows = 0
-    bulls = 0
-    guesses = 1
-
-    x = (u_guess == rand_str)
-    # print(x)
-
-    if x == True :
-        print('!!!! YOU WIN !!!!\nyou have {0} COWS, in {1} turns'.format(4, guesses))
-        break
-    elif x == False : continue
-
-    for i in u_guess :
-        if u_guess[i] == rand_str[i] :
-            cow += 1
-        elif u_guess[i] in rand_str[i] :
-            bull += 1
-        else :
-            print('WHOPPSIES')
 
     u_guess = input('guess again\n>>> ')
 
