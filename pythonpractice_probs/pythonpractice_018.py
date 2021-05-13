@@ -45,17 +45,22 @@ def cowbullgame(guess, random_lst) :
             else :
                 cow_bull[1] += 1
 
+    # COWS
     if cow_bull[0] > 1 or cow_bull[0] == 0 :
         print('you have {0} COWS'.format(cow_bull[0]))
     elif cow_bull[0] == 1 :
         print('you have {0} COW'.format(cow_bull[0]))
-
-        elif cow_bull[0] > 1 or cow_bull[0] == 0 :
-            print('\n& {0} BULLS'.format(cow_bull[1]))
-
-
+    # BULLS
+    elif cow_bull[1] > 1 or cow_bull[1] == 0 :
+        print('\n& {0} BULLS'.format(cow_bull[1]))
+    elif cow_bull[1] == 1 :
+        print('you have {0} BULL'.format(cow_bull[1]))
+    # WIN
+    else cow_bull[0] == 4 :
+        print('!!!!!! YOU WIN !!!!!!')
 
     return cow_bull
+
 # ----
 
 guesses = 0
