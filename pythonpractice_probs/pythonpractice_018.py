@@ -32,10 +32,6 @@ print('* user guess #1: {0} *'.format(u_guess))
 def cowbullgame(guess, random_lst) :
     cow_bull = [0,0]
 
-    if guess == random_lst :
-        cow_bull[0] = 4
-    else : break
-
     for i, n in (guess, random_lst) :
 
         if i in random_lst :
