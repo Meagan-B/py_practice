@@ -34,7 +34,7 @@ def cowbullgame(guess, random_lst) :
 
     if guess == random_lst :
         cow_bull[0] = 4
-    else : continue
+    else : break
 
     for i, n in (guess, random_lst) :
 
@@ -56,7 +56,7 @@ def cowbullgame(guess, random_lst) :
     elif cow_bull[1] == 1 :
         print('you have {0} BULL'.format(cow_bull[1]))
     # WIN
-    else cow_bull[0] == 4 :
+    elif cow_bull[0] == 4 :
         print('!!!!!! YOU WIN !!!!!!')
 
     return cow_bull
