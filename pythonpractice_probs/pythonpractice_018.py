@@ -17,7 +17,7 @@ import random
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
 rand_lst = list(rand_num_gen)
 # num_strs = [str(n) for n in rand_num_gen]
-# rand_str = int("".join(num_strs))
+rand_str = int("".join(num_strs))
 
 print('* random number generated: {0} *'.format(rand_str))
 
