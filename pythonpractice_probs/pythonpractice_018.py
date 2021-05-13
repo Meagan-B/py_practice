@@ -69,16 +69,16 @@ while (u_guess != 'quit'):
 
     cowbullgame(u_guess, rand_num_gen)
 
+    if cow_bull[0] == 4 :
+        u_guess = 'quit'
+
     u_guess = input('guess again\n>>> ')
 
     guesses += 1
 
-    if cow_bull[0] == 4 :
-        print('!!!!!! YOU WIN !!!!!!')
-
 # ----
 
-
+print('*end*')
 
 # ----
 
