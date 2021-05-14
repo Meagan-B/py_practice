@@ -24,8 +24,10 @@ print('* random number generated: {0} *'.format(rand_str))
 # ----
 
 u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
+print(type(u_guess))
 print('* user guess #1: {0} *'.format(u_guess))
-u_guess = list(u_guess.split())
+u_guess_lst = [int(d) fo d in str(u_guess)]
+print(u_guess_lst, type(u_guess_lst))
 
 # ----
 
