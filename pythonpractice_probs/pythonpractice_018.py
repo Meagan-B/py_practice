@@ -31,53 +31,82 @@ u_guess = list(u_guess.split())
 
 cow_bull = [0,0]
 
-def cowbullgame(guess, random_lst) :
-    # cow_bull = [0,0]
-    global cow_bull
-
-    for i, n in zip(guess, random_lst) :
-
-        if i in random_lst :
-
-            if i == n :
-                cow_bull[0] += 1
-            else :
-                cow_bull[1] += 1
-
-    # COWS
-    if cow_bull[0] > 1 or cow_bull[0] == 0 :
-        print('you have {0} COWS'.format(cow_bull[0]))
-    elif cow_bull[0] == 1 :
-        print('you have {0} COW'.format(cow_bull[0]))
-    # BULLS
-    elif cow_bull[1] > 1 or cow_bull[1] == 0 :
-        print('\n& {0} BULLS'.format(cow_bull[1]))
-    elif cow_bull[1] == 1 :
-        print('you have {0} BULL'.format(cow_bull[1]))
-    # WIN
-    elif cow_bull[0] == 4 :
-        print('!!!!!! YOU WIN !!!!!!')
-
-    return cow_bull
-
-# ----
-
-guesses = 0
-
-while (u_guess != 'quit'):
-    print('GUESS #{0}\n'.format(guesses))
-    cowbullgame(u_guess, rand_lst)
-
-    if cow_bull[0] == 4 :
-        u_guess = 'quit'
-
-    u_guess = input('guess again\n>>> ')
-    u_guess = list(u_guess.split())
-
-    guesses += 1
+# def cowbullgame(guess, random_lst) :
+#     # cow_bull = [0,0]
+#     global cow_bull
+#
+#     for i, n in zip(guess, random_lst) :
+#
+#         if i in random_lst :
+#
+#             if i == n :
+#                 cow_bull[0] += 1
+#             else :
+#                 cow_bull[1] += 1
+#
+#     # COWS
+#     if cow_bull[0] > 1 or cow_bull[0] == 0 :
+#         print('you have {0} COWS'.format(cow_bull[0]))
+#     elif cow_bull[0] == 1 :
+#         print('you have {0} COW'.format(cow_bull[0]))
+#     # BULLS
+#     elif cow_bull[1] > 1 or cow_bull[1] == 0 :
+#         print('\n& {0} BULLS'.format(cow_bull[1]))
+#     elif cow_bull[1] == 1 :
+#         print('you have {0} BULL'.format(cow_bull[1]))
+#     # WIN
+#     elif cow_bull[0] == 4 :
+#         print('!!!!!! YOU WIN !!!!!!')
+#
+#
 
 # ----
+#
+# guesses = 0
+#
+# while (u_guess != 'quit'):
+#     print('GUESS #{0}\n'.format(guesses))
+#     cowbullgame(u_guess, rand_lst)
+#
+#     if cow_bull[0] == 4 :
+#         u_guess = 'quit'
+#
+#     u_guess = input('guess again\n>>> ')
+#     u_guess = list(u_guess.split())
+#
+#     guesses += 1
 
+# ----
+     # ----
+for i, n in zip(u_guess, rand_lst) :
+    print('step 1')
+    if i in rand_lst :
+        print('step 2', i)
+        if i == n :
+            cow_bull[0] += 1
+            print('step 3a', cow_bull[0])
+        else :
+            cow_bull[1] += 1
+            print('step 3b', cow_bull[1])
+
+# COWS
+if cow_bull[0] > 1 or cow_bull[0] == 0 :
+    print('you have {0} COWS'.format(cow_bull[0]))
+elif cow_bull[0] == 1 :
+    print('you have {0} COW'.format(cow_bull[0]))
+# BULLS
+elif cow_bull[1] > 1 or cow_bull[1] == 0 :
+    print('\n& {0} BULLS'.format(cow_bull[1]))
+elif cow_bull[1] == 1 :
+    print('you have {0} BULL'.format(cow_bull[1]))
+# WIN
+elif cow_bull[0] == 4 :
+    print('!!!!!! YOU WIN !!!!!!')
+
+    # ----
+# ----
+
+# cowbullgame(u_guess, rand_lst)
 print('*end*')
 
 # ----
