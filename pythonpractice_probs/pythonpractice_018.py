@@ -28,7 +28,6 @@ print('* random number generated: {0} *'.format(rand_num_gen))
 # ----
 
 u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
-print(type(u_guess))
 print('* user guess #1: {0} *'.format(u_guess))
 u_guess_lst = [int(d) for d in str(u_guess)]
 
@@ -36,7 +35,7 @@ print(u_guess_lst, type(u_guess_lst))
 
 # ----
 
-cow_bull = [0,0]
+# cow_bull = [0,0]
 
 # def cowbullgame(guess, random_lst) :
 #     # cow_bull = [0,0]
@@ -103,17 +102,25 @@ cow_bull = [0,0]
 
 # ----
      # ----
-for i, n in zip(u_guess, rand_num_gen) :
-    print('step 1', i, n)
-    if i in rand_lst :
-        print('step 2', i)
-        if i == n :
-            cow_bull[0] += 1
-            print('step 3a', cow_bull[0])
-        else :
-            cow_bull[1] += 1
-            print('step 3b', cow_bull[1])
-    print(cow_bull[0], cow_bull[1])
+cow = 0
+bull = 0
+
+# print([i for i, j in zip(u_guess, rand_num_gen) if i == j])
+# if collections.counter(u_guess) == collections.counter(rand_num_gen) :
+
+
+# for i, n in zip(u_guess, rand_num_gen) :
+#
+#     print('step 1', i, n)
+#     if i in rand_num_gen :
+#         print('step 2', i)
+#         if i == n :
+#             cow += 1
+#             print('step 3a', cow)
+#         else :
+#             bull += 1
+#             print('step 3b', bull)
+#     print(cow, bull)
     # ----
 # ----
 
