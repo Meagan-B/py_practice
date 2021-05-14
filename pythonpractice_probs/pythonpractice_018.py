@@ -79,7 +79,7 @@ cow_bull = [0,0]
 # ----
      # ----
 for i, n in zip(u_guess, rand_lst) :
-    print('step 1')
+    print('step 1', i, n)
     if i in rand_lst :
         print('step 2', i)
         if i == n :
