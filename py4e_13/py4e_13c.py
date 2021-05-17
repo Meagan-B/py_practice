@@ -23,6 +23,9 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
+# --------
+# CHANGES BEGIN
+
 while True:
     address = input('Enter location: ')
     if len(address) < 1: break
@@ -55,26 +58,17 @@ while True:
 
     print(json.dumps(js, indent=4))
 
-    count = 0
-    sub_count = 0
+    # count = 0
     for item in js :
-        print('ITEM {0}: '.format(count), item)
-        count += 1
-        for i in item :
-            print('SUB_ITEM {0}: '.format(sub_count), i)
-            sub_count += 1
-        # print(js['results'][0])
+        # print('ITEM {0}: '.format(count), item)
+        # count += 1
+        print(js['results']['address_components'][0])
 
     lat = js['results'][0]['geometry']['location']['lat']
     lng = js['results'][0]['geometry']['location']['lng']
     print('lat', lat, 'lng', lng)
     location = js['results'][0]['formatted_address']
     print(location)
-
-# ----
-
-
-# ----
 
 
 # ...........................
