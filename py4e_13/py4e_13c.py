@@ -56,19 +56,14 @@ while True:
         continue
 
 
-    print(json.dumps(js, indent=4))
+    # print(json.dumps(js, indent=4))
+    print(js['results'][0]['address_components'][0])
 
-    # count = 0
-    for item in js :
-        # print('ITEM {0}: '.format(count), item)
-        # count += 1
-        print(js['results']['address_components'][0])
 
     lat = js['results'][0]['geometry']['location']['lat']
     lng = js['results'][0]['geometry']['location']['lng']
     print('lat', lat, 'lng', lng)
     location = js['results'][0]['formatted_address']
     print(location)
-
 
 # ...........................
