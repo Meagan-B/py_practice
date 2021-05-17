@@ -56,9 +56,13 @@ while True:
     print(json.dumps(js, indent=4))
 
     count = 0
+    sub_count = 0
     for item in js :
         print('ITEM {0}: '.format(count), item)
         count += 1
+        for i in item :
+            print('ITEM {0}: '.format(sub_count), i)
+            sub_count += 1
         # print(js['results'][0])
 
     lat = js['results'][0]['geometry']['location']['lat']
