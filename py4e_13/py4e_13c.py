@@ -28,20 +28,24 @@ while True:
     if len(address) < 1: break
     if address == 'q' : False
 
+
     parms = dict()
     parms['address'] = address
     if api_key is not False: parms['key'] = api_key
     url = serviceurl + urllib.parse.urlencode(parms)
+
 
     print('Retrieving', url)
     uh = urllib.request.urlopen(url, context=ctx)
     data = uh.read().decode()
     print('Retrieved', len(data), 'characters')
 
+
     try:
         js = json.loads(data)
     except:
         js = None
+
 
     if not js or 'status' not in js or js['status'] != 'OK':
         print('==== Failure To Retrieve ====')
@@ -49,9 +53,12 @@ while True:
         continue
 
 
+    print(json.dumps(js, indent=4))
 
-    # print(json.dumps(js, indent=4))
-    print(json.dumps(js[0][1], indent=4))
+
+    for item in js :
+        print('ITEM {0}: '.format(count), item)
+        # print(js['results'][0])
 
     lat = js['results'][0]['geometry']['location']['lat']
     lng = js['results'][0]['geometry']['location']['lng']
