@@ -55,9 +55,12 @@ while True:
         print(data)
         continue
 
-
+    count=0
     # print(json.dumps(js, indent=4))
-    print(js['results'][0]['address_components'][-1])
+    country_code = (js['results'][0]['address_components'][-1])
+    for i in country_code :
+        print('ITEM {0}: '.format(count), i)
+        count += 1
 
 
     lat = js['results'][0]['geometry']['location']['lat']
