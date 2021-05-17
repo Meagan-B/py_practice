@@ -60,7 +60,11 @@ while True:
 
 
     country_code = (js['results'][0]['address_components'][-1])
-    print(country_code['short_name'])
+    if country_code == None :
+        print('MISSING COUNTRY CODE')
+        break
+    else :
+        print(country_code['short_name'])
 
 
     lat = js['results'][0]['geometry']['location']['lat']
