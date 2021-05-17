@@ -26,7 +26,7 @@ ctx.verify_mode = ssl.CERT_NONE
 while True:
     address = input('Enter location: ')
     if len(address) < 1: break
-    if address == 'q' : False
+    if address == 'q' : break
 
 
     parms = dict()
@@ -61,7 +61,7 @@ while True:
         print('ITEM {0}: '.format(count), item)
         count += 1
         for i in item :
-            print('ITEM {0}: '.format(sub_count), i)
+            print('SUB_ITEM {0}: '.format(sub_count), i)
             sub_count += 1
         # print(js['results'][0])
 
