@@ -47,43 +47,36 @@ while True:
     address = input('Enter location: ')
     if len(address) < 1: break
     if address == 'q' : break
-
-
+    # ----
     parms = dict()
     parms['address'] = address
     if api_key is not False: parms['key'] = api_key
     url = serviceurl + urllib.parse.urlencode(parms)
-
-
+    # ----
     print('Retrieving', url)
     uh = urllib.request.urlopen(url, context=ctx)
     data = uh.read().decode()
     print('Retrieved', len(data), 'characters')
-
-
+    # ----
     try:
         js = json.loads(data)
     except:
         js = None
-
-
+    # ----
     if not js or 'status' not in js or js['status'] != 'OK':
         print('==== Failure To Retrieve ====')
         print(data)
         continue
-
-
+    # ----
     # print(json.dumps(js, indent=4))
-
-
+    # ----
     country_code = (js['results'][0]['place_id'])
     if country_code == None :
         print('MISSING COUNTRY CODE')
         break
     else :
         print(country_code)
-
-
+    # ----
     lat = js['results'][0]['geometry']['location']['lat']
     lng = js['results'][0]['geometry']['location']['lng']
     print('lat', lat, 'lng', lng)
