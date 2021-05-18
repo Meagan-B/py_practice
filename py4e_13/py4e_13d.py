@@ -73,10 +73,11 @@ while True:
         continue
 
 
-    # print(json.dumps(js, indent=4))
+    print(json.dumps(js, indent=4))
 
 
-    country_code = (js['results'][0]['address_components'][2])
+    # country_code = (js['results'][0]['address_components'][2])
+    country_code = (js['results'][3]['place_id'][0])
     if country_code == None :
         print('MISSING COUNTRY CODE')
         break
