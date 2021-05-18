@@ -77,13 +77,14 @@ while True:
 
 
     # country_code = (js['results'][0]['address_components'][2])
-    country_code = (js['results'][3]['place_id'][0])
+    country_code = (js['results'][0]['place_id'])
+    print(len(country_code))
     if country_code == None :
         print('MISSING COUNTRY CODE')
         break
     else :
-        print("\n#### ['results'][0]['address_components'][2] ####\n{0}\n".format(country_code))
-        # print(country_code['place_id'])
+        print("\n#### ['results'][0]['place_id'] ####\n{0}\n".format(country_code))
+        print(country_code)
 
 
     lat = js['results'][0]['geometry']['location']['lat']
