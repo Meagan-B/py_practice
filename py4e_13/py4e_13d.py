@@ -81,7 +81,8 @@ while True:
         print('MISSING COUNTRY CODE')
         break
     else :
-        print(country_code['short_name'])
+        print(country_code)
+        # print(country_code['short_name'])
 
 
     lat = js['results'][0]['geometry']['location']['lat']
