@@ -76,13 +76,13 @@ while True:
     print(json.dumps(js, indent=4))
 
 
-    country_code = (js['results'][0])
+    country_code = (js['results'][0]['address_components'][2])
     if country_code == None :
         print('MISSING COUNTRY CODE')
         break
     else :
         print(country_code)
-        # print(country_code['short_name'])
+        print(country_code['place_id'])
 
 
     lat = js['results'][0]['geometry']['location']['lat']
