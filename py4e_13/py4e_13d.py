@@ -73,7 +73,7 @@ while True:
         continue
 
 
-    print(json.dumps(js, indent=4))
+    # print(json.dumps(js, indent=4))
 
 
     country_code = (js['results'][0]['place_id'])
