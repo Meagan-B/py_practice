@@ -76,7 +76,7 @@ while True:
     print(json.dumps(js, indent=4))
 
 
-    country_code = (js['results'][1])
+    country_code = (js['results'][0])
     if country_code == None :
         print('MISSING COUNTRY CODE')
         break
