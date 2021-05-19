@@ -10,7 +10,7 @@ how_to_play = 'For every correctly guessed digit in the CORRECT placement,\nyou 
 # ----
 
 import random
-import collections 
+from collections import Counter
 
 # ----
 
