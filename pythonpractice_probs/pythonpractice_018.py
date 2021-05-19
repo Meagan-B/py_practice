@@ -35,38 +35,51 @@ u_guess_lst = [int(d) for d in str(u_guess)]
 
 print(u_guess_lst, type(u_guess_lst))
 
+
+
+
+# ----
+     # ----
+cow = 0
+bull = 0
+
+print(type(collections.Counter(u_guess_lst)), collections.Counter(u_guess_lst), 'u_guess_lst: {0}'.format(u_guess_lst))
+print('####')
+print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen), 'rand_num_gen: {0}'.format(rand_num_gen))
+
 # ----
 
-# cow_bull = [0,0]
-#
-# def cowbullgame(guess, random_lst) :
-#     # cow_bull = [0,0]
-#     global cow_bull
-#
-#     for i, n in zip(guess, random_lst) :
-#
-#         if i in random_lst :
-#
-#             if i == n :
-#                 cow_bull[0] += 1
-#             else :
-#                 cow_bull[1] += 1
-#
-#     # COWS
-#     if cow_bull[0] > 1 or cow_bull[0] == 0 :
-#         print('you have {0} COWS'.format(cow_bull[0]))
-#     elif cow_bull[0] == 1 :
-#         print('you have {0} COW'.format(cow_bull[0]))
-#     # BULLS
-#     elif cow_bull[1] > 1 or cow_bull[1] == 0 :
-#         print('\n& {0} BULLS'.format(cow_bull[1]))
-#     elif cow_bull[1] == 1 :
-#         print('you have {0} BULL'.format(cow_bull[1]))
-#     # WIN
-#     elif cow_bull[0] == 4 :
-#         print('!!!!!! YOU WIN !!!!!!')
-#
-# # ----
+for (i, n) in zip(u_guess, rand_num_gen) :
+
+    print('step 1', i, n)
+    if i in rand_num_gen :
+        print('step 2', i)
+        if i == n :
+            cow += 1
+            print('step 3a', cow)
+        else :
+            bull += 1
+            print('step 3b', bull)
+    print(cow, bull)
+
+# ----
+
+win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
+
+if win == True :
+    cow = 4
+    print('!!!!!! YOU WIN !!!!!!')
+
+    # ----
+# ----
+
+# cowbullgame(u_guess_lst, rand_lst)
+print('*end*')
+
+# ----
+
+# ...........................
+
 #
 # guesses = 0
 #
@@ -101,67 +114,35 @@ print(u_guess_lst, type(u_guess_lst))
 #     u_guess = list(u_guess.split())
 #
 #     guesses += 1
-
-# ----
-     # ----
-cow = 0
-bull = 0
-
-print(collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen))
-print('####')
-print(type(collections.Counter(u_guess_lst)), collections.Counter(u_guess_lst), 'u_guess_lst: {0}'.format(u_guess_lst))
-print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen), 'rand_num_gen: {0}'.format(rand_num_gen))
-
 # ----
 
-win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
-
-if win == True :
-    cow = 4
-    print('!!!!!! YOU WIN !!!!!!')
-
-
-# ----
-for (i, n) in zip(u_guess, rand_num_gen) :
-
-    print('step 1', i, n)
-    if i in rand_num_gen :
-        print('step 2', i)
-        if i == n :
-            cow += 1
-            print('step 3a', cow)
-        else :
-            bull += 1
-            print('step 3b', bull)
-    print(cow, bull)
-    # ----
-# ----
-
-# cowbullgame(u_guess_lst, rand_lst)
-print('*end*')
-
-# ----
-
-# ...........................
-
-# Geeks for Geek code that saved me,
+# cow_bull = [0,0]
 #
-# def numOfBullsCows(num,guess):
-#     bull_cow = [0,0]
-#     num_li = getDigits(num)
-#     guess_li = getDigits(guess)
+# def cowbullgame(guess, random_lst) :
+#     # cow_bull = [0,0]
+#     global cow_bull
 #
-#     for i,j in zip(num_li,guess_li):
+#     for i, n in zip(guess, random_lst) :
 #
-#         # common digit present
-#         if j in num_li:
+#         if i in random_lst :
 #
-#             # common digit exact match
-#             if j == i:
-#                 bull_cow[0] += 1
+#             if i == n :
+#                 cow_bull[0] += 1
+#             else :
+#                 cow_bull[1] += 1
 #
-#             common digit match but in wrong position
-#             else:
-#                 bull_cow[1] += 1
+#     # COWS
+#     if cow_bull[0] > 1 or cow_bull[0] == 0 :
+#         print('you have {0} COWS'.format(cow_bull[0]))
+#     elif cow_bull[0] == 1 :
+#         print('you have {0} COW'.format(cow_bull[0]))
+#     # BULLS
+#     elif cow_bull[1] > 1 or cow_bull[1] == 0 :
+#         print('\n& {0} BULLS'.format(cow_bull[1]))
+#     elif cow_bull[1] == 1 :
+#         print('you have {0} BULL'.format(cow_bull[1]))
+#     # WIN
+#     elif cow_bull[0] == 4 :
+#         print('!!!!!! YOU WIN !!!!!!')
 #
-#     return bull_cow
+# # ----
