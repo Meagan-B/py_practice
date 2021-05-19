@@ -108,22 +108,24 @@ cow = 0
 bull = 0
 
 print(collections.Counter(u_guess) == collections.Counter(rand_num_gen))
-print(collections.Counter(u_guess), collections.Counter(rand_num_gen))
+print('####')
+print(type(collections.Counter(u_guess)), collections.Counter(u_guess),
+print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen))
 
-if collections.Counter(u_guess) == collections.Counter(rand_num_gen) :
+# if collections.Counter(u_guess) == collections.Counter(rand_num_gen) :
 
-    for i, n in zip(u_guess, rand_num_gen) :
+for (i, n) in zip(u_guess, rand_num_gen) :
 
-        print('step 1', i, n)
-        if i in rand_num_gen :
-            print('step 2', i)
-            if i == n :
-                cow += 1
-                print('step 3a', cow)
-            else :
-                bull += 1
-                print('step 3b', bull)
-        print(cow, bull)
+    print('step 1', i, n)
+    if i in rand_num_gen :
+        print('step 2', i)
+        if i == n :
+            cow += 1
+            print('step 3a', cow)
+        else :
+            bull += 1
+            print('step 3b', bull)
+    print(cow, bull)
     # ----
 # ----
 
