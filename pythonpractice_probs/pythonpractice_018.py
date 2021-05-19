@@ -63,12 +63,12 @@ for (i, n) in zip(u_guess_lst, rand_num_gen) :
         print('you have found a perfect match, +1 cows')
         cow += 1
 
-    print(cow, bull)
-
 # ----
 
 if cow == 4 :
     print('!!!!!! YOU WIN !!!!!!')
+else :
+    print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))    
 
     # ----
 # ----
