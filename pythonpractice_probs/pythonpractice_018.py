@@ -18,12 +18,6 @@ from collections import Counter
 # need to address occasional 3 digit numbers
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
 print(rand_num_gen, type(rand_num_gen))
-# rand_lst = list(rand_num_gen)
-# print(rand_lst, type(rand_lst))
-# num_strs = [str(n) for n in rand_num_gen]
-# print(num_strs, type(num_strs))
-# rand_str = int("".join(num_strs))
-# print(rand_str, type(rand_str))
 
 print('* random number generated: {0} *'.format(rand_num_gen))
 
@@ -33,20 +27,12 @@ u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
 print('* user guess #1: {0} *'.format(u_guess))
 u_guess_lst = [int(d) for d in str(u_guess)]
 
-print(u_guess_lst, type(u_guess_lst))
-
-
-
-
 # ----
-     # ----
-cow = 0
-bull = 0
 
+print(u_guess_lst, type(u_guess_lst))
 print(type(collections.Counter(u_guess_lst)), collections.Counter(u_guess_lst), 'u_guess_lst: {0}'.format(u_guess_lst))
 print('####')
 print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen), 'rand_num_gen: {0}'.format(rand_num_gen))
-
 # ----
 
 win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
@@ -55,6 +41,14 @@ if win == True :
     cow = 4
 
 # ----
+# ----
+     # ----
+while (u_guess != 'quit'):
+
+    cow = 0
+    bull = 0
+
+
 
 for (i, n) in zip(u_guess_lst, rand_num_gen) :
     # print('step 1', i, n)
@@ -68,7 +62,7 @@ for (i, n) in zip(u_guess_lst, rand_num_gen) :
 if cow == 4 :
     print('!!!!!! YOU WIN !!!!!!')
 else :
-    print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))    
+    print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
 
     # ----
 # ----
