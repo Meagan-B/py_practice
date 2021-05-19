@@ -10,6 +10,7 @@ how_to_play = 'For every correctly guessed digit in the CORRECT placement,\nyou 
 # ----
 
 import random
+from collections import Counter
 
 # ----
 
@@ -36,7 +37,7 @@ print(u_guess_lst, type(u_guess_lst))
 # ----
 
 # cow_bull = [0,0]
-
+#
 # def cowbullgame(guess, random_lst) :
 #     # cow_bull = [0,0]
 #     global cow_bull
@@ -106,21 +107,21 @@ cow = 0
 bull = 0
 
 print([i for i, j in zip(u_guess, rand_num_gen) if i == j])
+
 if collections.counter(u_guess) == collections.counter(rand_num_gen) :
 
+    for i, n in zip(u_guess, rand_num_gen) :
 
-for i, n in zip(u_guess, rand_num_gen) :
-
-    print('step 1', i, n)
-    if i in rand_num_gen :
-        print('step 2', i)
-        if i == n :
-            cow += 1
-            print('step 3a', cow)
-        else :
-            bull += 1
-            print('step 3b', bull)
-    print(cow, bull)
+        print('step 1', i, n)
+        if i in rand_num_gen :
+            print('step 2', i)
+            if i == n :
+                cow += 1
+                print('step 3a', cow)
+            else :
+                bull += 1
+                print('step 3b', bull)
+        print(cow, bull)
     # ----
 # ----
 
