@@ -72,8 +72,8 @@ print(u_guess_lst, type(u_guess_lst))
 #     print('GUESS #{0}\n'.format(guesses))
 #     cowbullgame(u_guess, rand_lst)
 #
-# RESULTS
-# COWS
+# # RESULTS
+# # COWS
 #     if cow_bull[0] > 1 or cow_bull[0] == 0 :
 #         print('step 4a')
 #         print('you have {0} COWS'.format(cow_bull[0]))
@@ -105,22 +105,22 @@ print(u_guess_lst, type(u_guess_lst))
 cow = 0
 bull = 0
 
-# print([i for i, j in zip(u_guess, rand_num_gen) if i == j])
-# if collections.counter(u_guess) == collections.counter(rand_num_gen) :
+print([i for i, j in zip(u_guess, rand_num_gen) if i == j])
+if collections.counter(u_guess) == collections.counter(rand_num_gen) :
 
 
-# for i, n in zip(u_guess, rand_num_gen) :
-#
-#     print('step 1', i, n)
-#     if i in rand_num_gen :
-#         print('step 2', i)
-#         if i == n :
-#             cow += 1
-#             print('step 3a', cow)
-#         else :
-#             bull += 1
-#             print('step 3b', bull)
-#     print(cow, bull)
+for i, n in zip(u_guess, rand_num_gen) :
+
+    print('step 1', i, n)
+    if i in rand_num_gen :
+        print('step 2', i)
+        if i == n :
+            cow += 1
+            print('step 3a', cow)
+        else :
+            bull += 1
+            print('step 3b', bull)
+    print(cow, bull)
     # ----
 # ----
 
