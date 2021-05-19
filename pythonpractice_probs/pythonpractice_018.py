@@ -49,25 +49,25 @@ print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen)
 
 # ----
 
-for (i, n) in zip(u_guess, rand_num_gen) :
-
-    print('step 1', i, n)
-    if i in rand_num_gen :
-        print('step 2', i)
-        if i == n :
-            cow += 1
-            print('step 3a', cow)
-        else :
-            bull += 1
-            print('step 3b', bull)
-    print(cow, bull)
-
-# ----
-
 win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
 
 if win == True :
     cow = 4
+
+# ----
+
+for (i, n) in zip(u_guess_lst, rand_num_gen) :
+    # print('step 1', i, n)
+
+    if i == n :
+        print('step 2', i)
+        cow += 1
+
+    print(cow, bull)
+
+# ----
+
+if cow == 4 :
     print('!!!!!! YOU WIN !!!!!!')
 
     # ----
