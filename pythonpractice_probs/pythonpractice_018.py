@@ -109,8 +109,8 @@ bull = 0
 
 print(collections.Counter(u_guess) == collections.Counter(rand_num_gen))
 print('####')
-print(type(collections.Counter(u_guess)), collections.Counter(u_guess))
-print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen))
+print(type(collections.Counter(u_guess)), collections.Counter(u_guess), 'u_guess: {0}'.format(u_guess))
+print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen)'rand_num_gen: {0}'.format(rand_num_gen))
 
 # if collections.Counter(u_guess) == collections.Counter(rand_num_gen) :
 
