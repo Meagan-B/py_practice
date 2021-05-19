@@ -60,7 +60,7 @@ for (i, n) in zip(u_guess_lst, rand_num_gen) :
     # print('step 1', i, n)
 
     if i == n :
-        print('step 2', i)
+        print('you have found a perfect match, +1 cows')
         cow += 1
 
     print(cow, bull)
