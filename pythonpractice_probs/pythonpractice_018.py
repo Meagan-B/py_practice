@@ -11,7 +11,7 @@ how_to_play = 'For every correctly guessed digit in the CORRECT placement,\nyou 
 
 import random
 import collections
-from collections import counter
+from collections import Counter
 
 # ----
 
@@ -107,9 +107,10 @@ print(u_guess_lst, type(u_guess_lst))
 cow = 0
 bull = 0
 
-print([i for i, j in zip(u_guess, rand_num_gen) if i == j])
+print(collections.Counter(u_guess) == collections.Counter(rand_num_gen))
+print(collections.Counter(u_guess), collections.Counter(rand_num_gen))
 
-if collections.counter(u_guess) == collections.counter(rand_num_gen) :
+if collections.Counter(u_guess) == collections.Counter(rand_num_gen) :
 
     for i, n in zip(u_guess, rand_num_gen) :
 
