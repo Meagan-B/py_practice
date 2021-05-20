@@ -56,13 +56,6 @@ while guess < 3 :
 # matches = [x for x in u_guess_lst if x in rand_num_gen]
 # print(matches)
 
-# ----
-
-if cow == 4 :
-    print('!!!!!! YOU WIN !!!!!!')
-else :
-    print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
-
     # ----
 # ----
 
