@@ -43,9 +43,10 @@ while guess < 3 :
         print("BOOP")
     # if win == True :
         cow = 4
-    if cow == 4 :
-        print('!!!!!! YOU WIN !!!!!!')
         break
+    # if cow == 4 :
+    #     print('!!!!!! YOU WIN !!!!!!')
+    #     break
     else :
         print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
 
