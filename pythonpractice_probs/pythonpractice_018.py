@@ -33,36 +33,31 @@ print(u_guess_lst, type(u_guess_lst))
 print(type(collections.Counter(u_guess_lst)), collections.Counter(u_guess_lst), 'u_guess_lst: {0}'.format(u_guess_lst))
 print('####')
 print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen), 'rand_num_gen: {0}'.format(rand_num_gen))
-# ----
 
-win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
-
-if win == True :
-    cow = 4
-
-# ----
 # ----
      # ----
 guess = 0
+win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
 
-while (u_guess != 'quit') or (cow != 4) or (guess < 3) :
+while guess < 3 :
     guess += 1
     cow = 0
     bull = 0
-    win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
+    win = u_guess_lst == rand_num_gen
 
+    if u_guess == 'quit' : break
     if win == True :
         cow = 4
-        break
+    if cow == 4 : break
 
-    for (i, n) in zip(u_guess_lst, rand_num_gen) :
-        if i == n :
-            print('you have found a perfect match, +1 cows')
-            cow += 1
+    # for (i, n) in (u_guess_lst, rand_num_gen) :
+    #     if i == n :
+    #         print('you have found a perfect match, +1 cows')
+    #         cow += 1
 
 
-    # print('step 1', i, n)
-
+# matches = [x for x in u_guess_lst if x in rand_num_gen]
+# print(matches)
 
 # ----
 
