@@ -43,8 +43,10 @@ if win == True :
 # ----
 # ----
      # ----
-while (u_guess != 'quit') or (cow != 4) :
+guess = 0
 
+while (u_guess != 'quit') or (cow != 4) or (guess < 3) :
+    guess += 1
     cow = 0
     bull = 0
     win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
@@ -57,7 +59,7 @@ while (u_guess != 'quit') or (cow != 4) :
         if i == n :
             print('you have found a perfect match, +1 cows')
             cow += 1
-            continue
+
 
     # print('step 1', i, n)
 
