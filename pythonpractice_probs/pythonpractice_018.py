@@ -19,36 +19,35 @@ from collections import Counter
 rand_num_gen = [random.randint(0, 9) for i in range(4)]
 print(rand_num_gen, type(rand_num_gen))
 
-print('* random number generated: {0} *'.format(rand_num_gen))
 
 # ----
 
 u_guess = input('enter any 4 digit number\nmake thy first guess\n>>> ')
-print('* user guess #1: {0} *'.format(u_guess))
 u_guess_lst = [int(d) for d in str(u_guess)]
 
 # ----
 
-print(u_guess_lst, type(u_guess_lst))
-print(type(collections.Counter(u_guess_lst)), collections.Counter(u_guess_lst), 'u_guess_lst: {0}'.format(u_guess_lst))
-print('####')
-print(type(collections.Counter(rand_num_gen)), collections.Counter(rand_num_gen), 'rand_num_gen: {0}'.format(rand_num_gen))
+# print(u_guess_lst, type(u_guess_lst))
 
 # ----
      # ----
 guess = 0
-win = collections.Counter(u_guess_lst) == collections.Counter(rand_num_gen)
-
 while guess < 3 :
     guess += 1
     cow = 0
     bull = 0
-    win = u_guess_lst == rand_num_gen
+    # win = u_guess_lst == rand_num_gen
 
     if u_guess == 'quit' : break
-    if win == True :
+    if u_guess_lst == rand_num_gen :
+        print("BOOP")
+    # if win == True :
         cow = 4
-    if cow == 4 : break
+    if cow == 4 :
+        print('!!!!!! YOU WIN !!!!!!')
+        break
+    else :
+        print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
 
     # for (i, n) in (u_guess_lst, rand_num_gen) :
     #     if i == n :
@@ -76,6 +75,41 @@ print('*end*')
 
 # ...........................
 
+# import random
+
+# def game(num_digits):
+    # generate list of random integers of length num_digits
+    # listnum = [random.randint(0,9) for n in range(num_digits)]
+    # print("Solution key = " + str(listnum))
+
+    # count=0
+    # while True:
+        # count+=1
+        # print("~~~ Guess: " + str(count) + " ~~~")
+
+        # print("Please guess " + str(num_digits) + "-digit number: ")
+        # transform input string (e.g. "1234") to list of integers (e.g. [1,2,3,4])
+        # guess = [int(i) for i in str(input())]
+
+        if guess == listnum:
+            print("You won.")
+            print("It took you "+str(count)+" guess(es).")
+            break
+
+        else:
+            cow=0
+            bull=0
+
+            for x in range(0,num_digits):
+                if guess[x]==listnum[x]:
+                    cow += 1
+                elif guess[x] in listnum: # look if digit is somewhere else in the solution key (might already be a cow)
+                    bull += 1
+
+        print("Cows: "+str(cow)+" Bulls: "+str(bull))
+        print("++++++++++++++++")
+
+game(4)
 #
 # guesses = 0
 #
