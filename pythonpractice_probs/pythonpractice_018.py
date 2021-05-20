@@ -36,17 +36,14 @@ while guess < 3 :
     guess += 1
     cow = 0
     bull = 0
-    # win = u_guess_lst == rand_num_gen
 
     if u_guess == 'quit' : break
     if u_guess_lst == rand_num_gen :
-        print("BOOP")
-    # if win == True :
         cow = 4
+
+    if cow == 4 :
+        print('!!!!!! YOU WIN !!!!!!')
         break
-    # if cow == 4 :
-    #     print('!!!!!! YOU WIN !!!!!!')
-    #     break
     else :
         print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
 
@@ -92,25 +89,25 @@ print('*end*')
         # transform input string (e.g. "1234") to list of integers (e.g. [1,2,3,4])
         # guess = [int(i) for i in str(input())]
 
-        if guess == listnum:
-            print("You won.")
-            print("It took you "+str(count)+" guess(es).")
-            break
-
-        else:
-            cow=0
-            bull=0
-
-            for x in range(0,num_digits):
-                if guess[x]==listnum[x]:
-                    cow += 1
-                elif guess[x] in listnum: # look if digit is somewhere else in the solution key (might already be a cow)
-                    bull += 1
-
-        print("Cows: "+str(cow)+" Bulls: "+str(bull))
-        print("++++++++++++++++")
-
-game(4)
+#         if guess == listnum:
+#             print("You won.")
+#             print("It took you "+str(count)+" guess(es).")
+#             break
+#
+#         else:
+#             cow=0
+#             bull=0
+#
+#             for x in range(0,num_digits):
+#                 if guess[x]==listnum[x]:
+#                     cow += 1
+#                 elif guess[x] in listnum: # look if digit is somewhere else in the solution key (might already be a cow)
+#                     bull += 1
+#
+#         print("Cows: "+str(cow)+" Bulls: "+str(bull))
+#         print("++++++++++++++++")
+#
+# game(4)
 #
 # guesses = 0
 #
