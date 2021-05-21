@@ -27,9 +27,7 @@ def cowbullgame(num) :
     guess = 10
 
     while guess != 0 :
-        guess -= 1
-        print('\n++++++++++\nyou guessed {0}\n{1} guesses remaining...\n++++++++++\n'.format(u_guess, guess))
-        # ••••••
+
         cow = 0
         bull = 0
         # ••••••
@@ -52,6 +50,8 @@ def cowbullgame(num) :
             print('!!!!!! YOU WIN !!!!!!')
             break
         else :
+            guess -= 1
+            print('\n++++++++++\nyou guessed {0}\n{1} guesses remaining...\n++++++++++\n'.format(u_guess, guess))
             print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
         # ••••••
         u_guess = input('\nmake thy next guess\n>>> ')
