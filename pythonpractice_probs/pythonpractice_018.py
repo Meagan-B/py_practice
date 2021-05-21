@@ -12,54 +12,54 @@ print(welcome + how_to_play)
 import random
 
 # ----
+def cowbullgame(num) :
 
-# need to address occasional 3 digit numbers
-rand_num_gen = random.sample(range(9), 4)
-print(rand_num_gen, type(rand_num_gen))
+    rand_num_gen = random.sample(range(9), num)
+    print(rand_num_gen, type(rand_num_gen))
 
-# ----
+    # ----
 
-u_guess = input('enter a 4 digit number, WITHOUT duplicates\nmake thy first guess\n>>> ')
-u_guess_lst = [int(d) for d in str(u_guess)]
+    u_guess = input('enter a 4 digit number, WITHOUT duplicates\nmake thy first guess\n>>> ')
+    u_guess_lst = [int(d) for d in str(u_guess)]
 
-# ----
+    # ----
 
-guess = 10
+    guess = 10
 
-while guess != 0 :
-    guess -= 1
-    print('\n++++++++++\nyou guessed {0}\n{1} guesses remaining...\n++++++++++\n'.format(u_guess, guess))
-    # ••••••
-    cow = 0
-    bull = 0
-    # ••••••
-    if u_guess == 'quit' : break
-    # ••••••
-    if u_guess_lst == rand_num_gen :
-        cow = 4
-    else :
+    while guess != 0 :
+        guess -= 1
+        print('\n++++++++++\nyou guessed {0}\n{1} guesses remaining...\n++++++++++\n'.format(u_guess, guess))
+        # ••••••
         cow = 0
         bull = 0
         # ••••••
-        for i in range(0, 4) :
-            if u_guess_lst[i] == rand_num_gen[i]:
-                cow += 1
-            elif u_guess_lst[i] in rand_num_gen:
-                bull += 1
-            else: continue
-    # ••••••
-    if cow == 4 :
-        print('!!!!!! YOU WIN !!!!!!')
-        break
-    else :
-        print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
-    # ••••••
-    u_guess = input('\nmake thy next guess\n>>> ')
-    u_guess_lst = [int(d) for d in str(u_guess)]
+        if u_guess == 'quit' : break
+        # ••••••
+        if u_guess_lst == rand_num_gen :
+            cow = 4
+        else :
+            cow = 0
+            bull = 0
+            # ••••••
+            for i in range(0, 4) :
+                if u_guess_lst[i] == rand_num_gen[i]:
+                    cow += 1
+                elif u_guess_lst[i] in rand_num_gen:
+                    bull += 1
+                else: continue
+        # ••••••
+        if cow == 4 :
+            print('!!!!!! YOU WIN !!!!!!')
+            break
+        else :
+            print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
+        # ••••••
+        u_guess = input('\nmake thy next guess\n>>> ')
+        u_guess_lst = [int(d) for d in str(u_guess)]
 
 # ----
 
-# cowbullgame(u_guess_lst, rand_lst)
+cowbullgame(4)
 # print('*end*')
 
 # ...........................
