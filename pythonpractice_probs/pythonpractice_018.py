@@ -28,10 +28,9 @@ u_guess_lst = [int(d) for d in str(u_guess)]
 
 # ----
 
-guess = 0
+guess = 1
 
-while guess < 3 :
-    guess += 1
+while guess < 10 :
     cow = 0
     bull = 0
 
@@ -48,13 +47,17 @@ while guess < 3 :
                 cow += 1
             elif u_guess_lst[i] in rand_num_gen:
                 bull += 1
+            else: continue
 
 
-if cow == 4 :
-    print('!!!!!! YOU WIN !!!!!!')
-else :
-    print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
 
+    if cow == 4 :
+        print('!!!!!! YOU WIN !!!!!!')
+    else :
+        print('you have {0} COW(s) and {1} BULL(s)'.format(cow, bull))
+
+    u_guess = input('\nmake thy next guess\n>>> ')
+    guess += 1
 # ----
 
 # cowbullgame(u_guess_lst, rand_lst)
