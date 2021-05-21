@@ -14,7 +14,7 @@ import random
 # ----
 
 # need to address occasional 3 digit numbers
-rand_num_gen = [random.randint(0, 9) for i in range(4)]
+rand_num_gen = random.sample(range(9), 4)
 print(rand_num_gen, type(rand_num_gen))
 
 # ----
