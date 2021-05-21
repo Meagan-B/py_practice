@@ -47,7 +47,7 @@ def cowbullgame(num) :
                 else: continue
         # ••••••
         if cow == 4 :
-            print('!!!!!! YOU WIN !!!!!!')
+            print('your guess: {0} was correct!\n\n!!!!!! YOU WIN !!!!!!'.format(guess))
             break
         else :
             guess -= 1
