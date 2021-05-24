@@ -20,9 +20,6 @@ def cowbullgame(num) :
     # ----
 
     u_guess = input('enter a 4 digit number, WITHOUT duplicates\nmake thy first guess\n>>> ')
-    for i in range(0, 1) :
-        if u_guess[i] == u_guess[i]:
-            u_guess = input('please enter a number that DOES NOT contain any duplicate digits\n>>> ')
     u_guess_lst = [int(d) for d in str(u_guess)]
 
     # ----
