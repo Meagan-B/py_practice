@@ -34,14 +34,14 @@ def prime_calc(n) :
         # print(n)
         usr_n_chk = usr_i % n
         print(usr_n_chk, n)
-        if usr_n_chk == 0 :
-        # print('exit 4')
-            print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_fl, n, (usr_i/n)))
-            return False
-        else :
-            print('{0} divided by {1} is {2}, with a remainder of {3}…'.format(usr_fl, n, (usr_fl / n), float(usr_i % n)))
-            print('exit 5')
-            return True
+    if usr_n_chk == 0 :
+    # print('exit 4')
+        print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_i, n, (usr_i/n)))
+        return False
+    else :
+        print('{0} divided by {1} is {2}, with a remainder of {3}…'.format(usr_i, n, (usr_i / n), float(usr_i % n)))
+        print('exit 5')
+        return True
 
 # ----
 
