@@ -29,11 +29,13 @@ def prime_calc(n) :
                 # print('exit 3')
                 print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_i, i, (usr_i//i)))
                 return False
-
+    usr_n_chk = []
     for n in range(2, usr_i) :
         # print(n)
-        usr_n_chk = usr_i % n
-        if usr_n_chk = 0 :
+        usr_n_chk.append(usr_i % n)
+
+    for e in usr_n_chk :
+        if e = 0 :
             return True
         else :
             return False
