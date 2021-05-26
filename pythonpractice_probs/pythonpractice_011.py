@@ -33,14 +33,14 @@ def prime_calc(n) :
     for n in range(2, usr_i) :
         # print(n)
         usr_n_chk.append(usr_i % n)
-    print(usr_n_chk)    
+    print(usr_n_chk)
 
     for e in usr_n_chk :
         # if u_guess_lst[i] == rand_num_gen[i]:
-        if e = 0 :
-            return True
-        else :
+        if e == 0 :
             return False
+        else :
+            return True
 
 # ----
 
