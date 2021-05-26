@@ -9,34 +9,32 @@ usr_n_str = input('\nenter a number below to see if it is a PRIME NUMBER……\n
 def prime_calc(n) :
     global usr_n_str
     end_ints = [2, 3, 4, 5, 6, 8, 9]
-    # usr_fl = float(usr_n_str)
     usr_i = int(usr_n_str)
-
+    # ----
     if usr_i == 2 :
-        print('exit 1')
         return True
-
+    # ----
     if usr_i < 1 :
-        # print('exit 2')
-        print('{0} is less than 1'.format(usr_i))
         return False
-
+    # ----
     elif len(usr_n_str) > 1 :
         print(usr_n_str)
         last_dig = usr_i % 10
+        # ----
         for i in end_ints :
+            # ----
             if last_dig == i :
-                # print('exit 3')
-                print('{0} divided by {1} is {2}, with a remainder of 0…'.format(usr_i, i, (usr_i//i)))
                 return False
+    # ----
     usr_n_chk = []
+    # ----
     for n in range(2, usr_i) :
-        # print(n)
         usr_n_chk.append(usr_i % n)
+    # ----
     print(usr_n_chk)
-
+    # ----
     for e in usr_n_chk :
-        # if u_guess_lst[i] == rand_num_gen[i]:
+        # ----
         if e == 0 :
             return False
         else :
