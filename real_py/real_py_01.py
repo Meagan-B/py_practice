@@ -6,9 +6,12 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 def add_it_up(num) :
-
+    sum_lst = []
 
     print([i for i in range(0, num + 1)])
+    sum_lst.append([i for i in range(0, num + 1)])
+
+    print(sum_lst)
 
 # ----
 
