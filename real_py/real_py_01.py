@@ -5,8 +5,18 @@
 
 # >>>>>>>>>>>>>>>>>>>>>>>
 
+def add_it_up(num) :
+
+
+    print([i for i in range(0, num)])
 
 # ----
+
+usr_x = int(input('enter a number from 1-9\n>>> '))
+
 # ----
-# ----
+
+add_it_up(usr_x)
+
+
 # ...........................
