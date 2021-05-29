@@ -8,7 +8,7 @@
 def add_it_up(num) :
 
 
-    print([i for i in range(0, num)])
+    print([i for i in range(0, num + 1)])
 
 # ----
 
