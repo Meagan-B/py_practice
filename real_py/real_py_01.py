@@ -7,11 +7,15 @@
 
 def add_it_up(num) :
     sum_lst = []
+    sum_num = 0
 
     print([i for i in range(0, num + 1)])
-    sum_lst.append([i for i in range(0, num + 1)])
+    for i in range(0, num + 1) :
+        sum_lst.append(i)
+        sum_num += i
 
     print(sum_lst)
+    print(sum_num)
 
 # ----
 
