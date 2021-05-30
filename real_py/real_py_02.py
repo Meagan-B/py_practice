@@ -14,22 +14,19 @@
 def caesar_cipher(t, n) :
 
     t = [e for e in t]
-    d = len(t)
-    # print(t, d)
-
+    # d = len(t)
 
     cc_move = (t[0:n])
     print(cc_move)
 
     for i in cc_move :
         t.append(i)
-        # print(i)
-    # print(t)
 
     del t[0:n]
 
-    t = str(t)
-    print(t)
+    txt_str = ''
+    return (txt_str.join(t))
+    # print([t])
 
 # ----
 
@@ -40,6 +37,6 @@ cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
 # ----
 
-caesar_cipher(org_text, cc_num)
+print(caesar_cipher(org_text, cc_num))
 
 # ...........................
