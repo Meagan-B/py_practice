@@ -19,9 +19,12 @@ def caesar_cipher(t, n) :
 
     t.append(t[0:n])
     print(t)
-    
+
+    cc_move = (t[0:n])
+    print(cc_move)
     del t[0:n]
     print(t)
+
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
