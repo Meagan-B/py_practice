@@ -17,20 +17,25 @@ def caesar_cipher(t, n) :
     d = len(t)
     # print(t, d)
 
-    for i in range(t[0:n]) :
-        t.append(i)
-        print(i)
-    print(t)
 
     cc_move = (t[0:n])
     print(cc_move)
+
+    for i in cc_move :
+        t.append(i)
+        # print(i)
+    # print(t)
+
     del t[0:n]
+
+    t = str(t)
     print(t)
 
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
-org_text = 'abcdefghijklmnopqrstuvwxyz'
+# org_text = 'abcdefghijklmnopqrstuvwxyz'
+org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
 cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
 # ----
