@@ -12,13 +12,14 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 def caesar_cipher(t, n) :
-
-
+    t = [e for e in t]
+    print(t)
 
 
 # ----
 
-org_text = input('enter text to be encoded\n>>> ')
+# org_text = input('enter text to be encoded\n>>> ')
+org_text = 'abcdefghijklmnopqrstuvwxyz'
 cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
 # ----
