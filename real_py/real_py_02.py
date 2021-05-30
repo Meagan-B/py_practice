@@ -17,10 +17,11 @@ def caesar_cipher(t, n) :
     d = len(t)
     print(t, d)
 
-    for e in t :
-        print(e + 1)
-    # print(t[0+1])
-
+    for i in range(0, (d + 1)) :
+        v = 0
+        i = t[v+1]
+        print(i)
+        v += 1  
 
 # ----
 
