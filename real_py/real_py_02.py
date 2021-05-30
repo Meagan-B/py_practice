@@ -17,12 +17,11 @@ def caesar_cipher(t, n) :
     d = len(t)
     print(t, d)
 
-    for i in range(0, (d + 1)) :
-        v = 0
-        i = t[v+1]
-        print(i)
-        v += 1  
-
+    t.append(t[0:n])
+    print(t)
+    
+    del t[0:n]
+    print(t)
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
