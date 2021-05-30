@@ -12,8 +12,14 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 def caesar_cipher(t, n) :
+
     t = [e for e in t]
-    print(t)
+    d = len(t)
+    print(t, d)
+
+    for e in range(0, d +1) :
+        print(e + 1)
+    # print(t[0+1])
 
 
 # ----
