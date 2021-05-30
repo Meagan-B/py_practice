@@ -31,8 +31,8 @@ def caesar_cipher(t, n) :
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
-# org_text = 'abcdefghijklmnopqrstuvwxyz'
-org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
+org_text = 'abcdefghijklmnopqrstuvwxyz'
+# org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
 cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
 # ----
