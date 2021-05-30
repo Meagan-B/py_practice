@@ -15,9 +15,11 @@ def caesar_cipher(t, n) :
 
     t = [e for e in t]
     d = len(t)
-    print(t, d)
+    # print(t, d)
 
-    t.append(t[0:n])
+    for i in range(t[0:n]) :
+        t.append(i)
+        print(i)
     print(t)
 
     cc_move = (t[0:n])
