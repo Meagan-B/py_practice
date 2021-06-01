@@ -31,7 +31,7 @@ def caesar_cipher(t, n) :
     text = txt_str.join(t)
     # print([t])
     # ----
-    letters = ascii_lowercase
+    letters = string.ascii_lowercase
     print(letters)
     transl = str.maketrans(letters, text)
     print(transl)
