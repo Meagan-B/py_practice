@@ -17,14 +17,17 @@ import string
 def caesar_cipher(t, n) :
 
     a = string.ascii_lowercase
-    new_a = string.ascii_lowercase
+    new_a = list(a)
     a_shift = (a[0:n])
 
     for i in a_shift :
         new_a.append(i)
 
     del new_a[0:n]
-    print(a, new_a)
+
+    a_str = ''
+    a_str = a_str.join(new_a)
+    print(a, new_a, a_str)
     # ----
     t = [e for e in t]
     # txt_str = ''
@@ -35,8 +38,7 @@ def caesar_cipher(t, n) :
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
-org_alpha = 'abcdefghijklmnopqrstuvwxyz'
-# org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
+org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
 cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
 # ----
