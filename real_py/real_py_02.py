@@ -15,19 +15,24 @@ def caesar_cipher(t, n) :
 
     t = [e for e in t]
     # d = len(t)
-
+    # ----
     cc_move = (t[0:n])
     print(cc_move)
-
+    # ----
     for i in cc_move :
         t.append(i)
-
+    # ----
     del t[0:n]
-
+    # ----
     txt_str = ''
-    return (txt_str.join(t))
+    text = txt_str.join(t)
     # print([t])
-
+    # ----
+    letters = ascii_lowercase
+    print(letters)
+    transl = str.maketrans(letters, text)
+    print(transl)
+    # return plain_text.translate(trantab)
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
