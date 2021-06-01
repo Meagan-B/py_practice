@@ -16,29 +16,26 @@ import string
 # ----
 def caesar_cipher(t, n) :
 
+    a = string.ascii_lowercase
+    new_a = string.ascii_lowercase
+    a_shift = (a[0:n])
+
+    for i in a_shift :
+        new_a.append(i)
+
+    del new_a[0:n]
+    print(a, new_a)
+    # ----
     t = [e for e in t]
-    # d = len(t)
+    # txt_str = ''
+    # txt_str = txt_str.join(t)
     # ----
-    cc_move = (t[0:n])
-    # print(cc_move)
-    # ----
-    for i in cc_move :
-        t.append(i)
-    # ----
-    del t[0:n]
-    # ----
-    txt_str = ''
-    text = txt_str.join(t)
-    # print(text)
-    # ----
-    letters = string.ascii_lowercase
-    # ----
-    text_tran = str.maketrans(letters, text)
-    return text.translate(text_tran)
+    # alpha_trans = str.maketrans(a, new_a)
+    # return t.translate(alpha_trans)
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
-org_text = 'abcdefghijklmnopqrstuvwxyz'
+org_alpha = 'abcdefghijklmnopqrstuvwxyz'
 # org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
 cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
