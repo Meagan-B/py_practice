@@ -20,7 +20,7 @@ def caesar_cipher(t, n) :
     # d = len(t)
     # ----
     cc_move = (t[0:n])
-    print(cc_move)
+    # print(cc_move)
     # ----
     for i in cc_move :
         t.append(i)
@@ -29,13 +29,12 @@ def caesar_cipher(t, n) :
     # ----
     txt_str = ''
     text = txt_str.join(t)
-    # print([t])
+    # print(text)
     # ----
     letters = string.ascii_lowercase
-    print(letters)
-    transl = str.maketrans(letters, text)
-    print(transl)
-    # return plain_text.translate(trantab)
+    # ----
+    text_tran = str.maketrans(letters, text)
+    return text.translate(text_tran)
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
