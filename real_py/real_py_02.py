@@ -27,14 +27,14 @@ def caesar_cipher(t, n) :
 
     a_str = ''
     a_str = a_str.join(new_a)
-    print(a, new_a, a_str)
+    # print(a, new_a, a_str)
     # ----
     t = [e for e in t]
-    # txt_str = ''
-    # txt_str = txt_str.join(t)
+    txt_str = ''
+    txt_str = txt_str.join(t)
     # ----
-    # alpha_trans = str.maketrans(a, new_a)
-    # return t.translate(alpha_trans)
+    alpha_trans = str.maketrans(a, a_str)
+    return t.translate(alpha_trans)
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
