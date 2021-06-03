@@ -14,6 +14,8 @@ def add_it_up(num) :
         sum_lst.append(i)
         sum_num += i
 
+    print(sum_lst, sum_num)
+
     return sum_lst
     return sum_num
 
