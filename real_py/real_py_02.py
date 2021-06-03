@@ -33,7 +33,7 @@ def caesar_cipher(t, n) :
     txt_str = ''
     txt_str = txt_str.join(t)
     # ----
-    print(txt_str)
+    print(a, a_str, txt_str)
     #alpha_trans = str.maketrans(a, a_str)
     #print(alpha_trans)
     #return t.translate(alpha_trans)
