@@ -33,9 +33,10 @@ def caesar_cipher(t, n) :
     txt_str = ''
     txt_str = txt_str.join(t)
     # ----
-    
-    alpha_trans = str.maketrans(a, a_str)
-    return t.translate(alpha_trans)
+    print(txt_str)
+    #alpha_trans = str.maketrans(a, a_str)
+    #print(alpha_trans)
+    #return t.translate(alpha_trans)
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
