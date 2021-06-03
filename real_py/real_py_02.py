@@ -14,29 +14,31 @@
 import string
 
 # ----
+
 def caesar_cipher(t, n) :
 
-    a = string.ascii_lowercase
-    new_a = list(a)
-    a_shift = (a[0:n])
+    in_alpha = string.ascii_lowercase
+    out_alpha = list(in_alpha)
+    alpha_shift = (out_alpha[0:n])
 
-    for i in a_shift :
-        new_a.append(i)
+    for i in alpha_shift :
+        out_alpha.append(i)
 
-    del new_a[0:n]
+    del out_alpha[0:n]
+   
+    
+    out_alpha_str = ''
+    out_alpha = out_alpha_str.join(out_alpha)
 
-    a_str = ''
-    a_str = a_str.join(new_a)
-    # print(a, new_a, a_str)
-    # ----
+    
     t = [e for e in t]
     txt_str = ''
     txt_str = txt_str.join(t)
-    # ----
-    print(a, a_str, txt_str)
+
     #alpha_trans = str.maketrans(a, a_str)
     #print(alpha_trans)
     #return t.translate(alpha_trans)
+    
 # ----
 
 # org_text = input('enter text to be encoded\n>>> ')
