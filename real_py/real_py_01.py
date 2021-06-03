@@ -9,14 +9,14 @@ def add_it_up(num) :
     sum_lst = []
     sum_num = 0
 
-    print([i for i in range(0, num + 1)])
+  # print([i for i in range(0, num + 1)])
+ 
     for i in range(0, num + 1) :
         sum_lst.append(i)
         sum_num += i
 
-    print(sum_lst, sum_num)
+  # print(sum_lst, sum_num)
 
-    return sum_lst
     return sum_num
 
 # ----
@@ -25,7 +25,7 @@ usr_x = int(input('enter a number from 1-9\n>>> '))
 
 # ----
 
-print(add_it_up(usr_x))
+print('the sum of 1-{0} is...{1}'.format(usr_x, add_it_up(usr_x)))
 
 
 # ...........................
