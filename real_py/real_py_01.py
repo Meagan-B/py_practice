@@ -14,8 +14,8 @@ def add_it_up(num) :
         sum_lst.append(i)
         sum_num += i
 
-    print(sum_lst)
-    print(sum_num)
+    return sum_lst
+    return sum_num
 
 # ----
 
@@ -23,7 +23,7 @@ usr_x = int(input('enter a number from 1-9\n>>> '))
 
 # ----
 
-add_it_up(usr_x)
+print(add_it_up(usr_x))
 
 
 # ...........................
