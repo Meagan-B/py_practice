@@ -17,7 +17,10 @@ import re
 # ----
 
 def caesar_cipher(t, n) :
-
+    
+    t = t.lower()
+    #print(t)
+    
     in_alpha = string.ascii_lowercase
     out_alpha = list(in_alpha)
     alpha_shift = (out_alpha[0:n])
