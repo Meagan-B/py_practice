@@ -32,35 +32,34 @@ def caesar_cipher(t, n) :
     
 # ----
 
-    t = [e for e in t]
+    #t = [e for e in t]
     #print(t)
     
     letter_dict1 = {x:y for x,y in zip(in_alpha, out_alpha)}
-    print(letter_dict1)
+    #print(letter_dict1)
     
-    txt_str = ''
-    txt_str = txt_str.join(t)
+    #txt_str = ''
+    #txt_str = txt_str.join(t)
     #print(txt_str)
     
-    #alpha_trans = str.maketrans(a, a_str)
-    #print(alpha_trans)
-    #return t.translate(alpha_trans)
+    # NEED MORE INFO< CODE FROM O_STACK
     for l_dict in [letter_dict1]:
         pattern = re.compile("|".join(l_dict.keys()))
-        my_string = pattern.sub(lambda m: l_dict[re.escape(m.group(0))], my_string)
-
-    print(pattern)
-    print(my_string)
+        #print(pattern)
+        my_string = pattern.sub(lambda m: l_dict[re.escape(m.group(0))], t)
+        #print(my_string)
     
     return my_string
 # ----
 
-# org_text = input('enter text to be encoded\n>>> ')
-org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
+org_text = input('enter text to be encoded\n>>> ')
+#org_text = 'how much wood would a woodchuck chuck if a woodchuck could chuck wood'
 cc_num = int(input('enter shift value, for Ceasar Cipher\n>>> '))
 
 # ----
 
+#print(caesar_cipher(org_text, cc_num))
+print('ORIGINAL TEXT: {0}'.format(org_text))
 print(caesar_cipher(org_text, cc_num))
 
 # ...........................
