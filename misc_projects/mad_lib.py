@@ -6,10 +6,10 @@ import urllib.request
 
 # ----
 
-usr_host = str(input('enter URL below\n>>> '))
-print(usr_host)
+#usr_host = str(input('enter URL below\n>>> '))
+usr_host = 'http://data.pr4e.org/romeo.txt'
 usr_host = usr_host.rstrip()
-print(usr_host)
+#print(usr_host)
 
 # ----
 
