@@ -16,4 +16,7 @@ usr_host = usr_host.rstrip()
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
     html = html.decode()
-    # print(type(html))
+    print(type(html))
+    print(html)
+    
+# ----    
