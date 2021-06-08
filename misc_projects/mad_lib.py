@@ -31,12 +31,12 @@ adj_mapping = map(for_splice.__getitem__, adj)
 adj_map_list = list(adj_mapping)
 print(adj_map_list)
 
-#noun = [1, 5, 11, 18, 23, 28, 30]
+noun = [3, 6, 16, 19, 24]
 noun_mapping = map(for_splice.__getitem__, noun)
 noun_map_list = list(noun_mapping)
 print(noun_map_list)
 
 #verb = [1, 5, 11, 18, 23, 28, 30]
-verb_mapping = map(for_splice.__getitem__, verb)
-verb_map_list = list(verb_mapping)
-print(verb_map_list)
+#verb_mapping = map(for_splice.__getitem__, verb)
+#verb_map_list = list(verb_mapping)
+#print(verb_map_list)
