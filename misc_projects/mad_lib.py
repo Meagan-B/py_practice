@@ -26,17 +26,17 @@ for_splice = html.split()
 #print(for_splice)
 
 
-adj = [1, 5, 11, 18, 23, 28, 30]
+adj = [1, 5, 18, 23, 28, 30]
 adj_mapping = map(for_splice.__getitem__, adj)
 adj_map_list = list(adj_mapping)
-print(adj_map_list)
+print('adjectives: {0}'.format(adj_map_list))
 
 noun = [3, 6, 16, 19, 24, -1]
 noun_mapping = map(for_splice.__getitem__, noun)
 noun_map_list = list(noun_mapping)
-print(noun_map_list)
+print('nouns: {0}'.format(noun_map_list))
 
 verb = [7, 17, 21]
 verb_mapping = map(for_splice.__getitem__, verb)
 verb_map_list = list(verb_mapping)
-print(verb_map_list)
+print('verbs: {0}'.format(verb_map_list))
