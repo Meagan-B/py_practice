@@ -21,7 +21,7 @@ with urllib.request.urlopen(usr_host) as response :
     
 # ----
 
-for_splice = lst(html)
+for_splice = list(html)
 print(for_splice)
 
 #adj =
