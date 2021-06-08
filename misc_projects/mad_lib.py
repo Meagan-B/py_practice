@@ -16,14 +16,32 @@ usr_host = usr_host.rstrip()
 with urllib.request.urlopen(usr_host) as response :
     html = response.read()
     html = html.decode()
-    print(type(html))
-    print(html)
+    #print(type(html))
+    #print(html)
     
 # ----
 
 for_splice = html.split()
+#print(type(for_splice))
 print(for_splice)
 
-#adj =
+
+adj = [1, 5, 11, 18, 23, 28, 30]
+indices_to_access = [1, 5, 11, 18, 23, 28, 30]
+adj_mapping = map(for_splice.__getitem__, adj)
+adj_map_list = list(adj_mapping)
+print(adj_map_list)
+
 #noun =
-#verb = 
+adj = [1, 5, 11, 18, 23, 28, 30]
+indices_to_access = [1, 5, 11, 18, 23, 28, 30]
+adj_mapping = map(for_splice.__getitem__, adj)
+adj_map_list = list(adj_mapping)
+print(adj_map_list)
+
+#verb =
+adj = [1, 5, 11, 18, 23, 28, 30]
+indices_to_access = [1, 5, 11, 18, 23, 28, 30]
+adj_mapping = map(for_splice.__getitem__, adj)
+adj_map_list = list(adj_mapping)
+print(adj_map_list)
