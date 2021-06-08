@@ -19,4 +19,11 @@ with urllib.request.urlopen(usr_host) as response :
     print(type(html))
     print(html)
     
-# ----    
+# ----
+
+for_splice = lst(html)
+print(for_splice)
+
+#adj =
+#noun =
+#verb = 
