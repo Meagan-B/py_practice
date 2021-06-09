@@ -62,9 +62,9 @@ def romeo_mad_lib(t) :
     verb_map_list = list(verb_mapping)
     print('verbs: {0}'.format(verb_map_list))
     
-    new_verb = ['cat', 'rock', 'river', 'train', 'butt', 'cheese']
+    new_verb = ['swim', 'fart', 'explode']
     #new_adj = []
-    while len(new_verb) < 6 :
+    while len(new_verb) < 3 :
         new_verb.append(input('Enter a VERB below,\n>>> '))
     #print(new_verb)
         
