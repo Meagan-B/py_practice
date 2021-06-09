@@ -28,6 +28,7 @@ def romeo_mad_lib(t) :
     for_splice = html.split()
 # ----
     adj = [1, 5, 18, 23, 28, 30]
+    
     adj_mapping = map(for_splice.__getitem__, adj)
     adj_map_list = list(adj_mapping) 
     print('adjectives: {0}'.format(adj_map_list))
@@ -37,23 +38,21 @@ def romeo_mad_lib(t) :
     while len(new_adj) < 6 :
         new_adj.append(input('Enter an ADJECTIVE below,\n>>> '))
     #print(new_adj)    
-        
-    adj_mapping = map(for_splice.__getitem__, adj)
-    adj_map_list = list(adj_mapping) 
-    print('adjectives: {0}'.format(adj_map_list))
     
     adj_dict = {x:y for x,y in zip(adj_map_list, new_adj)}
     
     for a_tup in [adj_dict]:
         pattern = re.compile("|".join(a_tup.keys()))
-        my_string = pattern.sub(lambda m: a_tup[re.escape(m.group(0))], t)
+        new_string1 = pattern.sub(lambda m: a_tup[re.escape(m.group(0))], t)
+        
 # ----
-    noun = [3, 6, 16, 19, 24, -1]
+    noun = [3, 6, 11, 16, 19, 24, -1]
+    
     noun_mapping = map(for_splice.__getitem__, noun)
     noun_map_list = list(noun_mapping)
     print('nouns: {0}'.format(noun_map_list))
    
-    new_noun = ['hard', 'fluffy', 'stinky', 'wet', 'colorful', 'crunchy']
+    new_noun = ['cat', 'rock', 'river', 'train', 'butt', 'cheese']
     #new_adj = []
     while len(new_noun) < 6 :
         new_noun.append(input('Enter a NOUN below,\n>>> '))
@@ -63,7 +62,7 @@ def romeo_mad_lib(t) :
     
     for n_tup in [noun_dict]:
         pattern = re.compile("|".join(n_tup.keys()))
-        my_string = pattern.sub(lambda m: n_tup[re.escape(m.group(0))], t)
+        new_string2 = pattern.sub(lambda m: n_tup[re.escape(m.group(0))], new_string1)
 # ----
 #    verb = [7, 17, 21]
  #   verb_mapping = map(for_splice.__getitem__, verb)
@@ -71,10 +70,7 @@ def romeo_mad_lib(t) :
    # print('verbs: {0}'.format(verb_map_list))
 
 # ----
-    
-    
-    
-    return my_string
 
+    return new_string2
 
 print(romeo_mad_lib(html))
