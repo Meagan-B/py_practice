@@ -76,5 +76,5 @@ def romeo_mad_lib(t) :
 #----••••••••----••••••••----••••••••----#
     return new_string3
 #----••••••••----••••••••----••••••••----#
-print('\n',romeo_mad_lib(html))
+print('\n{0}'.format(romeo_mad_lib(html)))
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
