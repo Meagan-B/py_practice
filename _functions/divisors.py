@@ -1,8 +1,9 @@
 # Create a program that asks the user for a number and then prints out a list of all the divisors of that number.
 # For example, 13 is a divisor of 26 because 26 / 13 has no remainder.
-# >>>>>>>>>>>>>>>>>>>>>>
-
-def divisor_check() :
+#---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
+welcome = 'welcome to the,\n••••§•••• DIVISOR CHECKER ••••§••••\n\n'
+#----••••••••----••••••••----••••••••----#
+def divisor_check(n) :
     usr_num = int(input('enter a number for a list of its divisors\n>>> '))
     divisors = list(range(1, usr_num))
     b = []
@@ -15,8 +16,7 @@ def divisor_check() :
 
     print(b)
 
-# ----
-
+#----••••••••----••••••••----••••••••----#
+divisor_lst = input('enter the number(s) you would like to check')
 divisor_check()
-
-# ......................
+#---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
