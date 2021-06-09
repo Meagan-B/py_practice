@@ -67,6 +67,7 @@ def romeo_mad_lib(t) :
     while len(new_verb) < 3 :
         new_verb.append(input('Enter a VERB below,\n>>> '))
     #print(new_verb)
+    new_verb[0] = new_verb[0]+'s'
         
     verb_dict = {x:y for x,y in zip(verb_map_list, new_verb)}
     
