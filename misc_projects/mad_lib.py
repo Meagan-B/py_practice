@@ -3,6 +3,7 @@
 # >>>>>>>>>>>>>>>>>>>>>>>
 
 import urllib.request
+import re
 
 # ----
 
@@ -21,40 +22,48 @@ with urllib.request.urlopen(usr_host) as response :
     
 # ----
 
-def romeo_mad_lib(t)
+def romeo_mad_lib(t) :
     global html
-    
+# ----
     for_splice = html.split()
-
+# ----
     adj = [1, 5, 18, 23, 28, 30]
     adj_mapping = map(for_splice.__getitem__, adj)
     adj_map_list = list(adj_mapping) 
     print('adjectives: {0}'.format(adj_map_list))
     
-    new_adj = []
+    new_adj = ['hard', 'fluffy', 'stinky', 'wet', 'colorful', 'crunchy']
+    #new_adj = []
     while len(new_adj) < 6 :
-        #user_adj = input()
         new_adj.append(input('Enter an ADJECTIVE below,\n>>> '))
-        
+    #print(new_adj)    
         
     adj_mapping = map(for_splice.__getitem__, adj)
     adj_map_list = list(adj_mapping) 
     print('adjectives: {0}'.format(adj_map_list))
     
-    adj_dict = {x:y for x,y in zip(adj_map_list, out_alpha)}
-    #print(letter_dict1)
+    adj_dict = {x:y for x,y in zip(adj_map_list, new_adj)}
     
-    #CODE FROM O_STACK >>>
     for a_tup in [adj_dict]:
-        pattern = re.compile("|".join(w_dict.keys()))
-        #print(pattern)
-        my_string = pattern.sub(lambda m: w_dict[re.escape(m.group(0))], t)
-        #print(my_string)
+        pattern = re.compile("|".join(a_tup.keys()))
+        my_string = pattern.sub(lambda m: a_tup[re.escape(m.group(0))], t)
 # ----
-#    noun = [3, 6, 16, 19, 24, -1]
- #   noun_mapping = map(for_splice.__getitem__, noun)
-  #  noun_map_list = list(noun_mapping)
-   # print('nouns: {0}'.format(noun_map_list))
+    noun = [3, 6, 16, 19, 24, -1]
+    noun_mapping = map(for_splice.__getitem__, noun)
+    noun_map_list = list(noun_mapping)
+    print('nouns: {0}'.format(noun_map_list))
+   
+    new_noun = ['hard', 'fluffy', 'stinky', 'wet', 'colorful', 'crunchy']
+    #new_adj = []
+    while len(new_noun) < 6 :
+        new_noun.append(input('Enter a NOUN below,\n>>> '))
+    #print(new_noun)
+        
+    noun_dict = {x:y for x,y in zip(noun_map_list, new_noun)}
+    
+    for n_tup in [noun_dict]:
+        pattern = re.compile("|".join(n_tup.keys()))
+        my_string = pattern.sub(lambda m: n_tup[re.escape(m.group(0))], t)
 # ----
 #    verb = [7, 17, 21]
  #   verb_mapping = map(for_splice.__getitem__, verb)
