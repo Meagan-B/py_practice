@@ -2,6 +2,7 @@
 # For example, 13 is a divisor of 26 because 26 / 13 has no remainder.
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 welcome = 'welcome to the,\n••••§•••• DIVISOR CHECKER ••••§••••\n\n'
+print(welcome)
 #----••••••••----••••••••----••••••••----#
 def divisor_check(n) :
     usr_num = int(input('enter a number for a list of its divisors\n>>> '))
@@ -15,11 +16,10 @@ def divisor_check(n) :
             continue
 
     print(b)
-
 #----••••••••----••••••••----••••••••----#
 divisor_inp = input('enter the number(s) you would like to check below,\n>>> ')
 divisor_lst = [i for i in divisor_inp]
 print(divisor_lst)
-
-#divisor_check()
+#----••••••••----••••••••----••••••••----#
+#divisor_check(divisor_lst)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
