@@ -21,7 +21,7 @@ with urllib.request.urlopen(usr_host) as response :
     
 # ----
 
-def romeo_mad_lib()
+def romeo_mad_lib(t)
     global html
     
     for_splice = html.split()
@@ -31,7 +31,17 @@ def romeo_mad_lib()
     adj_map_list = list(adj_mapping) 
     print('adjectives: {0}'.format(adj_map_list))
     
-    adj_dict = {x:y for x,y in zip(in_alpha, out_alpha)}
+    new_adj = []
+    while len(new_adj) < 6 :
+        #user_adj = input()
+        new_adj.append(input('Enter an ADJECTIVE below,\n>>> '))
+        
+        
+    adj_mapping = map(for_splice.__getitem__, adj)
+    adj_map_list = list(adj_mapping) 
+    print('adjectives: {0}'.format(adj_map_list))
+    
+    adj_dict = {x:y for x,y in zip(adj_map_list, out_alpha)}
     #print(letter_dict1)
     
     #CODE FROM O_STACK >>>
@@ -41,18 +51,21 @@ def romeo_mad_lib()
         my_string = pattern.sub(lambda m: w_dict[re.escape(m.group(0))], t)
         #print(my_string)
 # ----
-    noun = [3, 6, 16, 19, 24, -1]
-    noun_mapping = map(for_splice.__getitem__, noun)
-    noun_map_list = list(noun_mapping)
-    print('nouns: {0}'.format(noun_map_list))
+#    noun = [3, 6, 16, 19, 24, -1]
+ #   noun_mapping = map(for_splice.__getitem__, noun)
+  #  noun_map_list = list(noun_mapping)
+   # print('nouns: {0}'.format(noun_map_list))
 # ----
-    verb = [7, 17, 21]
-    verb_mapping = map(for_splice.__getitem__, verb)
-    verb_map_list = list(verb_mapping)
-    print('verbs: {0}'.format(verb_map_list))
+#    verb = [7, 17, 21]
+ #   verb_mapping = map(for_splice.__getitem__, verb)
+  #  verb_map_list = list(verb_mapping)
+   # print('verbs: {0}'.format(verb_map_list))
 
 # ----
     
     
     
     return my_string
+
+
+print(romeo_mad_lib(html))
