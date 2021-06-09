@@ -44,9 +44,9 @@ def romeo_mad_lib(t) :
     noun_map_list = list(noun_mapping)
     print('nouns: {0}'.format(noun_map_list))
    
-    new_noun = ['cat', 'rock', 'river', 'train', 'butt', 'cheese']
+    new_noun = ['cat', 'rock', 'river', 'train', 'butt', 'cheese', 'snails']
     #new_adj = []
-    while len(new_noun) < 6 :
+    while len(new_noun) < 7 :
         new_noun.append(input('Enter a NOUN below,\n>>> '))
     #print(new_noun)
         
@@ -77,5 +77,5 @@ def romeo_mad_lib(t) :
 #----••••••••----••••••••----••••••••----#
     return new_string3
 #----••••••••----••••••••----••••••••----#
-print('\n{0}'.format(romeo_mad_lib(html)))
+print('ORIGINAL TEXT >>>\n{0}\nMAD LIB >>>\n{1}'.format(html, romeo_mad_lib(html)))
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
