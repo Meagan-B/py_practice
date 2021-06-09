@@ -17,6 +17,9 @@ def divisor_check(n) :
     print(b)
 
 #----••••••••----••••••••----••••••••----#
-divisor_lst = input('enter the number(s) you would like to check')
-divisor_check()
+divisor_inp = input('enter the number(s) you would like to check below,\n>>> ')
+divisor_lst = [i for i in divisor_inp]
+print(divisor_lst)
+
+#divisor_check()
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
