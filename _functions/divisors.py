@@ -17,15 +17,17 @@ def divisor_check(n) :
         b = []
 
         for i in divisors :
-            if e == 0 or e == 1 : continue
-            elif e % i == 0 :
+            if e % i == 0 :
                 b.append(i)
             else :
                 continue
-            
-        if len(b) < 1 :
-            b = [1, e]    
         
+        if len(b) < 1 :
+            if e == 0 or e == 1 :
+                b = [e]
+            else :
+                b = [1, e]
+           
         print('divisors for {0} >>> {1}'.format(e, b))
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
