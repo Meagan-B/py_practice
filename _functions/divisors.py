@@ -5,21 +5,24 @@ welcome = '••••§•••• DIVISOR CHECKER ••••§••••
 print(welcome)
 #----••••••••----••••••••----••••••••----#
 def divisor_check(n) :
-    usr_num = int(input('enter a number for a list of its divisors\n>>> '))
-    divisors = list(range(1, usr_num))
+    for d in n :
+        
+    divisors = list(range(1, n))
+    print(divisors)
     b = []
 
     for i in divisors :
-        if usr_num % i == 0 :
+        if n % i == 0 :
             b.append(i)
         else :
             continue
 
     print(b)
 #----••••••••----••••••••----••••••••----#
-divisor_inp = input('enter the number(s) you would like to check below,\n>>> ')
-divisor_lst = divisor_inp.split()
-print(divisor_lst)
+div_inp = input('enter the number(s) you would like to check below,\n>>> ')
+div_lst = div_inp.split()
+div_int_lst = [int(i) for i in div_lst]
+#print(div_inp, div_lst, div_int_lst)
 #----••••••••----••••••••----••••••••----#
-#divisor_check(divisor_lst)
+divisor_check(div_int_lst)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
