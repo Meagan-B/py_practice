@@ -11,7 +11,7 @@ def divisor_check(n) :
     #print('n_form >>> {0}'.format(n_form))    
     
     for e in n_form :
-        divisors = list(range(1, e))
+        divisors = list(range(2, e))
         #print('divisors >>> {0}'.format(divisors))
     
         b = []
@@ -22,7 +22,10 @@ def divisor_check(n) :
             else :
                 continue
             
-        print('divisors for {0} >>> {1}'.format(e, b))
+        if len(b) < 1 :
+            print('{0} has no divisors'.format(e))
+        else :    
+            print('divisors for {0} >>> {1}'.format(e, b))
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 #print('div_inp >>> {0}'.format(div_inp)) 
