@@ -5,35 +5,39 @@ welcome = '••••§•••• DIVISOR CHECKER ••••§••••
 print(welcome)
 #----••••••••----••••••••----••••••••----#
 def divisor_check(n) :
-    
-     for e in n_form :
-        divisors = list(range(2, e))
-        #print('divisors >>> {0}'.format(divisors))
-    
-        b = []
 
-        for i in divisors :
-            if e % i == 0 :
-                b.append(i)
-            else :
-                continue
+    divisors = list(range(2, n))
+    #print('divisors >>> {0}'.format(divisors))
+    
+    b = []
+
+    for i in divisors :
+        if n % i == 0 :
+            b.append(i)
+        else :
+            continue
         
-        if len(b) < 1 :
-            if e == 0 or e == 1 :
-                b = [e]
-            else :
-                b = [1, e]
+    if len(b) < 1 :
+        if n == 0 or n == 1 :
+            b = [n]
+        else :
+            b = [1, n]
            
-        print('divisors for {0} >>> {1}'.format(e, b))
-        #return b
+    print('divisors for {0} >>> {1}'.format(n, b))
+    #return b
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 #print('div_inp >>> {0}'.format(div_inp)) 
 div_lst = div_inp.split()
-#print('div_lst >>> {0}'.format(div_lst)) 
+#print('div_lst >>> {0}'.format(div_lst))
+div_int = [ int(d) for d in div_lst]
+print('div_lst >>> {0}'.format(div_int))
 #----••••••••----••••••••----••••••••----#
-divisor_check(div_lst)
+#divisor_check(div_lst)
 #----••••••••----••••••••----••••••••----#
-n_form = [ int(d) for d in n]
-    print('n_form >>> {0}'.format(n_form))
+x = [ int(d) for d in div_lst]
+    
+for num in x :
+    #print(num, type(num))
+    divisor_check(num)    
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
