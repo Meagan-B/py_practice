@@ -30,7 +30,7 @@ def divisor_check(n) :
         
         
         
-    print('divisors for {0} >>> {1}'.format(n, b))
+    #print('divisors for {0} >>> {1}'.format(n, b))
     return b
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
@@ -44,7 +44,7 @@ x = [ int(d) for d in div_lst]
 #----••••••••----••••••••----••••••••----#
 for num in x :
     #print(num, type(num))
-    #divisor_check(num)
+    divisor_check(num)
     
     if len(x) > 1 :
         c = [divisor_check(num)]
