@@ -27,14 +27,18 @@ def divisor_check(n) :
                 b = [e]
             else :
                 b = [1, e]
-           
+        return b   
         print('divisors for {0} >>> {1}'.format(e, b))
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 #print('div_inp >>> {0}'.format(div_inp)) 
-div_lst = div_inp.split()
+div_lst = div_inp.split(' ')
 #print('div_lst >>> {0}'.format(div_lst)) 
 #----••••••••----••••••••----••••••••----#
-for l in div_lst :
-    divisor_check(l)
+#for l in div_lst :
+    #divisor_check(l)
+#----••••••••----••••••••----••••••••----#
+x = divisor_check(div_lst)
+print(x, type(x))
+
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
