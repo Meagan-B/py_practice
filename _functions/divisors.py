@@ -35,5 +35,6 @@ div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 div_lst = div_inp.split()
 #print('div_lst >>> {0}'.format(div_lst)) 
 #----••••••••----••••••••----••••••••----#
-divisor_check(div_lst)
+for l in div_lst :
+    divisor_check(l)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
