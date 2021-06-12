@@ -50,7 +50,7 @@ for num in x :
         c = [divisor_check(num)]
         print(c)
     else :
-        divisor_check(num)
+        print(divisor_check(num))
 
         
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
