@@ -24,7 +24,7 @@ def divisor_check(n) :
             b = [1, n]
            
     print('divisors for {0} >>> {1}'.format(n, b))
-    #return b
+    return b
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 #print('div_inp >>> {0}'.format(div_inp)) 
@@ -39,5 +39,6 @@ x = [ int(d) for d in div_lst]
     
 for num in x :
     #print(num, type(num))
-    divisor_check(num)    
+    divisor_check(num)
+    if len(x) > 1
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
