@@ -31,14 +31,15 @@ div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 div_lst = div_inp.split()
 #print('div_lst >>> {0}'.format(div_lst))
 div_int = [ int(d) for d in div_lst]
-print('div_lst >>> {0}'.format(div_int))
-#----••••••••----••••••••----••••••••----#
-#divisor_check(div_lst)
+#print('div_lst >>> {0}'.format(div_int))
 #----••••••••----••••••••----••••••••----#
 x = [ int(d) for d in div_lst]
-    
+#----••••••••----••••••••----••••••••----#
 for num in x :
     #print(num, type(num))
     divisor_check(num)
-    if len(x) > 1
+    
+    if len(x) > 1 :
+        
+        
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
