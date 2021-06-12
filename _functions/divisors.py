@@ -22,7 +22,14 @@ def divisor_check(n) :
             b = [n]
         else :
             b = [1, n]
-           
+    
+   
+    #if len(n) > 1 :
+     #   c = [b]
+      #  print(c)
+        
+        
+        
     print('divisors for {0} >>> {1}'.format(n, b))
     return b
 #----••••••••----••••••••----••••••••----#
@@ -37,9 +44,13 @@ x = [ int(d) for d in div_lst]
 #----••••••••----••••••••----••••••••----#
 for num in x :
     #print(num, type(num))
-    divisor_check(num)
+    #divisor_check(num)
     
     if len(x) > 1 :
-        
+        c = [divisor_check(num)]
+        print(c)
+    else :
+        divisor_check(num)
+
         
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
