@@ -7,7 +7,7 @@ print(welcome)
 def divisor_check(n) :
     divisors = list(range(2, n))
 
-    b = []
+    b = [1]
 
     for i in divisors :
         if n % i == 0 :
@@ -30,10 +30,13 @@ def divisor_set_compare(x) :
     
     for i in x :
         c += divisor_check(i)
-        
-    c =set(c)
+     
+    d = []
+    for dup in c:
+        if dup not in d:
+            d.append(dup)
     
-    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, c))
+    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
     print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
