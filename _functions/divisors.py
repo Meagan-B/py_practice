@@ -44,12 +44,12 @@ x = [ int(d) for d in div_lst]
 #----••••••••----••••••••----••••••••----#
 for num in x :
     #print(num, type(num))
-    d_chk = divisor_check(num)
-    print('d_chk for {0} >>> '.format(num), d_chk)
+    #d_chk = divisor_check(num)
+    #print('d_chk for {0} >>> '.format(num), d_chk)
     
     if len(x) > 1 :
         c = set()
-        #c.add(d_chk)
+        c.append(divisor_check(num))
         print(c)
     else :
         print(divisor_check(num))
