@@ -26,11 +26,8 @@ def divisor_check(n) :
     #return b
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
-#print('div_inp >>> {0}'.format(div_inp)) 
 div_lst = div_inp.split()
-#print('div_lst >>> {0}'.format(div_lst))
 div_int = [ int(d) for d in div_lst]
-#print('div_lst >>> {0}'.format(div_int))
 #----••••••••----••••••••----••••••••----#   
 def divisor_set_compare(x) :
     c = set()
@@ -41,11 +38,9 @@ def divisor_set_compare(x) :
     print('common divisors of {0} >>> {1}'.format(x, c))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
-    #d_chk = divisor_check(num)
-    #print('d_chk for {0} >>> '.format(num), d_chk)
+    divisor_check(num)
     
     if len(div_int) > 1 :
         divisor_set_compare(div_int)
-    else :
-        divisor_check(div_int)
+    #else : continue
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
