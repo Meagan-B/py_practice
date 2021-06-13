@@ -6,41 +6,38 @@ print(welcome)
 #----••••••••----••••••••----••••••••----#
 def divisor_check(n) :
     divisors = list(range(2, n))
-    #print('divisors >>> {0}'.format(divisors))
-    
+
     b = []
 
     for i in divisors :
         if n % i == 0 :
             b.append(i)
-        else :
-            continue
         
     if len(b) < 1 :
         if n == 0 or n == 1 :
             b = [n]
         else :
             b = [1, n]
-        
-    print('divisors for {0} >>> {1}'.format(n, b))
-    #return b
+    
+    return b
 #----••••••••----••••••••----••••••••----#
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 div_lst = div_inp.split()
 div_int = [ int(d) for d in div_lst]
 #----••••••••----••••••••----••••••••----#   
 def divisor_set_compare(x) :
-    c = set()
+    c = []
     
     for i in x :
         c += divisor_check(i)
-     
-    print('common divisors of {0} >>> {1}'.format(x, c))
+        
+    c =set(c)
+    
+    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, c))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
-    divisor_check(num)
+    print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
     
-    if len(div_int) > 1 :
-        divisor_set_compare(div_int)
-    #else : continue
+if len(div_int) > 1 :
+    divisor_set_compare(div_int)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
