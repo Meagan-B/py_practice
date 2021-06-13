@@ -45,7 +45,7 @@ x = [ int(d) for d in div_lst]
 for num in x :
     #print(num, type(num))
     d_chk = divisor_check(num)
-    print(d_chk)
+    print('d_chk for {0} >>> '.format(num), d_chk)
     
     if len(x) > 1 :
         c = set()
