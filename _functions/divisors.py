@@ -31,12 +31,12 @@ def divisor_set_compare(x) :
     for i in x :
         c += divisor_check(i)
      
-    d = []
-    for dup in c:
-        if dup not in d:
-            d.append(dup)
+    #d = []
+    #for dup in c:
+     #   if dup not in d:
+      #      d.append(dup)
     
-    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
+    #print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
     print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
