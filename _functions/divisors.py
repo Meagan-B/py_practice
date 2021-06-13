@@ -5,7 +5,6 @@ welcome = '••••§•••• DIVISOR CHECKER ••••§••••
 print(welcome)
 #----••••••••----••••••••----••••••••----#
 def divisor_check(n) :
-
     divisors = list(range(2, n))
     #print('divisors >>> {0}'.format(divisors))
     
@@ -22,13 +21,6 @@ def divisor_check(n) :
             b = [n]
         else :
             b = [1, n]
-    
-   
-    #if len(n) > 1 :
-     #   c = [b]
-      #  print(c)
-        
-        
         
     print('divisors for {0} >>> {1}'.format(n, b))
     #return b
