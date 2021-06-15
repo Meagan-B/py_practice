@@ -26,7 +26,7 @@ div_lst = div_inp.split()
 div_int = [ int(d) for d in div_lst]
 #----••••••••----••••••••----••••••••----#   
 def divisor_set_compare(x) :
-    from collections import Counter
+    #from collections import Counter
 
     divisors = []
     
