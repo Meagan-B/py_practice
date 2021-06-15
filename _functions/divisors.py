@@ -26,16 +26,21 @@ div_lst = div_inp.split()
 div_int = [ int(d) for d in div_lst]
 #----••••••••----••••••••----••••••••----#   
 def divisor_set_compare(x) :
-    c = []
+    from collections import Counter
+
+    divisors = []
     
     for i in x :
-        c += divisor_check(i)
-     
-    #d = []
-    #for dup in c:
-     #   if dup not in d:
-      #      d.append(dup)
+        divisors += divisor_check(i)
+    print(divisors)
     
+    #d = [k for k,v in Counter(c).items()]
+    #print(d)
+    
+    for n in divisors :
+        if n % i == 0 :
+            b.append(i)
+        
     #print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
