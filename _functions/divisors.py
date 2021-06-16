@@ -4,6 +4,12 @@
 welcome = '••••§•••• DIVISOR CHECKER ••••§••••\n'
 print(welcome)
 #----••••••••----••••••••----••••••••----#
+div_inp = input('enter the number(s) you would like to check below,\n>>> ')
+div_lst = div_inp.split()
+div_int = [ int(d) for d in div_lst]
+#----••••••••----••••••••----••••••••----#
+print('\r')
+#----••••••••----••••••••----••••••••----# 
 def divisor_check(n) :
     divisors = list(range(2, n+1))
 
@@ -13,11 +19,7 @@ def divisor_check(n) :
             b.append(i)
     
     return b
-#----••••••••----••••••••----••••••••----#
-div_inp = input('enter the number(s) you would like to check below,\n>>> ')
-div_lst = div_inp.split()
-div_int = [ int(d) for d in div_lst]
-#----••••••••----••••••••----••••••••----#   
+#----••••••••----••••••••----••••••••----#  
 def divisor_set_compare(x) :
     #from collections import Counter
 
@@ -45,14 +47,14 @@ def divisor_set_compare(x) :
 for num in div_int :
     div_results = divisor_check(num)
     if len(div_results) == 0 :
-        print('\n{0} has no DIVISOR(S)'.format(num))
+        print('{0} has no DIVISOR(s)'.format(num))
     else :    
-        print('\nDIVISOR(S) for {0} >>> {1}'.format(num, div_results))
+        print('DIVISOR(s) for {0} >>> {1}'.format(num, div_results))
     
 if len(div_int) > 1 :
     compare_results = divisor_set_compare(div_int)
     if len(compare_results) == 0 :
-        print('\nno COMMON DIVISOR(S) between'.format(div_int))
+        print('\nno COMMON DIVISOR(s) between'.format(div_int))
     else :    
-        print('\nCOMMON DIVISOR(S) for {0} >>> {1}'.format(div_int, compare_results))
+        print('\nCOMMON DIVISOR(s) for {0} >>> {1}'.format(div_int, compare_results))
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
