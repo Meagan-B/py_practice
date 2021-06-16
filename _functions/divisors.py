@@ -7,6 +7,7 @@ print(welcome)
 div_inp = input('enter the number(s) you would like to check below,\n>>> ')
 div_lst = div_inp.split()
 div_int = [ int(d) for d in div_lst]
+div_set = set(div_int)
 #----••••••••----••••••••----••••••••----#
 print('\r')
 #----••••••••----••••••••----••••••••----# 
@@ -44,17 +45,17 @@ def divisor_set_compare(x) :
     
     return d
 #----••••••••----••••••••----••••••••----#        
-for num in div_int :
+for num in div_set :
     div_results = divisor_check(num)
     if len(div_results) == 0 :
         print('{0} has no DIVISOR(s)'.format(num))
     else :    
         print('DIVISOR(s) for {0} >>> {1}'.format(num, div_results))
     
-if len(div_int) > 1 :
-    compare_results = divisor_set_compare(div_int)
+if len(div_set) > 1 :
+    compare_results = divisor_set_compare(div_set)
     if len(compare_results) == 0 :
-        print('\nno COMMON DIVISOR(s) between'.format(div_int))
+        print('\nno COMMON DIVISOR(s) between'.format(div_set))
     else :    
-        print('\nCOMMON DIVISOR(s) for {0} >>> {1}'.format(div_int, compare_results))
+        print('\nCOMMON DIVISOR(s) for {0} >>> {1}'.format(div_set, compare_results))
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
