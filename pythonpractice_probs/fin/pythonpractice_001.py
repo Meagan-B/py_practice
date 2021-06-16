@@ -8,75 +8,37 @@
 import datetime
 current_date = datetime.datetime.utcnow()
 #----••••••••----••••••••----••••••••----#
-
-usrname = input('enter your name >>')
-print('hello, ' + usrname.capitalize())
-
-#----
-
-while True:
-    usrage = input('enter your age >>')
-    try:
-        i_usrage = int(usrage)
-        break
-    except:
-        print('!ERROR! enter age in numbers >>')
-#----
-
-if i_usrage < 100 :
-    yrscalc = 100 - i_usrage
-    mscalc = yrscalc * 12
-    wkscalc = yrscalc * 52
-    dyscalc = 365 *  yrscalc
-    num_dysto100 = current_date + datetime.timedelta(days = dyscalc)
-else :
-    print('you WIN @ life!  ' * 100 )
-
-#----
-
-print('%s will turn 100 in the year ~ %s ~' % (usrname.capitalize(), num_dysto100.year))
-print('%s years to 100' % yrscalc)
-print('%s months to 100' % mscalc)
-print('%s weeks to 100' % wkscalc)
-print('%s days to 100' % dyscalc)
-
-#----
-
-fin = input('enter Q to exit program >>')
-if fin == 'Q' or 'q' :
-    print(('thank you for playing!' + '\n') * 100 )
-    exit()
-#..........................
-    
-#----••••••••----••••••••----••••••••----#
-    def time_to_100():
+def time_to_100(p):
+    if p == 'Y' or 'y' :
+           
         usrname = input('enter your name >>')
         print('hello, ' + usrname.capitalize())
         
-
         usrage = input('enter your age >>')
         if isinstance(object, type) == False :
             print('!ERROR! enter age in numbers >>')
             return
         else :
             i_usrage = int(usrage)
-     
-#----
 
-if i_usrage < 100 :
-    yrscalc = 100 - i_usrage
-    mscalc = yrscalc * 12
-    wkscalc = yrscalc * 52
-    dyscalc = 365 *  yrscalc
-    num_dysto100 = current_date + datetime.timedelta(days = dyscalc)
-else :
-    print('you WIN @ life!  ' * 100 )
+        if i_usrage < 100 :
+            yrscalc = 100 - i_usrage
+            mscalc = yrscalc * 12
+            wkscalc = yrscalc * 52
+            dyscalc = 365 *  yrscalc
+            num_dysto100 = current_date + datetime.timedelta(days = dyscalc)
 
-#----
 
-print('%s will turn 100 in the year ~ %s ~' % (usrname.capitalize(), num_dysto100.year))
-print('%s years to 100' % yrscalc)
-print('%s months to 100' % mscalc)
-print('%s weeks to 100' % wkscalc)
-print('%s days to 100' % dyscalc)
+        print('you will turn 100 in {0} years, in the year >>> {1}\nyou will turn 100 in {2} months\nyou will turn 100 in {3} weeks\nyou will turn 100 in {4} days'.format(yrscalc, num_dysto100.year, mscalc, wkscalc, num_dysto100))
+        print('%s years to 100' % yrscalc)
+        print('%s months to 100' % mscalc)
+        print('%s weeks to 100' % wkscalc)
+        print('%s days to 100' % dyscalc)
+        return
+    
+    elif p == 'N' or 'n':
+        return
+#----••••••••----••••••••----••••••••----#             
+play = input('would you like to play? (Y/N)\n>>> ')
+time_to_100(play)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
