@@ -49,6 +49,6 @@ for num in div_int :
     else :    
         print('DIVISOR(S) for {0} >>> {1}'.format(num, results))
     
-#if len(div_int) > 1 :
- #   divisor_set_compare(div_int)
+if len(div_int) > 1 :
+    divisor_set_compare(div_int)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
