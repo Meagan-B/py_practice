@@ -39,16 +39,20 @@ def divisor_set_compare(x) :
         if v == len(x) :
             d.append(k)
             #print ("{0} : {1}".format(k, v))
-    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
-        
+    
+    return d
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
-    results = divisor_check(num)
-    if len(results) == 0 :
-        print('{0} has no DIVISOR(S)'.format(num))
+    div_results = divisor_check(num)
+    if len(div_results) == 0 :
+        print('\n{0} has no DIVISOR(S)'.format(num))
     else :    
-        print('DIVISOR(S) for {0} >>> {1}'.format(num, results))
+        print('\nDIVISOR(S) for {0} >>> {1}'.format(num, div_results))
     
 if len(div_int) > 1 :
-    divisor_set_compare(div_int)
+    compare_results = divisor_set_compare(div_int)
+    if len(compare_results) == 0 :
+        print('\nno COMMON DIVISOR(S) between'.format(div_int))
+    else :    
+        print('\nCOMMON DIVISOR(S) for {0} >>> {1}'.format(div_int, compare_results))
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
