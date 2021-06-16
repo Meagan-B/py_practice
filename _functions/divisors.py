@@ -37,15 +37,17 @@ def divisor_set_compare(x) :
     #d = [k for k,v in Counter(c).items()]
     #print(d)
     
+    d = []
+    
     for n in divisors :
         if n % i == 0 :
-            b.append(i)
+            d.append(i)
         
-    #print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
+    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
     print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
     
-if len(div_int) > 1 :
-    divisor_set_compare(div_int)
+#if len(div_int) > 1 :
+ #   divisor_set_compare(div_int)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
