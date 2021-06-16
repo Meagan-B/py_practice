@@ -43,9 +43,9 @@ def divisor_set_compare(x) :
         
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
-    results = divinsor_check(num)
-    if results == None :
-        print('{0} has 0 DIVISOR(S)'.format(n))
+    results = divisor_check(num)
+    if len(results) == 0 :
+        print('{0} has no DIVISOR(S)'.format(num))
     else :    
         print('DIVISOR(S) for {0} >>> {1}'.format(num, results))
     
