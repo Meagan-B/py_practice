@@ -44,15 +44,11 @@ def divisor_set_compare(x) :
             freq[n] = 1    
     print('freq >>> {0}'.format(freq))      
   
-    #for key, value in freq.items():
-     #   print ("{0} : {1}".format(key, value))
+    for k, v in freq.items():
+        if v == len(x) :
+            print ("{0} : {1}".format(key, value))
+            #print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
         
-    d = []
-    #for n in divisors :
-     #   if n % i == 0 :
-      #      d.append(i)
-        
-    print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
     print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
