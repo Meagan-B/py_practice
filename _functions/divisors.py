@@ -5,19 +5,12 @@ welcome = '••••§•••• DIVISOR CHECKER ••••§••••
 print(welcome)
 #----••••••••----••••••••----••••••••----#
 def divisor_check(n) :
-    divisors = list(range(2, n))
+    divisors = list(range(2, n+1))
 
-    b = [1]
-
+    b = []
     for i in divisors :
         if n % i == 0 :
             b.append(i)
-        
-    if len(b) < 1 :
-        if n == 0 or n == 1 :
-            b = [n]
-        else :
-            b = [1, n]
     
     return b
 #----••••••••----••••••••----••••••••----#
@@ -50,8 +43,12 @@ def divisor_set_compare(x) :
         
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
-    print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
+    results = divinsor_check(num)
+    if results == None :
+        print('{0} has 0 DIVISOR(S)'.format(n))
+    else :    
+        print('DIVISOR(S) for {0} >>> {1}'.format(num, results))
     
-if len(div_int) > 1 :
-    divisor_set_compare(div_int)
+#if len(div_int) > 1 :
+ #   divisor_set_compare(div_int)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
