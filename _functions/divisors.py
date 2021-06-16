@@ -31,18 +31,15 @@ def divisor_set_compare(x) :
     divisors = []
     for i in x :
         divisors += divisor_check(i)
-    print(divisors)
+    #print(divisors)
     
-    #d = [k for k,v in Counter(c).items()]
-    #print(d)
-
     freq = {}
     for n in divisors:
         if (n in freq):
             freq[n] += 1
         else:
             freq[n] = 1    
-    print('freq >>> {0}'.format(freq))      
+    #print('freq >>> {0}'.format(freq))      
   
     d = []
     for k, v in freq.items():
