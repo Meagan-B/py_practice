@@ -29,25 +29,34 @@ def divisor_set_compare(x) :
     #from collections import Counter
 
     divisors = []
-    
     for i in x :
         divisors += divisor_check(i)
     print(divisors)
     
     #d = [k for k,v in Counter(c).items()]
     #print(d)
-    
+
+    freq = {}
+    for n in divisors:
+        if (n in freq):
+            freq[n] += 1
+        else:
+            freq[n] = 1    
+    print('freq >>> {0}'.format(freq))      
+  
+    #for key, value in freq.items():
+     #   print ("{0} : {1}".format(key, value))
+        
     d = []
-    
-    for n in divisors :
-        if n % i == 0 :
-            d.append(i)
+    #for n in divisors :
+     #   if n % i == 0 :
+      #      d.append(i)
         
     print('\ncommon DIVISOR(S) of {0} >>> {1}'.format(x, d))
 #----••••••••----••••••••----••••••••----#        
 for num in div_int :
     print('DIVISOR(S) for {0} >>> {1}'.format(num, divisor_check(num)))
     
-#if len(div_int) > 1 :
- #   divisor_set_compare(div_int)
+if len(div_int) > 1 :
+    divisor_set_compare(div_int)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
