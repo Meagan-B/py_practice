@@ -6,10 +6,9 @@
 #"\n is the same as pressing the ENTER button)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 import datetime
-current_date = datetime.datetime.utcnow()
 #----••••••••----••••••••----••••••••----#
 def time_to_100(p):
-    if p == 'Y' or 'y' :
+    if p == 'Y' or p =='y' :
            
         usrname = input('enter your name >>')
         print('hello, ' + usrname.capitalize())
@@ -20,7 +19,10 @@ def time_to_100(p):
             return
         else :
             i_usrage = int(usrage)
-
+          
+        current_date = datetime.datetime.utcnow()
+        print(current_date)
+        
         if i_usrage < 100 :
             yrscalc = 100 - i_usrage
             mscalc = yrscalc * 12
@@ -30,13 +32,10 @@ def time_to_100(p):
 
 
         print('you will turn 100 in {0} years, in the year >>> {1}\nyou will turn 100 in {2} months\nyou will turn 100 in {3} weeks\nyou will turn 100 in {4} days'.format(yrscalc, num_dysto100.year, mscalc, wkscalc, num_dysto100))
-        print('%s years to 100' % yrscalc)
-        print('%s months to 100' % mscalc)
-        print('%s weeks to 100' % wkscalc)
-        print('%s days to 100' % dyscalc)
         return
     
-    elif p == 'N' or 'n':
+    elif p == 'N' or p =='n':
+        print('!!¡¡!!¡¡ •GAME OVER• ¡¡!!¡¡!!')
         return
 #----••••••••----••••••••----••••••••----#             
 play = input('would you like to play? (Y/N)\n>>> ')
