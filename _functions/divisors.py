@@ -4,7 +4,7 @@
 welcome = '••••§•••• DIVISOR CHECKER ••••§••••\n'
 print(welcome)
 #----••••••••----••••••••----••••••••----#
-div_inp = input('enter the number(s) you would like to check below,\n>>> ')
+div_inp = input('enter the number(s) you would like to check,\nDIVISOR CHECKER will also check for COMMON DIVISORS\n(if multiple integers are given).\n\n>>> ')
 div_lst = div_inp.split()
 div_int = [ int(d) for d in div_lst]
 div_set = set(div_int)
@@ -55,7 +55,7 @@ for num in div_set :
 if len(div_set) > 1 :
     compare_results = divisor_set_compare(div_set)
     if len(compare_results) == 0 :
-        print('\nno COMMON DIVISOR(s) between'.format(div_set))
+        print('\nno COMMON DIVISOR(s) between {0}'.format(div_set))
     else :    
         print('\nCOMMON DIVISOR(s) for {0} >>> {1}'.format(div_set, compare_results))
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
