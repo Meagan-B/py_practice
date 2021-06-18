@@ -8,6 +8,8 @@
 import datetime
 #----••••••••----••••••••----••••••••----#
 def time_to_100(p):
+    p = str(p.split())
+
     if p == 'Y' or p =='y' :
            
         usrname = input('enter your name >>')
@@ -30,8 +32,7 @@ def time_to_100(p):
             dyscalc = 365 *  yrscalc
             num_dysto100 = current_date + datetime.timedelta(days = dyscalc)
 
-
-        print('you will turn 100 in {0} years, in the year >>> {1}\nyou will turn 100 in {2} months\nyou will turn 100 in {3} weeks\nyou will turn 100 in {4} days'.format(yrscalc, num_dysto100.year, mscalc, wkscalc, num_dysto100))
+        print('you will turn 100 in {0} years, in the year >>> {1}\nyou will turn 100 in {2} months\nyou will turn 100 in {3} weeks\nyou will turn 100 in {4} days'.format(yrscalc, num_dysto100.year, mscalc, wkscalc, num_dysto100.day))
         return
     
     elif p == 'N' or p =='n':
