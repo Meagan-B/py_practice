@@ -23,7 +23,7 @@ def time_to_100(p):
         else :
             i_usrage = int(usrage)
           
-        current_date = datetime.datetime.utcnow()
+        current_date = datetime.datetime.today()
         print(current_date)
         
         if i_usrage < 100 :
@@ -31,9 +31,10 @@ def time_to_100(p):
             mscalc = yrscalc * 12
             wkscalc = yrscalc * 52
             dyscalc = 365 *  yrscalc
-            num_dysto100 = current_date + datetime.timedelta(days = dyscalc)
+            year_of_100 = current_date
+            
 
-        print('you will turn 100 in {0} years, in the year >>> {1}\nyou will turn 100 in {2} months\nyou will turn 100 in {3} weeks\nyou will turn 100 in {4} days'.format(yrscalc, num_dysto100.year, mscalc, wkscalc, num_dysto100.day))
+        print('you will turn 100 in {0} days, {1} weeks, {2} months and {3} years,\nin the year >>> {4}'.format(dyscalc, wkscalc, mscalc, yrscalc, year_of_100))
         return
     
     elif p[0] == 'N' or p[0] =='n':
