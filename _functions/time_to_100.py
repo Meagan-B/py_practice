@@ -7,11 +7,6 @@
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 def time_to_100(p):
     from datetime import date
-
-print("Current year:", today.year)
-print("Current month:", today.month)
-print("Current day:", today.day)
-    
     p = p.split()
 
     if p[0] == 'Y' or p[0] =='y' :
@@ -28,7 +23,7 @@ print("Current day:", today.day)
             i_usrage = int(usrage)
           
         current_date = date.today()
-        print("today's DATE >>> {0}\n'.format(current_date))
+        print("today's DATE >>> {0}\n".format(current_date))
         
         if i_usrage < 100 :
             yrscalc = 100 - i_usrage
