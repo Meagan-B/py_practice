@@ -1,7 +1,5 @@
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
-
-#----••••••••----••••••••----••••••••----#
-print('~~~~ PASSWORD GENERATOR ~~~~\n\nSTRONG passwords will consist of 15, randomly selected, characters\n\nWEAK passwords will consist of 3, randomly selected, english words\n\n••••••••••••••••••••\n\n')
+print('~~~~ PASSWORD GENERATOR ~~~~\n\n••••••••••••••••••••\n\n')
 #----••••••••----••••••••----••••••••----# 
 def pass_generator(n) :
     import random
