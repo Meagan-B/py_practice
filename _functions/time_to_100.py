@@ -5,9 +5,13 @@
 #Print out that many copies of the previous message on separate lines. (Hint: the string
 #"\n is the same as pressing the ENTER button)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
-import datetime
-#----••••••••----••••••••----••••••••----#
 def time_to_100(p):
+    from datetime import date
+
+print("Current year:", today.year)
+print("Current month:", today.month)
+print("Current day:", today.day)
+    
     p = p.split()
 
     if p[0] == 'Y' or p[0] =='y' :
@@ -23,15 +27,15 @@ def time_to_100(p):
         else :
             i_usrage = int(usrage)
           
-        current_date = datetime.datetime.today()
-        print(current_date)
+        current_date = date.today()
+        print("today's DATE >>> {0}\n'.format(current_date))
         
         if i_usrage < 100 :
             yrscalc = 100 - i_usrage
             mscalc = yrscalc * 12
             wkscalc = yrscalc * 52
             dyscalc = 365 *  yrscalc
-            year_of_100 = current_date
+            year_of_100 = today.year + yrscalc
             
 
         print('you will turn 100 in {0} days, {1} weeks, {2} months and {3} years,\nin the year >>> {4}'.format(dyscalc, wkscalc, mscalc, yrscalc, year_of_100))
