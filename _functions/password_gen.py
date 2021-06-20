@@ -4,7 +4,6 @@ print('~~~~~ PASSWORD GENERATOR ~~~~~\n•••••••••••••�
 def pass_generator(n) :
     import random
     import string
-    #from english_words import english_words_alpha_set
 #----••••••••----#
     n = int(n)
     if n < 8 :
