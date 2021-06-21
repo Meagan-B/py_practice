@@ -4,7 +4,9 @@ print('~~~~~ HOURLY RATE CALCULATOR ~~~~~\n••••••••••••�
 def hourly_rate() :
     hrs = float(input('hours\n>>> '))
     rate = float(input('hourly rate\n>>> '))
-except :
+    
+    = hrs * rate
+    
     print('numbers only')
 
 #----
