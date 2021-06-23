@@ -13,7 +13,7 @@ def hourly_rate(h, r, c) :
         hrs = float(inp_hrs)
         rate = float(inp_rate)
     
-        print('HRS >>> {0}\nnHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, (hrs * rate)))
+        print('HRS >>> {0}\nHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, (hrs * rate)))
 #----••••••••----#      
     else :
         print('ERROR\n>>> accepts numbers only'.format())
