@@ -20,9 +20,9 @@ def hourly_rate(h, r, c) :
 #----••••••••----#          
     from forex_python.converter import CurrencyRates
     
-    c = CurrencyRates()
+    cur_rates = CurrencyRates()
     
-    cur_rates_dict = dict(c.get_rates('USD'))
+    cur_rates_dict = dict(cur_rates.get_rates('USD'))
     print(cur_rates_dict)
     
     inp_conversion = cur_rates_dict.get(c)
