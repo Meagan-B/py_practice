@@ -23,12 +23,13 @@ def hourly_rate(h, r, c) :
 
 from forex_python.converter import CurrencyRates
 c = CurrencyRates()
-c.get_rates('USD')   # you can directly call get_rates('USD')
+cur_rates_dict = dict(c.get_rates('USD'))
+print(cur_rates_dict)
 
-from forex_python.bitcoin import BtcConverter
-b = BtcConverter()   # add "force_decimal=True" parmeter to get Decimal rates
-b.get_latest_price('EUR')   # you can directly call get_latest_price('EUR')
+#from forex_python.bitcoin import BtcConverter
+#b = BtcConverter()   # add "force_decimal=True" parmeter to get Decimal rates
+#b.get_latest_price('EUR')   # you can directly call get_latest_price('EUR')
 
 #----••••••••----••••••••----••••••••----# 
-hourly_rate(inp_hrs, inp_rate, inp_currency)
+#hourly_rate(inp_hrs, inp_rate, inp_currency)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
