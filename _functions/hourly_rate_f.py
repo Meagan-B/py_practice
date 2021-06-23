@@ -27,6 +27,8 @@ def hourly_rate(h, r, c) :
     
     inp_conversion = cur_rates_dict.get(c)
     print(inp_conversion)
+    inp_conversion= upper(str(inp_conversion))
+    print(inp_conversion)
 #----••••••••----#
 #from forex_python.bitcoin import BtcConverter
 #b = BtcConverter()   # add "force_decimal=True" parmeter to get Decimal rates
