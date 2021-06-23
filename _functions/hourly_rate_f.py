@@ -9,7 +9,7 @@ inp_currency = input('currency of pay (default is USD)\n>>> ')
 def hourly_rate(h, r, c) :
     
 #----••••••••----#
-     if hrs.isdigit() == True and rate.isdigit() == True :
+    if h.isdigit() == True and r.isdigit() == True :
         hrs = float(inp_hrs)
         rate = float(inp_rate)
     
