@@ -8,8 +8,11 @@ inp_currency = input('currency of pay (default is USD)\n>>> ')
 #----••••••••----••••••••----••••••••----# 
 def hourly_rate(h, r, c) :
     
-#----••••••••----#      
-    if isdigit(hrs) and isdigit(rate) is True :
+#----••••••••----#
+    hrs_check = isdigit(hrs)
+    rate_check = isdigit(rate)
+    
+    if hrs_check == True and rate_check == True :
         hrs = float(inp_hrs)
         rate = float(inp_rate)
     
@@ -35,5 +38,5 @@ def hourly_rate(h, r, c) :
 #b.get_latest_price('EUR')   # you can directly call get_latest_price('EUR')
 
 #----••••••••----••••••••----••••••••----# 
-#hourly_rate(inp_hrs, inp_rate, inp_currency)
+hourly_rate(inp_hrs, inp_rate, inp_currency)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
