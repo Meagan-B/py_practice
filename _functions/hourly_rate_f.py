@@ -17,15 +17,17 @@ def hourly_rate(h, r, c) :
 #----••••••••----#      
     else :
         print('ERROR\n>>> accepts numbers only'.format())
-        
+#----••••••••----#          
+    from forex_python.converter import CurrencyRates
     
-#----••••••••----••••••••----••••••••----# 
-
-from forex_python.converter import CurrencyRates
-c = CurrencyRates()
-cur_rates_dict = dict(c.get_rates('USD'))
-print(cur_rates_dict)
-
+    c = CurrencyRates()
+    
+    cur_rates_dict = dict(c.get_rates('USD'))
+    print(cur_rates_dict)
+    
+    inp_conversion = cur_rates_dict.get(c)
+    print(inp_conversion)
+#----••••••••----#
 #from forex_python.bitcoin import BtcConverter
 #b = BtcConverter()   # add "force_decimal=True" parmeter to get Decimal rates
 #b.get_latest_price('EUR')   # you can directly call get_latest_price('EUR')
