@@ -21,8 +21,9 @@ def hourly_rate(h, r, o) :
         if hrs > 40 and inp_overtime is not None:
             ot_multi = float(inp_overtime)
             ot_pay = (hrs - 40) * ot_multi 
-            print('HRS >>> {0}\nHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, (hrs * rate)))
             print('HRS >>> {0}\nHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, ((hrs * rate) + ot_pay)))
+        else :
+            print('HRS >>> {0}\nHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, (hrs * rate)))
 #----••••••••----#      
     else :
         print('ERROR\n>>> accepts numbers only'.format())
