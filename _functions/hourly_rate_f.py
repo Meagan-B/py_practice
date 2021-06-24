@@ -4,9 +4,8 @@ print(welcome)
 #----••••••••----••••••••----••••••••----#
 inp_hrs = input('hours\n>>> ')
 inp_rate = input('hourly rate\n>>> ')
-inp_currency = input('currency of pay (default is USD)\n>>> ')
 #----••••••••----••••••••----••••••••----# 
-def hourly_rate(h, r, c) :
+def hourly_rate(h, r) :
     
 #----••••••••----#
     if h.isdigit() == True and r.isdigit() == True :
@@ -17,23 +16,6 @@ def hourly_rate(h, r, c) :
 #----••••••••----#      
     else :
         print('ERROR\n>>> accepts numbers only'.format())
-#----••••••••----#          
-    from forex_python.converter import CurrencyRates
-    
-    cur_rates = CurrencyRates()
-    
-    cur_rates_dict = dict(cur_rates.get_rates('USD'))
-    print(cur_rates_dict)
-    
-    inp_conversion = cur_rates_dict.get(c)
-    print(inp_conversion)
-    inp_conversion= upper(str(inp_conversion))
-    print(inp_conversion)
-#----••••••••----#
-#from forex_python.bitcoin import BtcConverter
-#b = BtcConverter()   # add "force_decimal=True" parmeter to get Decimal rates
-#b.get_latest_price('EUR')   # you can directly call get_latest_price('EUR')
-
 #----••••••••----••••••••----••••••••----# 
-hourly_rate(inp_hrs, inp_rate, inp_currency)
+hourly_rate(inp_hrs, inp_rate)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
