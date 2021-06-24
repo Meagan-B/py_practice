@@ -7,6 +7,8 @@ inp_rate = input('hourly rate\n>>> ')
 y_or_n_overtime = input('do you recieve bonus pay for overtime?\n(Y/N) >>> ')
 if y_or_n_overtime == 'Y' or 'y' :
     inp_overtime = input('overtime multiplier\n>>> ')
+else :
+    inp_overtime = None 
 #----••••••••----••••••••----••••••••----# 
 def hourly_rate(h, r, o) :
     
