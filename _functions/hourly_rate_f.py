@@ -24,7 +24,7 @@ def hourly_rate(h, r, o) :
             print('HRS >>> {0}\nHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, ((hrs * rate) + ot_pay)))
         else :
             print('HRS >>> {0}\nHOURLY RATE >>> {1}\nTOTAL PAY >>> {2} '.format(hrs, rate, (hrs * rate)))
-#----••••••••----#      
+#----••••••••----   
     else :
         print('ERROR\n>>> accepts numbers only'.format())
 #----••••••••----••••••••----••••••••----# 
