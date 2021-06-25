@@ -8,7 +8,7 @@
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 
 
-#Alarm Clock ORIGINAL#
+#Alarm Clock ORIGINAL, https://hackr.io/blog/python-projects#
 import datetime
 import os
 import time
