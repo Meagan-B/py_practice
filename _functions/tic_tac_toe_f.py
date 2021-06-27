@@ -3,13 +3,19 @@
 import random
 #----••••••••----••••••••----••••••••----#
 #game board
-board = [i for i in range(0,9)]
 
 
+def board_print():
+    board = [i for i in range(0,9)]
+    print(board[:3])
+    print(board[:3])
+    print(board[:3])
 #----••••••••----••••••••----••••••••----#
 def char_select():
     
 def play(,,):
+    
+    
 
 
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
