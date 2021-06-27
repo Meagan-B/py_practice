@@ -1,17 +1,24 @@
 #tic-tac-toe re-write
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
+import random
+#----••••••••----••••••••----••••••••----#
+#game board
+board = [i for i in range(0,9)]
+
 
 #----••••••••----••••••••----••••••••----#
+def char_select():
+    
+def play(,,):
 
-#----••••••••----••••••••----••••••••----#
 
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 
 
-#tic-tac-toe ORIGINAL, https://hackr.io/blog/python-projects#
-import random
+### tic-tac-toe ORIGINAL, https://hackr.io/blog/python-projects ###
+#import random
 import sys
-board=[i for i in range(0,9)]
+#board=[i for i in range(0,9)]
 player, computer = '',''
 #Corners, Center and Others, respectively
 moves=((1,7,3,9),(5,),(2,4,6,8))
