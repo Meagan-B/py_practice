@@ -6,10 +6,10 @@ import random
 
 
 def board_print():
-    board = [i for i in range(1,10)]
+    board = [[i] for i in range(1,10)]
     print(board[:3])
-    print(board[4:7])
-    print(board[7:])
+    print(board[3:6])
+    print(board[6:])
     
 board_print()
 #----••••••••----••••••••----••••••••----#
