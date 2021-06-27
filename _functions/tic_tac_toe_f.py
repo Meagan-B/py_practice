@@ -13,7 +13,15 @@ def board_print():
     
 board_print()
 #----••••••••----••••••••----••••••••----#
-#def char_select():
+def char_select():
+    usr_char = input('would you like X or O ?\n>>> ').upper
+    if usr_char not 'X' or usr_char not 'O':
+        usr_char = 'X'
+        print('INCORRECT character input\nyou have been assigned X')
+    if usr_char == 'X' :
+        comp_char = 'O'
+    else :
+        comp_char = 'X'
     
 #def play(,,):
     
