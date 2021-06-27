@@ -6,14 +6,16 @@ import random
 
 
 def board_print():
-    board = [i for i in range(0,9)]
+    board = [i for i in range(1,10)]
     print(board[:3])
-    print(board[:3])
-    print(board[:3])
-#----••••••••----••••••••----••••••••----#
-def char_select():
+    print(board[4:7])
+    print(board[7:])
     
-def play(,,):
+board_print()
+#----••••••••----••••••••----••••••••----#
+#def char_select():
+    
+#def play(,,):
     
     
 
