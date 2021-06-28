@@ -15,7 +15,7 @@ board_print()
 #player select
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
-    (h, c) = ()
+    (h, c) = '',''
     
     if usr_char != 'X' and usr_char != 'O':
         (h, c) = ('X','O')
@@ -30,7 +30,6 @@ def char_select():
       
 human, comp = char_select()
 print('human player represented by : {0}\ncomputer player represented by : {1}'.format(human, comp))       
-char_select()
 #----••••••••----••••••••----••••••••----#
 
 #def play(,,):
