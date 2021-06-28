@@ -4,7 +4,6 @@ import random
 #----••••••••----••••••••----••••••••----#
 #game board
 
-
 def board_print():
     board = [[i] for i in range(1,10)]
     print(board[:3])
@@ -13,23 +12,26 @@ def board_print():
     
 board_print()
 #----••••••••----••••••••----••••••••----#
+#player select
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
+    (h, c) = ()
     
     if usr_char != 'X' and usr_char != 'O':
-        usr_char = 'X'
+        (h, c) = ('X','O')
         print('INCORRECT character input\nyou have been automatically assigned X')
         
     if usr_char == 'X' :
-        comp_char = 'O'
+        (h, c) = ('X','O')
     else :
-        comp_char = 'X'
+        (h, c) = ('O','X')
+     
+    return (h, c) 
       
-    print('human player represented by : {0}\ncomputer player represented by : {1}'.format(usr_char, comp_char))  
-        
+human, comp = char_select()
+print('human player represented by : {0}\ncomputer player represented by : {1}'.format(human, comp))       
 char_select()
 #----••••••••----••••••••----••••••••----#
-
 
 #def play(,,):
     
@@ -44,11 +46,11 @@ char_select()
 import sys
 #board=[i for i in range(0,9)]
 player, computer = '',''
-#Corners, Center and Others, respectively
+###Corners, Center and Others, respectively
 moves=((1,7,3,9),(5,),(2,4,6,8))
-#Winner combinations
+##Winner combinations
 winners=((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
-#Table
+##Table
 tab=range(1,10)
 def print_board():
     x=1
@@ -61,15 +63,18 @@ def print_board():
         if i in ('X','O'): char=i;
         x+=1
         print(char,end=end)
+        
 def select_char():
     chars=('X','O')
     if random.randint(0,1) == 0:
         return chars[::-1]
     return chars
+
 def can_move(brd, player, move):
     if move in tab and brd[move-1] == move-1:
         return True
     return False
+
 def can_win(brd, player, move):
     places=[]
     x=0
@@ -86,6 +91,7 @@ def can_win(brd, player, move):
         if win == True:
             break
     return win
+
 def make_move(brd, player, move, undo=False):
     if can_move(brd, player, move):
         brd[move-1] = player
@@ -94,33 +100,37 @@ def make_move(brd, player, move, undo=False):
             brd[move-1] = move-1
         return (True, win)
     return (False, False)
-#AI goes here
+
+##AI goes here
 def computer_move():
     move=-1
-#If I can win, others do not matter.
+##If I can win, others do not matter.
     for i in range(1,10):
         if make_move(board, computer, i, True)[1]:
             move=i
             break
     if move == -1:
-#If player can win, block him.
+##If player can win, block him.
         for i in range(1,10):
             if make_move(board, player, i, True)[1]:
                 move=i
                 break
     if move == -1:
-#Otherwise, try to take one of desired places.
+##Otherwise, try to take one of desired places.
         for tup in moves:
             for mv in tup:
                 if move == -1 and can_move(board, computer, mv):
                     move=mv
                     break
     return make_move(board, computer, move)
+
 def space_exist():
     return board.count('X') + board.count('O') != 9
+
 player, computer = select_char()
 print('Player is [%s] and computer is [%s]' % (player, computer))
 result='%%% Deuce ! %%%'
+
 while space_exist():
     print_board()
     print('#Make your move ! [1-9] : ', end='')
