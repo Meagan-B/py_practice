@@ -32,7 +32,20 @@ human, comp = char_select()
 print('human player represented by : {0}\ncomputer player represented by : {1}'.format(human, comp))       
 #----••••••••----••••••••----••••••••----#
 
-#def play(,,):
+def play(h, c) :
+    ply_count = 0
+    moves = [[i] for i in range(1,10)]
+    
+    while ply_count < 9 :
+        move = input('make your move, input digit from 1-9\n>>> ')
+        if move != int(range(1, 10)) :
+            
+        if move in moves
+        
+        ply_count += 1
+    
+    
+
     
     
 
