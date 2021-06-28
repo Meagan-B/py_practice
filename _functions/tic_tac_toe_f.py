@@ -18,12 +18,14 @@ def char_select():
     
     if usr_char != 'X' and usr_char != 'O':
         usr_char = 'X'
-        print('INCORRECT character input\nyou have been assigned X')
+        print('INCORRECT character input\nyou have been automatically assigned X')
         
     if usr_char == 'X' :
         comp_char = 'O'
     else :
         comp_char = 'X'
+      
+    print('human player represented by : {0}\ncomputer player represented by : {1}'.format(usr_char, comp_char))  
         
 char_select()
 #----••••••••----••••••••----••••••••----#
