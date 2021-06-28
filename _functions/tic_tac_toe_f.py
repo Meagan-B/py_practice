@@ -16,7 +16,7 @@ board_print()
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
     
-    if usr_char != 'X' or usr_char != 'O':
+    if usr_char != 'X' and usr_char != 'O':
         usr_char = 'X'
         print('INCORRECT character input\nyou have been assigned X')
         
