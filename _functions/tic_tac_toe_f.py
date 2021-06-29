@@ -48,10 +48,9 @@ def play(h, c) :
             for i in board :
             
                 if move == i :
-                    
                     # Overstack, Tiago Vieira
                     arr = numpy.asarray(board)
-                    arr[ arr == 8 ] = i # change all occurrences of 8 by 0
+                    arr[ arr == i ] = move # change all occurrences of x by y
                     print(arr)
                 else :
                     print('invalid play')
