@@ -11,7 +11,7 @@ def board_print(b):
     print(b[3:6])
     print(b[6:])
     
-board_print()
+#board_print(board)
 #----••••••••----••••••••----••••••••----#
 #player select
 
@@ -36,14 +36,14 @@ print('human player represented by : {0}\ncomputer player represented by : {1}'.
 
 def play(h, c) :
     ply_count = 0
-    moves = [[i] for i in range(1,10)]
+    board = [[i] for i in range(1,10)]
     
     while ply_count < 9 :
         move = input('make your move, input digit from 1-9\n>>> ')
         
         x = move.isnumeric()
         if x is True :
-            for i in moves :
+            for i in board :
                 if move == i :
                     #replace i with move
                 else :
