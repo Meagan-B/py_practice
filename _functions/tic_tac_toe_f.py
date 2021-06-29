@@ -1,6 +1,7 @@
 #tic-tac-toe re-write
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 import random
+import numpy
 #----••••••••----••••••••----••••••••----#
 #game board
 
@@ -43,9 +44,15 @@ def play(h, c) :
         
         x = move.isnumeric()
         if x is True :
+            
             for i in board :
+            
                 if move == i :
-                    #replace i with move
+                    
+                    # Overstack, Tiago Vieira
+                    arr = numpy.asarray(board)
+                    arr[ arr == 8 ] = i # change all occurrences of 8 by 0
+                    print(arr)
                 else :
                     print('invalid play')
                     continue
