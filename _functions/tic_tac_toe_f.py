@@ -38,7 +38,10 @@ def play(h, c) :
     
     while ply_count < 9 :
         move = input('make your move, input digit from 1-9\n>>> ')
-        if move == int(range(1, 10)) :
+        
+        x = move.isnumeric()
+        if x is True :
+            
             if move in moves
         #######
                 ply_count += 1
