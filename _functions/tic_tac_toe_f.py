@@ -41,8 +41,12 @@ def play(h, c) :
         
         x = move.isnumeric()
         if x is True :
-            
-            if move in moves
+            for i in moves :
+                if move == i :
+                    #replace i with move
+                else :
+                    print('invalid play')
+                    continue
         #######
                 ply_count += 1
         else:
