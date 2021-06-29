@@ -32,7 +32,7 @@ def char_select():
     return (h, c) 
       
 human, comp = char_select()
-print('human player represented by : {0}\ncomputer player represented by : {1}'.format(human, comp))       
+print('PLAYER: {0}\nCOMP: {1}'.format(human, comp))       
 #----••••••••----••••••••----••••••••----#
 
 def play(h, c) :
@@ -55,14 +55,11 @@ def play(h, c) :
                 else :
                     print('invalid play')
                     continue
-        #######
+                
                 ply_count += 1
         else:
             print('INCORRECT character input\n')
             continue        
-    
-    
-
     
     
 
