@@ -4,15 +4,17 @@ import random
 #----••••••••----••••••••----••••••••----#
 #game board
 
-def board_print():
-    board = [[i] for i in range(1,10)]
-    print(board[:3])
-    print(board[3:6])
-    print(board[6:])
+board = [[i] for i in range(1,10)]
+
+def board_print(b):
+    print(b[:3])
+    print(b[3:6])
+    print(b[6:])
     
 board_print()
 #----••••••••----••••••••----••••••••----#
 #player select
+
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
     (h, c) = '',''
