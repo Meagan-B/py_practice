@@ -45,6 +45,8 @@ def play(h, c) :
         x = move.isnumeric()
         if x is True :
             
+            move = int(move)
+            
             for i in board :
             
                 if move == i :
