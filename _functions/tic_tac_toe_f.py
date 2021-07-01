@@ -61,7 +61,7 @@ def play(h, c) :
             print('INCORRECT character input\n')
             continue        
     
-    
+play(human, comp)    
 
 
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
