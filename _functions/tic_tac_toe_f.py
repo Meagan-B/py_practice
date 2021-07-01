@@ -45,14 +45,15 @@ def play(h, c) :
         x = move.isnumeric()
         if x is True :
             
-            move = int(move)
+            move = [int(move)]
             
             for i in board :
             
                 if move == i :
                     # Overstack, Tiago Vieira
                     arr = numpy.asarray(board)
-                    arr[ arr == i ] = move # change all occurrences of x by y
+                    print(arr)
+                    arr[ arr == 'b' ] = move # change all occurrences of x by y
                     print(arr)
                     ply_count += 1
                 
