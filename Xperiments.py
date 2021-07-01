@@ -1,3 +1,5 @@
+import numpy
+
 board = [i for i in range(1,10)]
 
 move = input('make your move, input digit from 1-9\n>>> ')
