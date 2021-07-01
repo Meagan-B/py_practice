@@ -52,12 +52,14 @@ def play(h, c) :
                     arr = numpy.asarray(board)
                     arr[ arr == i ] = move # change all occurrences of x by y
                     print(arr)
-                elif move != i : continue    
-        else :
-            print('invalid play')
-            continue
+                    ply_count += 1
                 
-                ply_count += 1
+                elif move != i : continue    
+                
+                else :
+                    print('invalid play')
+                    continue
+                
         else:
             print('INCORRECT character input\n')
             continue        
