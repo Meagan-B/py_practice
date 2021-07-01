@@ -4,7 +4,8 @@ board = [i for i in range(1,10)]
 print(board)
 
 move = input('make your move, input digit from 1-9\n>>> ')
- 
+move = int(move) 
+
 for i in board :
     if move == i : 
         arr = numpy.asarray(board)
