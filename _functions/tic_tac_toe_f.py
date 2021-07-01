@@ -39,7 +39,7 @@ def play(h, c) :
     ply_count = 0
     board = [[i] for i in range(1,10)]
     
-    while ply_count < 9 :
+    while ply_count < 1 :
         move = input('make your move, input digit from 1-9\n>>> ')
         
         x = move.isnumeric()
@@ -48,13 +48,11 @@ def play(h, c) :
             move = [int(move)]
             
             for i in board :
-            
+            ######START HERE######
                 if move == i :
                     # Overstack, Tiago Vieira
                     arr = numpy.asarray(board)
-                    print(arr)
                     arr[ arr == 'b' ] = move # change all occurrences of x by y
-                    print(arr)
                     ply_count += 1
                 
                 elif move != i : continue    
