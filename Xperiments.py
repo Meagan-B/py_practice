@@ -7,11 +7,10 @@ move = input('make your move, input digit from 1-9\n>>> ')
 move = int(move) 
 
 for i in board :
-    if move == i : 
-        arr = numpy.asarray(board)
-        print(numpy.asarray(board))
-        arr[ arr == 'X' ] = move
-        print(arr)
+    if move == i :
+        print(i)
+        i = move
+        print(i)
 
 print(move)
 print(board)
