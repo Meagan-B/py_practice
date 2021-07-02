@@ -9,7 +9,7 @@ move = int(move)
 for i in board :
     if move == i :
         print(i)
-        i = move
+        i = 'X'
         print(i)
 
 print(move)
