@@ -18,12 +18,14 @@ print(board)
 
 
 def f1(arr, find, replace):
+    print('arr: {0}\nfind: {1}\nreplace: {2}'.format(arr, find, replace))
     # fast and readable
     base=0
     for cnt in range(arr.count(find)):
         offset=arr.index(find, base)
         arr[offset]=replace
         base=offset+1
+    print('offset: {0}\base: {1}\n'.format(offset, base))    
 
 print(f1(board, move, 'X'))
 
