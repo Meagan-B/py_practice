@@ -16,6 +16,18 @@ for i in board :
 print(move)
 print(board)
 
+
+def f1(arr, find, replace):
+    # fast and readable
+    base=0
+    for cnt in range(arr.count(find)):
+        offset=arr.index(find, base)
+        arr[offset]=replace
+        base=offset+1
+
+print(f1(board, move, 'X'))
+
+
 #arr = numpy.asarray([1, 6, 1, 9, 8])
 #arr[ arr == 8 ] = 0 
 #print(arr)
