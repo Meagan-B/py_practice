@@ -11,6 +11,7 @@ for i in board :
         print(i)
         i = 'X'
         print(i)
+        #need to find way to replace the i in board, reverse the for i loop to put it back with new value
 
 print(move)
 print(board)
