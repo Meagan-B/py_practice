@@ -1,4 +1,4 @@
-import numpy
+#import numpy
 
 board = [i for i in range(1,10)]
 print(board)
@@ -6,15 +6,15 @@ print(board)
 move = input('make your move, input digit from 1-9\n>>> ')
 move = int(move) 
 
-for i in board :
-    if move == i :
-        print(i)
-        i = 'X'
-        print(i)
+#for i in board :
+   # if move == i :
+  #      print(i)
+ #       i = 'X'
+#        print(i)
         #need to find way to replace the i in board, reverse the for i loop to put it back with new value
 
-print(move)
-print(board)
+#print(move)
+#print(board)
 
 
 def f1(arr, find, replace):
@@ -25,9 +25,9 @@ def f1(arr, find, replace):
         offset=arr.index(find, base)
         arr[offset]=replace
         base=offset+1
-    print('offset: {0}\base: {1}\n'.format(offset, base))    
+    print('arr: {0}\nbase: {1}\n'.format(arr, base))    
 
-print(f1(board, move, 'X'))
+f1(board, move, 'X')
 
 
 #arr = numpy.asarray([1, 6, 1, 9, 8])
