@@ -34,10 +34,16 @@ def char_select():
 human, comp = char_select()
 print('PLAYER: {0}\nCOMP: {1}'.format(human, comp))       
 #----••••••••----••••••••----••••••••----#
-
+#character replacement
+def char_replace(arr, find, replace):
+    print('ORIGINAL array: {0}\nfind: {1}\nreplacement: {2}'.format(arr, find, replace))
+    for cnt in range(arr.count(find)):
+        arr[find - 1] = replace
+        print('MODIFIED array: {0}'.format(arr))
+#----••••••••----••••••••----••••••••----#        
 def play(h, c) :
     ply_count = 0
-    board = [[i] for i in range(1,10)]
+    board = [i for i in range(1,10)]
     
     while ply_count < 1 :
         move = input('make your move, input digit from 1-9\n>>> ')
@@ -45,15 +51,12 @@ def play(h, c) :
         x = move.isnumeric()
         if x is True :
             
-            move = [int(move)]
+            move = int(move)
             
             for i in board :
             ######START HERE######
                 if move == i :
-                    # Overstack, Tiago Vieira
-                    arr = numpy.asarray(board)
-                    arr[ arr == 'b' ] = move # change all occurrences of x by y
-                    ply_count += 1
+                    char_replace(board, move, h)
                 
                 elif move != i : continue    
                 
