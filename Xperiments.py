@@ -18,20 +18,10 @@ move = int(move)
 
 
 def f1(arr, find, replace):
-    #print('arr: {0}\nfind: {1}\nreplace: {2}'.format(arr, find, replace))
-    # fast and readable
-    base=0
-    #for cnt in range(arr.count(find)):
-     #   offset = arr.index(find, base)
-      #  print(offset)
-       # arr[offset] = replace
-        #print(arr)
-        #print(arr[offset])
-        #base = offset+1
-        #print(base)
+    print('ORIGINAL array: {0}\nfind: {1}\nreplace: {2}'.format(arr, find, replace))
     for cnt in range(arr.count(find)):
         arr[find - 1] = replace
-        print(arr)
+        print('MODIFIED array: {0}'.format(arr))
 
 f1(board, move, 'X')
 
