@@ -35,10 +35,17 @@ print('PLAYER: {0}\nCOMP: {1}'.format(human, comp))
 # character replacement
 
 def char_replace(arr, find, replace):
-    print('ORIGINAL array: {0}\nfind: {1}\nreplacement: {2}'.format(arr, find, replace))
+    #print('ORIGINAL array: {0}\nfind: {1}\nreplacement: {2}'.format(arr, find, replace))
     for cnt in range(arr.count(find)):
         arr[find - 1] = replace
-        print('MODIFIED array: {0}'.format(arr))
+        #print('MODIFIED array: {0}'.format(arr))
+        board_print(arr)
+#----••••••••----••••••••----••••••••----#
+# win check
+
+######START HERE######
+def win_chk() :
+    
 #----••••••••----••••••••----••••••••----#
 # game play
 
@@ -56,7 +63,6 @@ def play(h, c) :
             move = int(move)
             
             for i in board :
-            ######START HERE######
                 if move == i :
                     char_replace(board, move, h)
                 
@@ -80,11 +86,11 @@ play(human, comp)
 #import random
 import sys
 #board=[i for i in range(0,9)]
-player, computer = '',''
+#player, computer = '',''
 ###Corners, Center and Others, respectively
-moves=((1,7,3,9),(5,),(2,4,6,8))
+#moves=((1,7,3,9),(5,),(2,4,6,8))
 ##Winner combinations
-winners=((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
+#winners=((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
 ##Table
 tab=range(1,10)
 def print_board():
