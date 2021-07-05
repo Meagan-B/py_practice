@@ -2,6 +2,7 @@
 
 def board_print(b):
     #b = [[i] for i in b]
+    #print(b[:3].join('|'))
     print(b[:3])
     print(b[3:6])
     print(b[6:])
