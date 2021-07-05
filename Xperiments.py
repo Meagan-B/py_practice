@@ -30,10 +30,8 @@ def f1(arr, find, replace):
         #base = offset+1
         #print(base)
     for cnt in range(arr.count(find)):
-        print(arr[find])
-        arr[find] = replace
+        arr[find - 1] = replace
         print(arr)
-    #print('arr: {0}\nbase: {1}\n'.format(arr, base))    
 
 f1(board, move, 'X')
 
