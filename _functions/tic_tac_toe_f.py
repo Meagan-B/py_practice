@@ -1,11 +1,9 @@
-#tic-tac-toe re-write
+# tic-tac-toe re-write
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 import random
 import numpy
 #----••••••••----••••••••----••••••••----#
-#game board
-
-board = [[i] for i in range(1,10)]
+# game board
 
 def board_print(b):
     print(b[:3])
@@ -14,7 +12,7 @@ def board_print(b):
     
 #board_print(board)
 #----••••••••----••••••••----••••••••----#
-#player select
+# player select
 
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
@@ -34,16 +32,20 @@ def char_select():
 human, comp = char_select()
 print('PLAYER: {0}\nCOMP: {1}'.format(human, comp))       
 #----••••••••----••••••••----••••••••----#
-#character replacement
+# character replacement
+
 def char_replace(arr, find, replace):
     print('ORIGINAL array: {0}\nfind: {1}\nreplacement: {2}'.format(arr, find, replace))
     for cnt in range(arr.count(find)):
         arr[find - 1] = replace
         print('MODIFIED array: {0}'.format(arr))
-#----••••••••----••••••••----••••••••----#        
+#----••••••••----••••••••----••••••••----#
+# game play
+
 def play(h, c) :
     ply_count = 0
     board = [i for i in range(1,10)]
+    board_print(board)
     
     while ply_count < 1 :
         move = input('make your move, input digit from 1-9\n>>> ')
