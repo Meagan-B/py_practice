@@ -1,24 +1,18 @@
-#import numpy
-
-def board_print(b):
-    #b = [[i] for i in b]
-    #print(b[:3].join('|'))
-    print(b[:3])
-    print(b[3:6])
-    print(b[6:])
+def win_chk(p) :
+    wins = set((1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9))
+    print(wins)
+    p = set([int(m) for m in p])
+    print(p)
     
-board = [i for i in range(1,10)]
-board_print(board)
 
-move = input('make your move, input digit from 1-9\n>>> ')
-move = int(move) 
+ply_count = 0
+ply_track = []
 
-def char_replace(arr, find, replace):
-    #print('ORIGINAL array: {0}\nfind: {1}\nreplacement: {2}'.format(arr, find, replace))
-    for cnt in range(arr.count(find)):
-        arr[find - 1] = replace
-        #print('MODIFIED array: {0}'.format(arr))
-        board_print(arr)
-        
-        
-char_replace(board, move, 'x')
+while ply_count < 3 :
+    move = input('make your move, input digit from 1-9\n>>> ')
+    ply_track += move
+    print(ply_track)
+    ply_count += 1
+
+
+win_chk(p)
