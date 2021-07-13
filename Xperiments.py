@@ -6,10 +6,10 @@ def win_chk(p) :
     
     for l in wins :
         l = set(l)
-        print(l)
         p = set(p)
-        print(p)
-    
+        if l == p :
+            print('win')
+            
 
 ply_count = 0
 ply_track = []
