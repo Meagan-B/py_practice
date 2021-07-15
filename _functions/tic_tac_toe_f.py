@@ -59,7 +59,7 @@ def win_chk(h, c) :
 #computer play
             
 def computer_ply(arr) :
-    computer_play = random.choice()
+    computer_play = random.choice(arr)
 
 #computer_ply()
 #----••••••••----••••••••----••••••••----#
