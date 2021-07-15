@@ -65,26 +65,27 @@ def play(h, c) :
     board = [i for i in range(1,10)]
     board_print(board)
     
-    move = input('make your move, input digit from 1-9\n>>> ')
+    while ply_count < 3 :
+        move = input('make your move, input digit from 1-9\n>>> ')
         
-    x = move.isnumeric()
-    if x is True :
+        x = move.isnumeric()
+        if x is True :
             
-        move = int(move)
+            move = int(move)
             
-        for i in board :
-            if move == i :
-                char_replace(board, move, h)
+            for i in board :
+                if move == i :
+                    char_replace(board, move, h)
                 
-            elif move != i : continue    
+                elif move != i : continue    
                 
-            else :
-                print('invalid play')
-                continue
+                else :
+                    print('invalid play')
+                    continue
                 
-    else:
-        print('INCORRECT character input\n')
-        continue        
+        else:
+            print('INCORRECT character input\n')
+            continue        
     
 play(human, comp)    
 
