@@ -83,6 +83,7 @@ def play(h, c) :
             for i in board :
                 if move == i :
                     char_replace(board, move, h)
+                    continue
                 
                 elif move != i : continue    
                 
