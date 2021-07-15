@@ -9,7 +9,7 @@ def win_chk(p) :
         if l == p :
             print('win')
             
-#++++++++++++++++++++++++++++++TESTING
+#++++++++++++++++++++++++++++++
 #ply_count = 0
 #ply_track = []
 
@@ -20,11 +20,12 @@ def win_chk(p) :
 
 
 #win_chk(ply_track)
-
+#++++++++++++++++++++++++++++++
+   
+board = [i for i in range(1,10)]
 import random
 
-def random_set_buildr() :
-    rand_select = [random.randint(1, 9) for i in range(10)]
-    print(rand_select)
+def computer_ply(arr) :
+    computer_play = random.choice(arr)
 
-random_set_buildr()
+computer_ply(board)
