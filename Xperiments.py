@@ -21,13 +21,20 @@ def win_chk(p) :
 
 #win_chk(ply_track)
 #++++++++++++++++++++++++++++++
+
+def char_replace(arr, find, replace):
+    print('ORIGINAL: {0}'.format(arr))
+    
+    for cnt in range(arr.count(find)):
+        arr[find - 1] = replace
+        print('MODIFIED array: {0}'.format(arr))
+        #board_print(arr)
    
 board = [i for i in range(1,10)]
 import random
 
 def computer_ply(arr) :
-    print('ORIGINAL: {0}'.format(arr))
     computer_play = random.choice(arr)
-    print('MODIFIED: {0}'.format(arr))
+    print(computer_play)
     
 computer_ply(board)
