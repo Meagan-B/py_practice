@@ -10,7 +10,7 @@ def win_chk(p) :
         if l == p :
             print('win')
             
-
+#++++++++++++++++++++++++++++++TESTING
 ply_count = 0
 ply_track = []
 
