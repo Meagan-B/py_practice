@@ -57,8 +57,8 @@ def win_chk(h, c) :
 #def win_chk(,)    
 #----••••••••----••••••••----••••••••----#
 #computer play
+            ######START HERE#######
 def random_set_buildr() :
-    # print(set_length, set_start, set_end)
     rand_select = [random.randint(1, 9) for i in range(10)]
     print(rand_select)
 # ----
