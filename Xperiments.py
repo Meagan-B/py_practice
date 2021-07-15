@@ -10,13 +10,21 @@ def win_chk(p) :
             print('win')
             
 #++++++++++++++++++++++++++++++TESTING
-ply_count = 0
-ply_track = []
+#ply_count = 0
+#ply_track = []
 
-while ply_count < 3 :
-    move = input('make your move, input digit from 1-9\n>>> ')
-    ply_track += move
-    ply_count += 1
+#while ply_count < 3 :
+ #   move = input('make your move, input digit from 1-9\n>>> ')
+  #  ply_track += move
+   # ply_count += 1
 
 
-win_chk(ply_track)
+#win_chk(ply_track)
+
+import random
+
+def random_set_buildr() :
+    rand_select = [random.randint(1, 9) for i in range(10)]
+    print(rand_select)
+
+random_set_buildr()
