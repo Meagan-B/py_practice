@@ -26,6 +26,8 @@ board = [i for i in range(1,10)]
 import random
 
 def computer_ply(arr) :
+    print('ORIGINAL: {0}'.format(arr))
     computer_play = random.choice(arr)
-
+    print('MODIFIED: {0}'.format(arr))
+    
 computer_ply(board)
