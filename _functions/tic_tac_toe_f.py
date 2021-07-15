@@ -57,13 +57,11 @@ def win_chk(h, c) :
 #def win_chk(,)    
 #----••••••••----••••••••----••••••••----#
 #computer play
-            ######START HERE#######
-def random_set_buildr() :
-    rand_select = [random.randint(1, 9) for i in range(10)]
-    print(rand_select)
-# ----
+            
+def computer_ply(arr) :
+    computer_play = random.choice()
 
-random_set_buildr()
+#computer_ply()
 #----••••••••----••••••••----••••••••----#
 # game play
 
@@ -92,6 +90,9 @@ def play(h, c) :
                     print('invalid play')
                     continue
                 
+            ######START HERE#######    
+            computer_ply(board)
+             
         else:
             print('INCORRECT character input\n')
             continue        
