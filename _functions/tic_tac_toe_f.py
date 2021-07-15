@@ -43,17 +43,18 @@ def char_replace(arr, find, replace):
 #----••••••••----••••••••----••••••••----#
 # win check
 
-def win_chk(p) :
+def win_chk(h, c) :
     wins = [(1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9)]
-    p = [int(m) for m in p]
-    print(p)
+    ply = [int(m) for m in ply]
+    print(ply)
     
     for l in wins :
         l = set(l)
         p = set(p)
         if l == p :
             print('win')
-    
+
+#def win_chk(,)    
 #----••••••••----••••••••----••••••••----#
 # game play
 
@@ -64,27 +65,26 @@ def play(h, c) :
     board = [i for i in range(1,10)]
     board_print(board)
     
-    while ply_count < 3 :
-        move = input('make your move, input digit from 1-9\n>>> ')
+    move = input('make your move, input digit from 1-9\n>>> ')
         
-        x = move.isnumeric()
-        if x is True :
+    x = move.isnumeric()
+    if x is True :
             
-            move = int(move)
+        move = int(move)
             
-            for i in board :
-                if move == i :
-                    char_replace(board, move, h)
+        for i in board :
+            if move == i :
+                char_replace(board, move, h)
                 
-                elif move != i : continue    
+            elif move != i : continue    
                 
-                else :
-                    print('invalid play')
-                    continue
+            else :
+                print('invalid play')
+                continue
                 
-        else:
-            print('INCORRECT character input\n')
-            continue        
+    else:
+        print('INCORRECT character input\n')
+        continue        
     
 play(human, comp)    
 
