@@ -89,6 +89,7 @@ def play(h, c) :
                     
                     print(board)
                     
+                    ######START HERE####### 
                     #c_move = computer_ply(board)
                     char_replace(board, (computer_ply(board)), c)
                     c_ply_count += 1
@@ -99,9 +100,7 @@ def play(h, c) :
                 
                 else :
                     print('invalid play')
-                    continue
-                
-            ######START HERE#######    
+                    continue   
              
         else:
             print('INCORRECT character input\n')
