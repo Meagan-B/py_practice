@@ -34,7 +34,7 @@ board = [i for i in range(1,10)]
 import random
 
 def computer_ply(arr) :
-    computer_play = random.choice(arr)
+    computer_play = int(random.choice(arr))
     print(computer_play)
     
 computer_ply(board)
