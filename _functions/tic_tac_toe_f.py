@@ -88,8 +88,8 @@ def play(h, c) :
                     
                     print(board)
                     
-                    c_move = computer_ply(board)
-                    char_replace(board, c_move, c)
+                    #c_move = computer_ply(board)
+                    char_replace(board, (computer_ply(board)), c)
                     c_ply_count += 1
                     
                     continue
