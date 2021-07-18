@@ -66,13 +66,14 @@ def computer_ply(arr) :
 # game play
 
 def play(h, c) :
-    ply_count = 0
+    h_ply_count = 0
+    c_ply_count = 0
     ply_track = []
     
     board = [i for i in range(1,10)]
     board_print(board)
     
-    while ply_count < 3 :
+    while h_ply_count < 3 :
         move = input('make your move, input digit from 1-9\n>>> ')
         
         x = move.isnumeric()
@@ -83,6 +84,14 @@ def play(h, c) :
             for i in board :
                 if move == i :
                     char_replace(board, move, h)
+                    h_ply_count += 1
+                    
+                    print(board)
+                    
+                    c_move = computer_ply(board)
+                    char_replace(board, c_move, c)
+                    c_ply_count += 1
+                    
                     continue
                 
                 elif move != i : continue    
@@ -92,7 +101,6 @@ def play(h, c) :
                     continue
                 
             ######START HERE#######    
-            computer_ply(board)
              
         else:
             print('INCORRECT character input\n')
