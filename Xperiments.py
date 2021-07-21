@@ -34,7 +34,8 @@ board = [i for i in range(1,10)]
 import random
 
 def computer_ply(arr) :
-    computer_play = int(random.choice(arr))
-    print(computer_play)
+    arr_chk = [i for i in arr if i.isdigit()]
+    computer_play = random.choice(arr_chk)
+    return computer_play
     
 computer_ply(board)
