@@ -44,17 +44,27 @@ def char_replace(arr, find, replace):
         board_print(arr)
 #----••••••••----••••••••----••••••••----#
 # win check
+# NEEDS: a lot of work, currently NOT functional
+
+                    ######START HERE#######
 
 def win_chk(p) :
     wins = [(1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9)]
-    ply = [int(m) for m in ply]
+    ply = [int(m) for m in p]
     print(ply)
     
     for d in wins :
-        d = set(d)
-        i = set(i)
-        if d == i :
-            print('win')
+        print('d: {0}'.format(d))
+        d_set = set(d)
+        print('d_set: {0}'.format(d_set))
+    
+    for i in ply :
+        print('i: {0}'.format(i))
+        i_set = set(i)
+        print('i_set: {0}'.format(i_set))
+    
+    if d_set == i_set :
+        print('win')
 
 #def win_chk(,)    
 #----••••••••----••••••••----••••••••----#
@@ -105,9 +115,8 @@ def play(p1, p2) :
                     char_replace(board, move, p1)
                     
                     #checking for winner
-                    win_chk(player_1)
+                    win_chk(plyr_1_track)
                     
-                    ######START HERE#######
                     #computer move
                     c_move = computer_ply(board)
                     plyr_2_count += 1
@@ -115,7 +124,7 @@ def play(p1, p2) :
                     char_replace(board, (computer_ply(board)), p2)
                     
                     #checking for winner
-                    win_chk(player_2)
+                    win_chk(plyr_2_track)
                     
                     continue
                 
