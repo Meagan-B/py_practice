@@ -59,11 +59,18 @@ def win_chk(h, c) :
 #computer play
             
 def computer_ply(arr) :
-    arr_chk = [i for i in arr if i.isdigit()]
-    computer_play = random.choice(arr_chk)
+    arr_clean = []
+    
+    for i in arr :
+        if i == 'X' or i == 'O' : continue
+        else :
+            arr_clean.append(i)
+
+    computer_play = random.choice(arr_clean)
+    
     return computer_play
 
-#computer_ply()
+#computer_ply(board)
 #----••••••••----••••••••----••••••••----#
 # game play
 
