@@ -31,8 +31,8 @@ def char_select():
      
     return (p1, p2) 
       
-human, comp = char_select()
-print('PLAYER: {0}\nCOMP: {1}'.format(human, comp))       
+player_1, player_2 = char_select()
+print('PLAYER 1: {0}\nPLAYER 2: {1}'.format(player_1, player_2))       
 #----••••••••----••••••••----••••••••----#
 # character replacement
 
@@ -45,7 +45,7 @@ def char_replace(arr, find, replace):
 #----••••••••----••••••••----••••••••----#
 # win check
 
-def win_chk(p1, p2) :
+def win_chk(p) :
     wins = [(1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9)]
     ply = [int(m) for m in ply]
     print(ply)
@@ -59,7 +59,9 @@ def win_chk(p1, p2) :
 #def win_chk(,)    
 #----••••••••----••••••••----••••••••----#
 # RANDOM computer play,
-# needs AI to make something more advanced
+# NEEDS:
+        # AI for more advanced game strategy
+        # block to ask if there will be 1 or 2 human players
             
 def computer_ply(arr) :
     arr_clean = []
@@ -87,7 +89,7 @@ def play(p1, p2) :
     board = [i for i in range(1,10)]
     board_print(board)
     
-    while plyr_1_count < 3 :
+    while plyr_1_count < 9 :
         move = input('make your move, input digit from 1-9\n>>> ')
         
         x = move.isnumeric()
@@ -102,12 +104,18 @@ def play(p1, p2) :
                     plyr_1_track.append(move)
                     char_replace(board, move, p1)
                     
+                    #checking for winner
+                    win_chk(player_1)
+                    
                     ######START HERE#######
                     #computer move
                     c_move = computer_ply(board)
                     plyr_2_count += 1
                     plyr_2_track.append(c_move)
                     char_replace(board, (computer_ply(board)), p2)
+                    
+                    #checking for winner
+                    win_chk(player_2)
                     
                     continue
                 
@@ -120,12 +128,8 @@ def play(p1, p2) :
         else:
             print('INCORRECT character input\n')
             continue        
-        
-        
-#first 3 plays for player 1/2 plays for player 2        
-play(human, comp)    
-#checking for winner after player 1 makes 3 moves
-win_chk(human,comp)
+               
+play(player_1, player_2)    
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 
 
