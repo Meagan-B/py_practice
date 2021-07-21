@@ -4,6 +4,7 @@ import random
 import numpy
 #----••••••••----••••••••----••••••••----#
 # game board
+# NEEDS: better formatting once a play has been made
 
 def board_print(b):
     print(b[:3])
@@ -13,21 +14,22 @@ def board_print(b):
 #board_print(board)
 #----••••••••----••••••••----••••••••----#
 # player select
+# NEEDS: a way to randomly select who goes first (player_1 & player_2)
 
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
-    (h, c) = '',''
+    (p1, p2) = '',''
     
     if usr_char != 'X' and usr_char != 'O':
-        (h, c) = ('X','O')
+        (p1, p2) = ('X','O')
         print('INCORRECT character input\nyou have been automatically assigned X')
         
     if usr_char == 'X' :
-        (h, c) = ('X','O')
+        (p1, p2) = ('X','O')
     else :
-        (h, c) = ('O','X')
+        (p1, p2) = ('O','X')
      
-    return (h, c) 
+    return (p1, p2) 
       
 human, comp = char_select()
 print('PLAYER: {0}\nCOMP: {1}'.format(human, comp))       
@@ -43,15 +45,15 @@ def char_replace(arr, find, replace):
 #----••••••••----••••••••----••••••••----#
 # win check
 
-def win_chk(h, c) :
+def win_chk(p1, p2) :
     wins = [(1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9)]
     ply = [int(m) for m in ply]
     print(ply)
     
-    for l in wins :
-        l = set(l)
-        p = set(p)
-        if l == p :
+    for d in wins :
+        d = set(d)
+        i = set(i)
+        if d == i :
             print('win')
 
 #def win_chk(,)    
@@ -75,17 +77,17 @@ def computer_ply(arr) :
 #----••••••••----••••••••----••••••••----#
 # game play
 
-def play(h, c) :
-    h_ply_count = 0
-    c_ply_count = 0
-   
-    h_ply_track = []
-    c_ply_track = []
+def play(p1, p2) :
+    plyr_1_count = 0
+    plyr_1_track = []
+    
+    plyr_2_count = 0
+    plyr_2_track = []
     
     board = [i for i in range(1,10)]
     board_print(board)
     
-    while h_ply_count < 3 :
+    while plyr_1_count < 3 :
         move = input('make your move, input digit from 1-9\n>>> ')
         
         x = move.isnumeric()
@@ -96,16 +98,16 @@ def play(h, c) :
             for i in board :
                 if move == i :
                     #player move
-                    h_ply_count += 1
-                    h_ply_track.append(move)
-                    char_replace(board, move, h)
+                    plyr_1_count += 1
+                    plyr_1_track.append(move)
+                    char_replace(board, move, p1)
                     
                     ######START HERE#######
                     #computer move
                     c_move = computer_ply(board)
-                    c_ply_count += 1
-                    c_ply_track.append(c_move)
-                    char_replace(board, (computer_ply(board)), c)
+                    plyr_2_count += 1
+                    plyr_2_track.append(c_move)
+                    char_replace(board, (computer_ply(board)), p2)
                     
                     continue
                 
