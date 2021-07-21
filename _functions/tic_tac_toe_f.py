@@ -78,7 +78,9 @@ def computer_ply(arr) :
 def play(h, c) :
     h_ply_count = 0
     c_ply_count = 0
-    ply_track = []
+   
+    h_ply_track = []
+    c_ply_track = []
     
     board = [i for i in range(1,10)]
     board_print(board)
@@ -93,13 +95,17 @@ def play(h, c) :
             
             for i in board :
                 if move == i :
-                    char_replace(board, move, h)
+                    #player move
                     h_ply_count += 1
+                    h_ply_track.append(move)
+                    char_replace(board, move, h)
                     
-                    ######START HERE####### 
-                    #c_move = computer_ply(board)
-                    char_replace(board, (computer_ply(board)), c)
+                    ######START HERE#######
+                    #computer move
+                    c_move = computer_ply(board)
                     c_ply_count += 1
+                    c_ply_track.append(c_move)
+                    char_replace(board, (computer_ply(board)), c)
                     
                     continue
                 
@@ -112,9 +118,12 @@ def play(h, c) :
         else:
             print('INCORRECT character input\n')
             continue        
-    
+        
+        
+#first 3 plays for player 1/2 plays for player 2        
 play(human, comp)    
-
+#checking for winner after player 1 makes 3 moves
+win_chk(human,comp)
 #---->>>>>>>>>>>>-------->>>>>>>>>>>>----#
 
 
