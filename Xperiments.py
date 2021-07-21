@@ -35,9 +35,14 @@ import random
 
 def computer_ply(arr) :
     for i in arr :
-        if i == int :
-            arr += i
+        arr += int(i)
+        
+        try :
+            arr += int(i)
+        except ValueError : continue
+        
     computer_play = random.choice(arr)
     return computer_play
     
 computer_ply(board)
+
