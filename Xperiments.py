@@ -34,14 +34,18 @@ board = [1, 2, 3, 'X', 5, 6, 7, 'O', 9]
 import random
 
 def computer_ply(arr) :
+    arr_clean = []
+    
     for i in arr :
-        arr += int(i)
-        
+        #print(int(i))
         try :
-            arr += int(i)
-        except ValueError : continue
+            i = int(i)
+            arr_clean += i
+        except (ValueError, TypeError) : pass
         
-    computer_play = random.choice(arr)
+    print(arr_clean)
+    computer_play = random.choice(arr_clean)
+    
     return computer_play
     
 computer_ply(board)
