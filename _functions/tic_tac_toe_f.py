@@ -59,7 +59,8 @@ def win_chk(h, c) :
 #computer play
             
 def computer_ply(arr) :
-    computer_play = random.choice(arr)
+    arr_chk = [i for i in arr if i.isdigit()]
+    computer_play = random.choice(arr_chk)
     return computer_play
 
 #computer_ply()
