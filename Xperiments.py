@@ -38,11 +38,9 @@ def computer_ply(arr) :
     
     for i in arr :
         #print(int(i))
-        if 
-        try :
-            i = int(i)
-            arr_clean += i
-        except (ValueError, TypeError) : pass
+        if i == 'X' or i == 'O' : continue
+        else :
+            arr_clean.append(i)
         
     print(arr_clean)
     computer_play = random.choice(arr_clean)
