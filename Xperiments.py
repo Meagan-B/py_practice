@@ -34,10 +34,11 @@ board = [1, 2, 3, 'X', 5, 6, 7, 'O', 9]
 import random
 
 def computer_ply(arr) :
-    #arr_clean = []
+    arr_clean = []
     
     for i in arr :
         #print(int(i))
+        if 
         try :
             i = int(i)
             arr_clean += i
