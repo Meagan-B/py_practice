@@ -41,8 +41,7 @@ def computer_ply(arr) :
         if i == 'X' or i == 'O' : continue
         else :
             arr_clean.append(i)
-        
-    print(arr_clean)
+
     computer_play = random.choice(arr_clean)
     
     return computer_play
