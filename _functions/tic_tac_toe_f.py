@@ -96,8 +96,6 @@ def play(h, c) :
                     char_replace(board, move, h)
                     h_ply_count += 1
                     
-                    print(board)
-                    
                     ######START HERE####### 
                     #c_move = computer_ply(board)
                     char_replace(board, (computer_ply(board)), c)
