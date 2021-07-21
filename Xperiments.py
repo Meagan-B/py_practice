@@ -30,12 +30,14 @@ def char_replace(arr, find, replace):
         print('MODIFIED array: {0}'.format(arr))
         #board_print(arr)
    
-board = [i for i in range(1,10)]
+board = [1, 2, 3, 'X', 5, 6, 7, 'O', 9]
 import random
 
 def computer_ply(arr) :
-    arr_chk = [i for i in arr if i.isdigit()]
-    computer_play = random.choice(arr_chk)
+    for i in arr :
+        if i == int :
+            arr += i
+    computer_play = random.choice(arr)
     return computer_play
     
 computer_ply(board)
