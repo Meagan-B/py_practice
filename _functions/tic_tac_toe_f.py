@@ -88,6 +88,7 @@ def computer_ply(arr) :
 #computer_ply(board)
 #----••••••••----••••••••----••••••••----#
 # game play
+# NEEDS: element to begin plau with pre-selected player (who goes first)
 
 def play(p1, p2) :
     plyr_1_count = 0
