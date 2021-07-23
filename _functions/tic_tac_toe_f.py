@@ -49,31 +49,31 @@ def char_replace(arr, find, replace):
 # NEEDS: a lot of work, currently NOT functional
 
                     ######START HERE#######
-
 def win_chk(p) :
     wins = [(1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9)]
-    ply = [int(m) for m in p]
-    print(ply)
-    
+    ply_set = set(p)
+    w = None
+   
     for d in wins :
-        print('d: {0}'.format(d))
         d_set = set(d)
-        print('d_set: {0}'.format(d_set))
     
-    for i in ply :
-        print('i: {0}'.format(i))
-        i_set = set(i)
-        print('i_set: {0}'.format(i_set))
-    
-    if d_set == i_set :
-        print('win')
+        if d_set == ply_set :
+            w = True
+            print('{0} WINS the game'.format(p))
+            return w
+        else :
+            w = False
+        
+    if w == False :
+        return w
 
-#def win_chk(,)    
+#def win_chk(p)    
 #----••••••••----••••••••----••••••••----#
 # RANDOM computer play,
 # NEEDS:
         # AI for more advanced game strategy
         # block to ask if there will be 1 or 2 human players
+    
             
 def computer_ply(arr) :
     arr_clean = []
@@ -90,8 +90,10 @@ def computer_ply(arr) :
 #computer_ply(board)
 #----••••••••----••••••••----••••••••----#
 # game play
-# NEEDS: element to begin play with pre-selected player (who goes first)
-
+# NEEDS:
+        # element to begin play with pre-selected player (who goes first)
+        # add text block for in between plays
+        
 def play(p1, p2) :
     plyr_1_count = 0
     plyr_1_track = []
