@@ -117,6 +117,7 @@ def play(p1, p2) :
                     #player move
                     plyr_1_count += 1
                     plyr_1_track.append(move)
+                    print("PLAYER 1 move >>>\n")
                     char_replace(board, move, p1)
                     
                     #checking for winner
@@ -126,6 +127,7 @@ def play(p1, p2) :
                     c_move = computer_ply(board)
                     plyr_2_count += 1
                     plyr_2_track.append(c_move)
+                    print("PLAYER 2 move >>>\n")
                     char_replace(board, (computer_ply(board)), p2)
                     
                     #checking for winner
