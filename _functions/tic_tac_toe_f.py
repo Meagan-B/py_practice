@@ -15,6 +15,7 @@ def board_print(b):
 #----••••••••----••••••••----••••••••----#
 # player select
 # NEEDS: a way to randomly select who goes first (player_1 & player_2)
+        # asking for player preferences (will AI be necessary or not)
 
 def char_select():
     usr_char = input('would you like X or O ?\n>>> ').capitalize()
