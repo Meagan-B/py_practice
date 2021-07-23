@@ -14,7 +14,8 @@ def board_print(b):
 #board_print(board)
 #----••••••••----••••••••----••••••••----#
 # player select
-# NEEDS: a way to randomly select who goes first (player_1 & player_2)
+# NEEDS:
+        # a way to randomly select who goes first (player_1 & player_2)
         # asking for player preferences (will AI be necessary or not)
 
 def char_select():
@@ -89,7 +90,7 @@ def computer_ply(arr) :
 #computer_ply(board)
 #----••••••••----••••••••----••••••••----#
 # game play
-# NEEDS: element to begin plau with pre-selected player (who goes first)
+# NEEDS: element to begin play with pre-selected player (who goes first)
 
 def play(p1, p2) :
     plyr_1_count = 0
