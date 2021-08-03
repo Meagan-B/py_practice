@@ -51,21 +51,23 @@ def char_replace(arr, find, replace):
                     ######START HERE#######
 def win_chk(p) :
     wins = [(1,2,3),(1,5,9),(1,4,7),(2,5,8),(3,6,9),(3,5,7),(4,5,6),(7,8,9)]
-    ply_set = set(p)
     w = None
-   
-    for d in wins :
-        d_set = set(d)
     
-        if d_set == ply_set :
-            w = True
-            print('{0} WINS the game'.format(p))
-            return w
-        else :
-            w = False
+    if len(p) > 2 :
+        ply_set = set(p)
+    
+        for d in wins :
+            d_set = set(d)
+    
+            if d_set == ply_set :
+                 w = True
+                 print('{0} WINS the game'.format(p))
+                 return w
+            else :
+                 w = False
         
-    if w == False :
-        return w
+        if w == False :
+            return w
 
 #def win_chk(p)    
 #----••••••••----••••••••----••••••••----#
