@@ -24,6 +24,10 @@ def win_chk(p) :
         
 p1 = [1, 2, 3]
 p2 = [4, 8, 9]
+p3 = [1, 2]
+p4 =[1, 2, 3, 4]
 
 print(win_chk(p1))
 print(win_chk(p2))
+print(win_chk(p3))
+print(win_chk(p4))
