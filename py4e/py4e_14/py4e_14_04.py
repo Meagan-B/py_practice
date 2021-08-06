@@ -1,4 +1,3 @@
-#4
 class PartyAnimal:
    x = 0
    name = ''
