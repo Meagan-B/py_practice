@@ -7,8 +7,11 @@ def win_chk(p) :
     ply_set = set(p)
     w = None
    
-    for d in wins :
-        d_set = set(d)
+    for i in ply_set :
+            
+        for d in wins :
+            if i == d: places.append(x)
+            d_set = set(d)
     
         if d_set == ply_set :
             w = True
@@ -38,19 +41,20 @@ board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 #ORIGINAL CODE
 
-def can_win(brd, player):
+def can_win(brd, p):
     places=[]
     x=0
-    for i in brd:
-        if i == player: places.append(x);
-        x+=1
-    win=True
-    for tup in wins:
+    for d in p :
+        for i in brd:
+            if i == d: places.append(x);
+            x+=1
         win=True
-        for ix in tup:
-            if brd[ix] != player:
-                win=False
-                break
+        for tup in wins:
+            win=True
+            for ix in tup:
+                if brd[ix] != d:
+                    win=False
+                    break
         if win == True:
             break
     return win
