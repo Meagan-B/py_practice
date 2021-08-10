@@ -7,7 +7,6 @@
 #
 # >>>>>>>>>>>>>>>>>>>>>
 
-import getpass
 
 # ----
 
@@ -26,17 +25,20 @@ rps_game_dict = {'r':1, 'p':2, 's':3,'R':1, 'P':2, 'S':3}
 
 # ----
 # still needs some protection from users inputting incorrect play values
+# 081021, removing getpass as its causing malfunciont, will also turn into function
 
 while True :
     print('\n•••••••• NEW GAME ••••••••\n')
-    p1 = getpass.getpass('%s enter your play……\n("r", "p" or "s")\n >>> ' % player_one)
-    p2 = getpass.getpass('%s enter your play……\n("r", "p" or "s")\n >>> ' % player_two)
+    p1 = input('{0} enter your play……\n("r", "p" or "s")\n >>> '.format(player_one))
+    p2 = input('{0} enter your play……\n("r", "p" or "s")\n >>> '.format(player_two))
+    
     # if p1 not in rps_game_dict :
     #     print('ERROR\nincorrect play entered')
     #     break
     # if p1 not in rps_game_dict :
     #     print('ERROR\nincorrect play entered')
     #     break
+    
     p1_play = rps_game_dict.get(p1)
     p2_play = rps_game_dict.get(p2)
     game = p1_play - p2_play
