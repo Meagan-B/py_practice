@@ -6,7 +6,9 @@ if hrs <= 40 :
 
 
 else :
+    print(rate)
     rate = rate * 1.5
+    print(rate)
     wages = hrs * rate
 
 print(float(wages))
