@@ -1,7 +1,10 @@
-# This first line is provided for you
+hrs = float(input("Enter Hours:"))
+rate = float(input("Enter Pay/Rate:"))
 
-hrs = float(input("enter hours:"))
-rate = float(input("enter hourly rate:"))
+if hrs <= 40 :
+    wages = hrs * rate
 
-payrate = float(hrs * rate)
-print(payrate)
+
+else :
+    rate = rate * 1.5
+    wages = hrs * rate
