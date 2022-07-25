@@ -8,3 +8,5 @@ if hrs <= 40 :
 else :
     rate = rate * 1.5
     wages = hrs * rate
+
+print(float(wages))
